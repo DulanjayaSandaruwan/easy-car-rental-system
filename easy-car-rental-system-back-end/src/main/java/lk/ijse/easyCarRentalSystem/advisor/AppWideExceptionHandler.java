@@ -1,10 +1,12 @@
 package lk.ijse.easyCarRentalSystem.advisor;
 
+import lk.ijse.easyCarRentalSystem.exception.NotFoundException;
+import lk.ijse.easyCarRentalSystem.exception.ValidateException;
 import lk.ijse.easyCarRentalSystem.util.ResponseUtil;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
@@ -14,9 +16,18 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @CrossOrigin
 @RestControllerAdvice
 public class AppWideExceptionHandler {
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler({Exception.class})
-    public ResponseUtil exceptionHandler(Exception e) {
-        return new ResponseUtil(500, e.getMessage(), null);
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity handleException(Exception e) {
+        return new ResponseEntity(new ResponseUtil("500", "Error", e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(NotFoundException.class)
+    public ResponseEntity handleNotFoundException(NotFoundException e) {
+        return new ResponseEntity(new ResponseUtil("404", "Error", e.getMessage()), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(ValidateException.class)
+    public ResponseEntity handleValidationException(ValidateException e) {
+        return new ResponseEntity(new ResponseUtil("400", "Error", e.getMessage()), HttpStatus.BAD_REQUEST);
     }
 }

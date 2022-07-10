@@ -2,7 +2,7 @@ package lk.ijse.easyCarRentalSystem.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomerDTO;
 import lk.ijse.easyCarRentalSystem.entity.Customer;
-import lk.ijse.easyCarRentalSystem.dto.repo.CustomerRepo;
+import lk.ijse.easyCarRentalSystem.repo.CustomerRepo;
 import lk.ijse.easyCarRentalSystem.service.CustomerService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;

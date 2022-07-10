@@ -21,8 +21,11 @@ import javax.persistence.Id;
 public class Admin {
     @Id
     private String adminID;
+
     private String adminName;
+
     private String adminEmail;
+
     private String adminPassword;
 
     //    {

@@ -19,7 +19,6 @@ import javax.persistence.*;
 public class CustomerMessage {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String messageID;
 
     private String customerEmail;

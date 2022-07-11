@@ -12,14 +12,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class CustomerDTO {
+
     private String customerNICNumber;
+
     private String customerNICImage;
+
     private String customerName;
+
     private String customerAddress;
+
     private String customerContact;
+
     private String customerEmail;
+
     private String customerPassword;
+
     private String customerDrivingNumber;
+
     private String customerDrivingImage;
+
     private String customerStatus;
 }

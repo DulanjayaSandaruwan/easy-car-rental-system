@@ -39,7 +39,7 @@ public class JpaConfig {
         LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
         bean.setJpaVendorAdapter(jpa);
         bean.setDataSource(dataSource);
-        bean.setPackagesToScan(environment.getRequiredProperty("entity.package.name"));
+        bean.setPackagesToScan(environment.getRequiredProperty("entity.package"));
 
         return bean;
     }

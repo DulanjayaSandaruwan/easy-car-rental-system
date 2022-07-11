@@ -18,6 +18,7 @@ import javax.persistence.Id;
 @ToString
 @Entity
 public class Customer {
+
     @Id
     private String customerNICNumber;
 

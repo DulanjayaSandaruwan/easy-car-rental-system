@@ -23,4 +23,11 @@ public class CustomerMessageDTO {
     private String statusMessage;
 
     private Customer customerNicNumber;
+
+    public CustomerMessageDTO(String customerEmail, String statusHead, String statusMessage, Customer customerNicNumber) {
+        this.customerEmail = customerEmail;
+        this.statusHead = statusHead;
+        this.statusMessage = statusMessage;
+        this.customerNicNumber = customerNicNumber;
+    }
 }

@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Import;
  * @Since : 08/07/2022
  **/
 @Configuration
-@Import(lk.ijse.easyCarRentalSystem.config.JpaConfig.class)
+@Import(JpaConfig.class)
 public class WebRootConfig {
 }

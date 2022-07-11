@@ -16,4 +16,5 @@ import lombok.ToString;
 @ToString
 public class GetCustomerMessageDTO {
     private Customer customerNICNumber;
+
 }

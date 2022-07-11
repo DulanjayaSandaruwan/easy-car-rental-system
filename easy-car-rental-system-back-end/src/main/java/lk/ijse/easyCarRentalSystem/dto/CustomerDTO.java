@@ -32,4 +32,13 @@ public class CustomerDTO {
     private String customerDrivingImage;
 
     private String customerStatus;
+
+    public CustomerDTO(String customerNICNumber) {
+        this.customerNICNumber = customerNICNumber;
+    }
+
+    public CustomerDTO(String customerEmail, String customerPassword) {
+        this.customerEmail = customerEmail;
+        this.customerPassword = customerPassword;
+    }
 }

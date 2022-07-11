@@ -25,7 +25,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public CustomerDTO matchLoginDetails(String customerEmail, String customerPassword) {
-        Customer customer = loginRepo.findCustomerByCustomerEmailAndAndCustomerPassword(customerEmail,customerPassword).get();
+        Customer customer = loginRepo.findCustomerByCustomerEmailAndAndCustomerPassword(customerEmail, customerPassword).get();
         return modelMapper.map(customer.getCustomerEmail(), CustomerDTO.class);
     }
 }

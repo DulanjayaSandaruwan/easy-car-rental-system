@@ -44,21 +44,16 @@ public class CustomerMessageServiceImpl implements CustomerMessageService {
 
     @Override
     public CustomerMessageDTO searchCustomersForEmail(GetCustomerMessageDTO getCustomerMessageDTO) {
-        Optional<CustomerMessage> byCustNICNumber = customerMessageRepo.findByCustomerNICNumber(getCustomerMessageDTO.getCustomerNICNumber());
-        if (byCustNICNumber.isPresent()) {
-            return modelMapper.map(byCustNICNumber.get(), CustomerMessageDTO.class);
+        Optional<CustomerMessage> byCustomerNICNumber = customerMessageRepo.findByCustomerNICNumber(getCustomerMessageDTO.getCustomerNICNumber());
+        if (byCustomerNICNumber.isPresent()) {
+            return modelMapper.map(byCustomerNICNumber.get(), CustomerMessageDTO.class);
         }
         return null;
     }
 
     @Override
     public void addCustomerMessage(CustomerMessageDTO entity) {
-        CustomerMessage message = new CustomerMessage(
-                entity.getStatusHead(),
-                entity.getStatusMessage(),
-                entity.getCustomerEmail(),
-                entity.getCustomerNicNumber()
-        );
+        CustomerMessage message = new CustomerMessage(entity.getStatusHead(), entity.getStatusMessage(), entity.getCustomerEmail(), entity.getCustomerNicNumber());
         customerMessageRepo.save(message);
     }
 }

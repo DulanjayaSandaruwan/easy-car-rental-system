@@ -39,4 +39,13 @@ public class Customer {
     private String customerDrivingImage;
 
     private String customerStatus;
+
+    public Customer(String customerNICNumber) {
+        this.customerNICNumber = customerNICNumber;
+    }
+
+    public Customer(String customerEmail, String customerPassword) {
+        this.customerEmail = customerEmail;
+        this.customerPassword = customerPassword;
+    }
 }

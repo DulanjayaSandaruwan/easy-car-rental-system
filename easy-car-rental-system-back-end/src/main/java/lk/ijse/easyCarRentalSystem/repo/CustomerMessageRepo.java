@@ -12,5 +12,5 @@ import java.util.Optional;
  **/
 public interface CustomerMessageRepo extends JpaRepository<CustomerMessage, String> {
 
-    Optional<CustomerMessage> findByCustomerNICNumber(Customer customerNICNumber);
+    Optional<CustomerMessage> findByCustomerNICNumber( Customer customerNicNumber);
 }

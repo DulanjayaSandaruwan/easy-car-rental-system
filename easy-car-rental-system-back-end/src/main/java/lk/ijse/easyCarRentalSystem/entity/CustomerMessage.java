@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -22,6 +19,7 @@ import javax.persistence.ManyToOne;
 public class CustomerMessage {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String messageID;
 
     private String customerEmail;
@@ -30,14 +28,14 @@ public class CustomerMessage {
 
     private String statusMessage;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "customerNICNumber", referencedColumnName = "customerNICNumber")
-    private Customer customerNicNumber;
+    private Customer customerNICNumber;
 
-    public CustomerMessage(String customerEmail, String statusHead, String statusMessage, Customer customerNicNumber) {
+    public CustomerMessage(String customerEmail, String statusHead, String statusMessage, Customer customerNICNumber) {
         this.customerEmail = customerEmail;
         this.statusHead = statusHead;
         this.statusMessage = statusMessage;
-        this.customerNicNumber = customerNicNumber;
+        this.customerNICNumber = customerNICNumber;
     }
 }

@@ -47,8 +47,8 @@ public class CustomerMessageController {
 
     @GetMapping
     public ResponseEntity searchCustomerForEmail(@RequestBody GetCustomerMessageDTO getCustomerMessageDTO) {
-        System.out.println("custNICNumber ID Search");
-        System.out.println("custNICNumber ID Search" + getCustomerMessageDTO);
+        System.out.println("customerNICNumber ID Search");
+        System.out.println("customerNICNumber ID Search" + getCustomerMessageDTO);
 
         CustomerMessageDTO customerDTO = customerMessageService.searchCustomersForEmail(getCustomerMessageDTO);
         return new ResponseEntity(new ResponseUtil("200", "Done", customerDTO), HttpStatus.OK);

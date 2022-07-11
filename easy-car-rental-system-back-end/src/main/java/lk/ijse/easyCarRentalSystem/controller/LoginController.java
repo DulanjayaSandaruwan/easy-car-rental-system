@@ -24,7 +24,7 @@ public class LoginController {
     LoginService loginService;
 
     @GetMapping(path = "/{customerEmail}/{customerPassword}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity matchLoginDetails(@PathVariable String customerEmail, @PathVariable String customerPassword){
+    public ResponseEntity matchLoginDetails(@PathVariable String customerEmail, @PathVariable String customerPassword) {
         System.out.println("Customer Email" + customerEmail);
         System.out.println("Customer Password" + customerPassword);
 

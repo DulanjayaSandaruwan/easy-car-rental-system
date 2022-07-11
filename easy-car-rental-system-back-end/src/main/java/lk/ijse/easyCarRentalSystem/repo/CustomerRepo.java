@@ -13,6 +13,5 @@ import java.util.ArrayList;
 public interface CustomerRepo extends JpaRepository<Customer, String> {
 
     @Query(value = "select * from customer where customerStatus='Not Approved'", nativeQuery = true)
-
-    public ArrayList<Customer> getPendingCustomers();
+    ArrayList<Customer> getPendingCustomers();
 }

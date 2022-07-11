@@ -35,18 +35,18 @@ public class JpaConfig {
     Environment environment;
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpa){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpa) {
         LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
         bean.setJpaVendorAdapter(jpa);
         bean.setDataSource(dataSource);
-        bean.setPackagesToScan(environment.getRequiredProperty("entity.package"));
+        bean.setPackagesToScan(environment.getRequiredProperty("entity.package.name"));
 
         return bean;
     }
 
     @Bean
     public DataSource dataSource() throws NamingException {
-        DriverManagerDataSource dataSource=new DriverManagerDataSource();
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
         dataSource.setUrl(environment.getRequiredProperty("my.app.url"));
         dataSource.setUsername(environment.getRequiredProperty("my.app.username"));
@@ -57,7 +57,7 @@ public class JpaConfig {
     }
 
     @Bean
-    public JpaVendorAdapter jpaVendorAdapter(){
+    public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter vendor = new HibernateJpaVendorAdapter();
         vendor.setDatabasePlatform(environment.getRequiredProperty("my.app.dialect"));
         vendor.setDatabase(Database.MYSQL);
@@ -68,7 +68,7 @@ public class JpaConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory emf){
+    public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
 

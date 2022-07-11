@@ -23,7 +23,6 @@ import java.net.URISyntaxException;
 @RequestMapping("api/v1/customer")
 @CrossOrigin
 public class CustomerController {
-
     @Autowired
     CustomerService customerService;
 

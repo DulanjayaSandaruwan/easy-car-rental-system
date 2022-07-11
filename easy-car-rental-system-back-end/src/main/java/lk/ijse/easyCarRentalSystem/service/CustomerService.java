@@ -10,13 +10,13 @@ import java.util.List;
  * @Since : 10/07/2022
  **/
 public interface CustomerService {
-    public void saveCustomer(CustomerDTO entity);
+    void saveCustomer(CustomerDTO entity);
 
-    public CustomerDTO searchCustomer(String customerNICNumber);
+    CustomerDTO searchCustomer(String customerNICNumber);
 
-    public ArrayList<CustomerDTO> getPendingCustomers();
+    ArrayList<CustomerDTO> getPendingCustomers();
 
-    public List<CustomerDTO> getAllCustomers();
+    List<CustomerDTO> getAllCustomers();
 
-    public void updateCustomerStatus(CustomerDTO entity);
+    void updateCustomerStatus(CustomerDTO entity);
 }

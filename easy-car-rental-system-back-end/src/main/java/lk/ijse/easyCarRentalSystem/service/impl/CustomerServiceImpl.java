@@ -25,18 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepo customerRepo;
 
     public void saveCustomer(CustomerDTO entity) {
-        Customer customer = new Customer(
-                entity.getCustomerNICNumber(),
-                entity.getCustomerNICImage(),
-                entity.getCustomerName(),
-                entity.getCustomerAddress(),
-                entity.getCustomerContact(),
-                entity.getCustomerEmail(),
-                entity.getCustomerPassword(),
-                entity.getCustomerDrivingNumber(),
-                entity.getCustomerDrivingImage(),
-                "Not Approved"
-        );
+        Customer customer = new Customer(entity.getCustomerNICNumber(), entity.getCustomerNICImage(), entity.getCustomerName(), entity.getCustomerAddress(), entity.getCustomerContact(), entity.getCustomerEmail(), entity.getCustomerPassword(), entity.getCustomerDrivingNumber(), entity.getCustomerDrivingImage(), "Not Approved");
         customerRepo.save(customer);
     }
 

@@ -34,10 +34,19 @@ public class DriverSchedule {
     @JoinColumn(name = "driverNICNumber", referencedColumnName = "driverNICNumber")
     private Driver driverNICNumber;
 
+    public DriverSchedule(String driverStatus) {
+        this.driverStatus = driverStatus;
+    }
+
     public DriverSchedule(String rideStartDate, String rideEndDate, String driverStatus, Driver driverNICNumber) {
         this.rideStartDate = rideStartDate;
         this.rideEndDate = rideEndDate;
         this.driverStatus = driverStatus;
         this.driverNICNumber = driverNICNumber;
+    }
+
+    public String setDriverStatus(String driverStatus) {
+        this.driverStatus = driverStatus;
+        return driverStatus;
     }
 }

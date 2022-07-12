@@ -6,6 +6,7 @@ import lk.ijse.easyCarRentalSystem.repo.DriverScheduleRepo;
 import lk.ijse.easyCarRentalSystem.service.DriverScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  * @Since : 12/07/2022
  **/
 @Service
+@Transactional
 public class DriverScheduleImpl implements DriverScheduleService {
 
     @Autowired

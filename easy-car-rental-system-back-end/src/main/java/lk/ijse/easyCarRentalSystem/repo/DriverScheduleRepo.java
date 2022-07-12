@@ -13,6 +13,6 @@ import java.util.List;
  **/
 public interface DriverScheduleRepo extends JpaRepository<DriverSchedule, String> {
 
-    @Query("from DriverSchedule bd where bd.driverNICNumber.driverNICNumber=:driverNICNumber")
+    @Query("from DriverSchedule d where d.driverNICNumber.driverNICNumber=:driverNICNumber")
     List<DriverSchedule> findByDriverNICNumber(@Param("driverNICNumber") String driverNICNumber);
 }

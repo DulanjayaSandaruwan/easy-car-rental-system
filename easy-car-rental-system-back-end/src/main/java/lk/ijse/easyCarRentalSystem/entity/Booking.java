@@ -46,9 +46,10 @@ public class Booking {
     @JsonIgnore
     private List<BookingDetails> bookingDetails = new ArrayList<>();
 
-    public Booking(String bookingID, String bookingStatus, String rentDate, String rentTime, String returnDate, String returnTime, Customer customerNICNumber) {
+    public Booking(String bookingID, String bookingStatus, String rentStatus, String rentDate, String rentTime, String returnDate, String returnTime, String time, Customer customerNICNumber) {
         this.bookingID = bookingID;
         this.bookingStatus = bookingStatus;
+        this.rentStatus = rentStatus;
         this.rentDate = rentDate;
         this.rentTime = rentTime;
         this.returnDate = returnDate;

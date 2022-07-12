@@ -7,10 +7,12 @@ import lk.ijse.easyCarRentalSystem.exception.ValidateException;
 import lk.ijse.easyCarRentalSystem.repo.VehicleRepo;
 import lk.ijse.easyCarRentalSystem.service.VehicleService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -36,7 +38,10 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public ArrayList<VehicleDTO> getAllVehicle() {
-        return null;
+        List<Vehicle> all = vehicleRepo.getNotAssignVehicle();
+        System.out.println("Test +  " + all);
+        return modelMapperr.map(all, new TypeToken<ArrayList<VehicleDTO>>() {
+        }.getType());
     }
 
     @Override
@@ -46,6 +51,16 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public VehicleDTO getReturns(String vehicleRegID) {
-        return null;
+        Vehicle vehicle = vehicleRepo.findByVehicleRegID(vehicleRegID);
+        System.out.println("v = " + vehicleRegID);
+        return new VehicleDTO(
+                vehicle.getVehicleRegID(),
+                vehicle.getVehicleBrand(),
+                vehicle.getDailyRate(),
+                vehicle.getMonthlyRate(),
+                vehicle.getFreeKmForDay(),
+                vehicle.getFreeKmForMonth(),
+                vehicle.getPricePerExtraKm()
+        );
     }
 }

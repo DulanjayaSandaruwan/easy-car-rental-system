@@ -48,7 +48,7 @@ public class VehicleDTO {
 
     private String vehicleStatus;
 
-    public VehicleDTO(String vehicleRegID) {
+    public VehicleDTO(String vehicleRegID, String vehicleBrand, double dailyRate, double monthlyRate, String freeKmForDay, String freeKmForMonth, double pricePerExtraKm) {
         this.vehicleRegID = vehicleRegID;
     }
 }

@@ -53,4 +53,14 @@ public class Vehicle {
     private double pricePerExtraKm;
 
     private String vehicleStatus;
+
+    public Vehicle(String vehicleRegID, String vehicleBrand, double dailyRate, double monthlyRate, String freeKmForDay, String freeKmForMonth, double pricePerExtraKm) {
+        this.vehicleRegID = vehicleRegID;
+        this.vehicleBrand = vehicleBrand;
+        this.dailyRate = dailyRate;
+        this.monthlyRate = monthlyRate;
+        this.freeKmForDay = freeKmForDay;
+        this.freeKmForMonth = freeKmForMonth;
+        this.pricePerExtraKm = pricePerExtraKm;
+    }
 }

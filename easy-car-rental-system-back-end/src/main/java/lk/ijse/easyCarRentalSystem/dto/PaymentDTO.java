@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>

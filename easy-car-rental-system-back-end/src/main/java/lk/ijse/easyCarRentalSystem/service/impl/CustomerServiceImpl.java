@@ -2,6 +2,7 @@ package lk.ijse.easyCarRentalSystem.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomerDTO;
 import lk.ijse.easyCarRentalSystem.entity.Customer;
+import lk.ijse.easyCarRentalSystem.entity.Driver;
 import lk.ijse.easyCarRentalSystem.repo.CustomerRepo;
 import lk.ijse.easyCarRentalSystem.service.CustomerService;
 import org.modelmapper.ModelMapper;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -25,14 +27,14 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepo customerRepo;
 
     public void saveCustomer(CustomerDTO entity) {
-        Customer customer = new Customer(entity.getCustomerNICNumber(), entity.getCustomerNICImage(), entity.getCustomerName(), entity.getCustomerAddress(), entity.getCustomerContact(), entity.getCustomerEmail(), entity.getCustomerPassword(), entity.getCustomerDrivingNumber(), entity.getCustomerDrivingImage(), "Not Approved");
+        Customer customer = new Customer(entity.getCustomerNICNumber(), entity.getCustomerNICImage().getName(), entity.getCustomerName(), entity.getCustomerAddress(), entity.getCustomerContact(), entity.getCustomerEmail(), entity.getCustomerPassword(), entity.getCustomerDrivingNumber(), entity.getCustomerDrivingImage().getName(), "Not Approved");
+        System.out.println(entity.getCustomerNICImage());
         customerRepo.save(customer);
     }
 
     public CustomerDTO searchCustomer(String customerNICNumber) {
-        Customer customer = customerRepo.findById(customerNICNumber).get();
-        CustomerDTO customerDTO = modelMapper.map(customer, CustomerDTO.class);
-        return customerDTO;
+        Optional<Customer> customer = customerRepo.findById(customerNICNumber);
+           return modelMapper.map(customer, CustomerDTO.class);
     }
 
     public ArrayList<CustomerDTO> getPendingCustomers() {
@@ -47,9 +49,9 @@ public class CustomerServiceImpl implements CustomerService {
         }.getType());
     }
 
-    public void updateCustomerStatus(CustomerDTO entity) {
-        Customer customer1 = customerRepo.findById(entity.getCustomerNICNumber()).get();
-        customer1.setCustomerStatus("Approved");
-        customerRepo.save(customer1);
+    public void updateCustomerStatus(CustomerDTO customerNICNumber) {
+        Optional<Customer> byId = customerRepo.findById(customerNICNumber.getCustomerNICNumber());
+        if(byId.isPresent())
+            customerRepo.updateStatusForCustomer(customerNICNumber.getCustomerNICNumber());
     }
 }

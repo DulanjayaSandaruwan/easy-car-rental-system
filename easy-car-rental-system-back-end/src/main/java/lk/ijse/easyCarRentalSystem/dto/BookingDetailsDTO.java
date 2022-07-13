@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -22,7 +23,7 @@ public class BookingDetailsDTO {
 
     private double lossDamageFee;
 
-    private String lossDamageFeeSlip;
+    private MultipartFile lossDamageFeeSlip;
 
     private Booking bookingID;
 

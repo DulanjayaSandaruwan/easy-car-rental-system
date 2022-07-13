@@ -3,6 +3,7 @@ package lk.ijse.easyCarRentalSystem.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -15,7 +16,7 @@ public class DriverDTO {
 
     private String driverNICNumber;
 
-    private String driverNICImage;
+    private MultipartFile driverNICImage;
 
     private String driverName;
 
@@ -25,7 +26,7 @@ public class DriverDTO {
 
     private String driverLicenseNumber;
 
-    private String driverLicenseImage;
+    private MultipartFile driverLicenseImage;
 
     private String driverPassword;
 

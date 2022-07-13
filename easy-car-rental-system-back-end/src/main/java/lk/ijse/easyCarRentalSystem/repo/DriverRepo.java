@@ -12,9 +12,9 @@ import java.util.ArrayList;
  **/
 public interface DriverRepo extends JpaRepository<Driver, String> {
 
-    @Query(value = "select * from drivers where driverStatus='NOT ASSIGN'", nativeQuery = true)
+    @Query(value = "select * from driver where driverStatus='NOT ASSIGN'", nativeQuery = true)
     ArrayList<Driver> getNotAssignDrivers();
 
-    @Query(value = "update drivers set driverStatus='ASSIGN' where driverNICNumber=?1", nativeQuery = true)
+    @Query(value = "update driver set driverStatus='ASSIGN' where driverNICNumber=?1", nativeQuery = true)
     void updateStatusForDriver(String driverNICNumber);
 }

@@ -1,6 +1,5 @@
 package lk.ijse.easyCarRentalSystem.controller;
 
-import lk.ijse.easyCarRentalSystem.dto.DriverScheduleDTO;
 import lk.ijse.easyCarRentalSystem.dto.VehicleScheduleDTO;
 import lk.ijse.easyCarRentalSystem.service.VehicleScheduleService;
 import lk.ijse.easyCarRentalSystem.util.ResponseUtil;

@@ -10,7 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 /**
@@ -33,6 +37,25 @@ public class VehicleController {
         }
         vehicleService.addVehicle(dto);
         return new ResponseEntity(new ResponseUtil("200", "Done", dto), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/file")
+    public ResponseEntity saveFile(@RequestPart("file") MultipartFile myFile) {
+        try {
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadsDir = new File(projectPath + "/uploads");
+            System.out.println(projectPath);
+            uploadsDir.mkdir();
+            System.out.println("projectPath = " + projectPath);
+            myFile.transferTo(new File(uploadsDir.getAbsolutePath() + "/" + myFile.getOriginalFilename()));
+
+            return new ResponseEntity(new ResponseUtil("200", "Done", myFile.getOriginalFilename()), HttpStatus.OK);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+            return new ResponseEntity(new ResponseUtil("500", "Done", false), HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (IOException e) {
+            return new ResponseEntity(new ResponseUtil("500", "Done", false), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

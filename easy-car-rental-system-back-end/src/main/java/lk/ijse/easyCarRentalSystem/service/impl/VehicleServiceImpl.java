@@ -25,7 +25,7 @@ public class VehicleServiceImpl implements VehicleService {
     private VehicleRepo vehicleRepo;
 
     @Autowired
-    private ModelMapper modelMapperr;
+    private ModelMapper modelMapper;
 
     @Override
     public void addVehicle(VehicleDTO dto) {
@@ -33,14 +33,14 @@ public class VehicleServiceImpl implements VehicleService {
         if (vehicleRepo.existsById(dto.getVehicleRegID())) {
             throw new ValidateException("Customer Already Exist");
         }
-        vehicleRepo.save(modelMapperr.map(dto, Vehicle.class));
+        vehicleRepo.save(modelMapper.map(dto, Vehicle.class));
     }
 
     @Override
     public ArrayList<VehicleDTO> getAllVehicle() {
         List<Vehicle> all = vehicleRepo.getNotAssignVehicle();
         System.out.println("Test +  " + all);
-        return modelMapperr.map(all, new TypeToken<ArrayList<VehicleDTO>>() {
+        return modelMapper.map(all, new TypeToken<ArrayList<VehicleDTO>>() {
         }.getType());
     }
 

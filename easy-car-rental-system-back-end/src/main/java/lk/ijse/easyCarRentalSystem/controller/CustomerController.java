@@ -26,8 +26,8 @@ public class CustomerController {
     @Autowired
     CustomerService customerService;
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity saveCustomer(@RequestBody CustomerDTO dto) {
+    @PostMapping(path = "/save", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity saveCustomer(@ModelAttribute CustomerDTO dto) {
         System.out.println("Test1" + " " + dto);
         if (dto.getCustomerNICNumber().trim().length() <= 0) {
             throw new NotFoundException("Customer NIC number can not be empty !");
@@ -65,8 +65,8 @@ public class CustomerController {
         return new ResponseEntity(new ResponseUtil("200", "Done", customerDTO), HttpStatus.OK);
     }
 
-    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity updatePendingRequest(@RequestBody CustomerDTO dto) {
+    @PutMapping(path = "/update",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity updatePendingRequest(@ModelAttribute CustomerDTO dto) {
         if (dto.getCustomerNICNumber().trim().length() <= 0) {
             System.out.println("dto = " + dto);
             throw new NotFoundException("No NIC number provided to update");

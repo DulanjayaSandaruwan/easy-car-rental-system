@@ -14,4 +14,7 @@ public interface CustomerRepo extends JpaRepository<Customer, String> {
 
     @Query(value = "select * from customer where customerStatus='Not Approved'", nativeQuery = true)
     ArrayList<Customer> getPendingCustomers();
+
+    @Query(value = "update customer set customerStatus='ASSIGN' where customerNICNumber=?1", nativeQuery = true)
+    void updateStatusForCustomer(String customerNICNumber);
 }

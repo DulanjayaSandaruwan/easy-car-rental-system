@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -20,13 +21,13 @@ public class VehicleDTO {
 
     private String vehicleColor;
 
-    private String vehicleFrontImage;
+    private MultipartFile vehicleFrontImage;
 
-    private String vehicleBackImage;
+    private MultipartFile vehicleBackImage;
 
-    private String vehicleSideImage;
+    private MultipartFile vehicleSideImage;
 
-    private String vehicleInteriorImage;
+    private MultipartFile vehicleInteriorImage;
 
     private String transmissionType;
 

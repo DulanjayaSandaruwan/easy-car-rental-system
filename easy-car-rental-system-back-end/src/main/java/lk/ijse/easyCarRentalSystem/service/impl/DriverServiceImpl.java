@@ -14,7 +14,10 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * @author : D.D.Sandaruwan <dulanjayasandaruwan1998@gmail.com>
@@ -37,16 +40,14 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void addDrivers(DriverDTO dto) {
-        Driver driver = new Driver(dto.getDriverNICNumber(), dto.getDriverNICImage(), dto.getDriverName(), dto.getDriverEmail(), dto.getDriverContact(), dto.getDriverLicenseNumber(), dto.getDriverLicenseImage(), dto.getDriverPassword(), "NOT ASSIGN");
+        Driver driver = new Driver(dto.getDriverNICNumber(), dto.getDriverNICImage().getName(), dto.getDriverName(), dto.getDriverEmail(), dto.getDriverContact(), dto.getDriverLicenseNumber(), dto.getDriverLicenseImage().getName(), dto.getDriverPassword(), "NOT ASSIGN");
+        driverRepo.save(driver);
     }
 
     @Override
     public DriverDTO searchDriver(String driverNICNumber) {
         Optional<Driver> driver = driverRepo.findById(driverNICNumber);
-        if (driver.isPresent()){
-            return modelMapper.map(driver.get(), DriverDTO.class);
-        }
-        return null;
+            return modelMapper.map(driver, DriverDTO.class);
     }
 
     @Override
@@ -74,7 +75,7 @@ public class DriverServiceImpl implements DriverService {
     public ArrayList<CustomDTO> getReturn(String vehicleRegID) {
         ArrayList<Object[]> arrayList = bookingRepo.getReturn(vehicleRegID);
         ArrayList<CustomDTO> all = new ArrayList<>();
-        for (Object[] object : arrayList){
+        for (Object[] object : arrayList) {
             System.out.println(Arrays.toString(object));
             all.add(new CustomDTO(
                     object[0].toString(),
@@ -92,9 +93,9 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void updateDriverStatus(DriverDTO driverNICNumber) {
-        Driver byId = driverRepo.findById(driverNICNumber.getDriverNICImage()).get();
-        byId.setDriverStatus("ASSIGN");
-        driverRepo.save(byId);
+        Optional<Driver> byId = driverRepo.findById(driverNICNumber.getDriverNICNumber());
+        if(byId.isPresent())
+            driverRepo.updateStatusForDriver(driverNICNumber.getDriverNICNumber());
     }
 
     @Override

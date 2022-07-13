@@ -1,7 +1,7 @@
 package lk.ijse.easyCarRentalSystem;
 
-import lk.ijse.easyCarRentalSystem.config.WebAppConfig;
-import lk.ijse.easyCarRentalSystem.config.WebRootConfig;
+import lk.ijse.easyCarRentalSystem.service.impl.config.WebAppConfig;
+import lk.ijse.easyCarRentalSystem.service.impl.config.WebRootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.MultipartConfigElement;

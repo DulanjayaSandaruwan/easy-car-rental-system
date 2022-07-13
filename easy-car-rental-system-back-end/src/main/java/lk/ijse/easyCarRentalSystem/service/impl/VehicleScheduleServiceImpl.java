@@ -1,9 +1,9 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.VehicleScheduleDTO;
+import lk.ijse.easyCarRentalSystem.dto.service.VehicleScheduleService;
 import lk.ijse.easyCarRentalSystem.entity.VehicleSchedule;
 import lk.ijse.easyCarRentalSystem.repo.VehicleScheduleRepo;
-import lk.ijse.easyCarRentalSystem.service.VehicleScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

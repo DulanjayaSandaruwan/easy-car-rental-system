@@ -1,4 +1,4 @@
-package lk.ijse.easyCarRentalSystem.config;
+package lk.ijse.easyCarRentalSystem.service.impl.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

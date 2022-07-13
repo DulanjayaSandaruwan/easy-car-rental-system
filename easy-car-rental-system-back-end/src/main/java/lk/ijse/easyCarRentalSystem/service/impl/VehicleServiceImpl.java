@@ -1,11 +1,11 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.VehicleDTO;
 import lk.ijse.easyCarRentalSystem.dto.VehicleIDDTO;
+import lk.ijse.easyCarRentalSystem.dto.service.VehicleService;
 import lk.ijse.easyCarRentalSystem.entity.Vehicle;
 import lk.ijse.easyCarRentalSystem.exception.ValidateException;
 import lk.ijse.easyCarRentalSystem.repo.VehicleRepo;
-import lk.ijse.easyCarRentalSystem.service.VehicleService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

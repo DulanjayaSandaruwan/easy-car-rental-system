@@ -1,4 +1,4 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomerDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomerMessageDTO;
@@ -7,7 +7,7 @@ import lk.ijse.easyCarRentalSystem.entity.Customer;
 import lk.ijse.easyCarRentalSystem.entity.CustomerMessage;
 import lk.ijse.easyCarRentalSystem.repo.CustomerMessageRepo;
 import lk.ijse.easyCarRentalSystem.repo.CustomerRepo;
-import lk.ijse.easyCarRentalSystem.service.CustomerMessageService;
+import lk.ijse.easyCarRentalSystem.dto.service.CustomerMessageService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

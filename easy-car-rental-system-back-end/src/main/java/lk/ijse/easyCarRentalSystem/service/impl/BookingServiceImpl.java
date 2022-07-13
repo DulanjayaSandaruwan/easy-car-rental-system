@@ -1,11 +1,11 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.BookingAcceptDTO;
 import lk.ijse.easyCarRentalSystem.dto.BookingDTO;
 import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
 import lk.ijse.easyCarRentalSystem.entity.*;
 import lk.ijse.easyCarRentalSystem.repo.*;
-import lk.ijse.easyCarRentalSystem.service.BookingService;
+import lk.ijse.easyCarRentalSystem.dto.service.BookingService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,7 +54,7 @@ public class BookingServiceImpl implements BookingService {
 
         if (bookingSaved != null) {
             for (BookingDetailsDTO bookingDetailsDTO : bookingDTO.getBookingDetails()) {
-                BookingDetails bookingDetails = new BookingDetails(bookingDetailsDTO.getLossDamageFee(), bookingDetailsDTO.getLossDamageFeeSlip(), bookingDetailsDTO.getBookingID(), bookingDetailsDTO.getVehicleRegID(), bookingDetailsDTO.getDriverNICNumber());
+                BookingDetails bookingDetails = new BookingDetails(bookingDetailsDTO.getLossDamageFee(), bookingDetailsDTO.getLossDamageFeeSlip().getName(), bookingDetailsDTO.getBookingID(), bookingDetailsDTO.getVehicleRegID(), bookingDetailsDTO.getDriverNICNumber());
                 BookingDetails save = bookingDetailsRepo.save(bookingDetails);
 
                 System.out.println("Get VEHICLE ID" + bookingDetailsDTO.getVehicleRegID());

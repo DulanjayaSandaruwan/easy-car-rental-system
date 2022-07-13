@@ -1,9 +1,8 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
+import lk.ijse.easyCarRentalSystem.dto.service.BookingDetailService;
 import lk.ijse.easyCarRentalSystem.repo.BookingDetailsRepo;
-import lk.ijse.easyCarRentalSystem.service.BookingDetailService;
-import lk.ijse.easyCarRentalSystem.service.BookingService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

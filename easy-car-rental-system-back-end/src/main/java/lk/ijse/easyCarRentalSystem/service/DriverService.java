@@ -1,4 +1,4 @@
-package lk.ijse.easyCarRentalSystem.service;
+package lk.ijse.easyCarRentalSystem.dto.service;
 
 import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;

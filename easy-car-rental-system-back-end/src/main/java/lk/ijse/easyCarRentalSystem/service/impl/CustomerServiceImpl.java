@@ -1,10 +1,9 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomerDTO;
 import lk.ijse.easyCarRentalSystem.entity.Customer;
-import lk.ijse.easyCarRentalSystem.entity.Driver;
 import lk.ijse.easyCarRentalSystem.repo.CustomerRepo;
-import lk.ijse.easyCarRentalSystem.service.CustomerService;
+import lk.ijse.easyCarRentalSystem.dto.service.CustomerService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

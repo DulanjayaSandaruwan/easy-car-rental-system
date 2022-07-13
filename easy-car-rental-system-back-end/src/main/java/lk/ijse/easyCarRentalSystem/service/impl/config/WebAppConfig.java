@@ -1,4 +1,4 @@
-package lk.ijse.easyCarRentalSystem.config;
+package lk.ijse.easyCarRentalSystem.service.impl.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

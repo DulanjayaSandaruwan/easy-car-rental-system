@@ -1,14 +1,14 @@
-package lk.ijse.easyCarRentalSystem.service.impl;
+package lk.ijse.easyCarRentalSystem.dto.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;
 import lk.ijse.easyCarRentalSystem.dto.DriverDTO;
+import lk.ijse.easyCarRentalSystem.dto.service.DriverService;
 import lk.ijse.easyCarRentalSystem.entity.BookingDetails;
 import lk.ijse.easyCarRentalSystem.entity.Driver;
 import lk.ijse.easyCarRentalSystem.repo.BookingDetailsRepo;
 import lk.ijse.easyCarRentalSystem.repo.BookingRepo;
 import lk.ijse.easyCarRentalSystem.repo.DriverRepo;
-import lk.ijse.easyCarRentalSystem.service.DriverService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

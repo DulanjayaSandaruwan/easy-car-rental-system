@@ -4,7 +4,7 @@ import lk.ijse.easyCarRentalSystem.dto.CustomerDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomerMessageDTO;
 import lk.ijse.easyCarRentalSystem.dto.GetCustomerMessageDTO;
 import lk.ijse.easyCarRentalSystem.exception.NotFoundException;
-import lk.ijse.easyCarRentalSystem.service.CustomerMessageService;
+import lk.ijse.easyCarRentalSystem.dto.service.CustomerMessageService;
 import lk.ijse.easyCarRentalSystem.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

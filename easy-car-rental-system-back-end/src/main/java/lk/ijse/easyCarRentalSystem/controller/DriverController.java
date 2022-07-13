@@ -29,7 +29,7 @@ public class DriverController {
     private DriverService driverService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity saveCustomer(@RequestBody DriverDTO dto) {
+    public ResponseEntity saveCustomer(@ModelAttribute DriverDTO dto) {
         System.out.println("Test1" + " " + dto);
         if (dto.getDriverNICNumber().trim().length() <= 0) {
             throw new NotFoundException("Customer id cannot be empty");

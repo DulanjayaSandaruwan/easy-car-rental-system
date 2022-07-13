@@ -30,7 +30,7 @@ public class VehicleController {
     VehicleService vehicleService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity saveVehicle(@RequestBody VehicleDTO dto) {
+    public ResponseEntity saveVehicle(@ModelAttribute VehicleDTO dto) {
         System.out.println("Test1" + " " + dto);
         if (dto.getVehicleRegID().trim().length() <= 0) {
             throw new NotFoundException("Customer NIC number cannot be empty");

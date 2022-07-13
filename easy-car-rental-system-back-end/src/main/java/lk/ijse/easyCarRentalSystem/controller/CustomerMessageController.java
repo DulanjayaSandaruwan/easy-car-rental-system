@@ -27,7 +27,7 @@ public class CustomerMessageController {
     CustomerMessageService customerMessageService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity saveBooking(@RequestBody CustomerMessageDTO customerMessageDTO) {
+    public ResponseEntity saveBooking(@ModelAttribute CustomerMessageDTO customerMessageDTO) {
         System.out.println("dto = " + customerMessageDTO);
         if (customerMessageDTO.getCustomerEmail().trim().length() <= 0) {
             throw new NotFoundException("Customer id cannot be empty");

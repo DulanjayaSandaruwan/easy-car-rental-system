@@ -1,8 +1,8 @@
-package lk.ijse.easyCarRentalSystem.dto.service.impl;
+package lk.ijse.easyCarRentalSystem.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.VehicleDTO;
 import lk.ijse.easyCarRentalSystem.dto.VehicleIDDTO;
-import lk.ijse.easyCarRentalSystem.dto.service.VehicleService;
+import lk.ijse.easyCarRentalSystem.service.VehicleService;
 import lk.ijse.easyCarRentalSystem.entity.Vehicle;
 import lk.ijse.easyCarRentalSystem.exception.ValidateException;
 import lk.ijse.easyCarRentalSystem.repo.VehicleRepo;

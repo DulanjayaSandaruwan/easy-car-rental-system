@@ -1,9 +1,10 @@
-package lk.ijse.easyCarRentalSystem.dto.service.impl;
+package lk.ijse.easyCarRentalSystem.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;
 import lk.ijse.easyCarRentalSystem.entity.*;
+import lk.ijse.easyCarRentalSystem.entity.*;
 import lk.ijse.easyCarRentalSystem.repo.*;
-import lk.ijse.easyCarRentalSystem.dto.service.PaymentService;
+import lk.ijse.easyCarRentalSystem.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

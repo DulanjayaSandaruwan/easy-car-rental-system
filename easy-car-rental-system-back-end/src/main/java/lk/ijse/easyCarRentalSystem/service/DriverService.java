@@ -1,4 +1,4 @@
-package lk.ijse.easyCarRentalSystem.dto.service;
+package lk.ijse.easyCarRentalSystem.service;
 
 import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;
@@ -17,10 +17,11 @@ public interface DriverService {
 
     ArrayList<DriverDTO> getNotAssignDrivers();
 
-    BookingDetailsDTO getReturns(String vehicleRegID);
+//    BookingDetailsDTO getReturns(String vehicleRegID);
 
     ArrayList<CustomDTO> getReturn(String vehicleRegID);
+
     void updateDriverStatus(DriverDTO driverNICNumber);
 
-    ArrayList<DriverDTO>getAllDrivers();
+    ArrayList<DriverDTO> getAllDrivers();
 }

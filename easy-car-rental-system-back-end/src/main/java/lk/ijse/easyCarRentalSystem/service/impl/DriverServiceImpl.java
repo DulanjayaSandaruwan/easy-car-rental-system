@@ -1,14 +1,12 @@
 package lk.ijse.easyCarRentalSystem.service.impl;
 
-import lk.ijse.easyCarRentalSystem.dto.BookingDetailsDTO;
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;
 import lk.ijse.easyCarRentalSystem.dto.DriverDTO;
-import lk.ijse.easyCarRentalSystem.dto.service.DriverService;
-import lk.ijse.easyCarRentalSystem.entity.BookingDetails;
 import lk.ijse.easyCarRentalSystem.entity.Driver;
 import lk.ijse.easyCarRentalSystem.repo.BookingDetailsRepo;
 import lk.ijse.easyCarRentalSystem.repo.BookingRepo;
 import lk.ijse.easyCarRentalSystem.repo.DriverRepo;
+import lk.ijse.easyCarRentalSystem.service.DriverService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +45,7 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public DriverDTO searchDriver(String driverNICNumber) {
         Optional<Driver> driver = driverRepo.findById(driverNICNumber);
-            return modelMapper.map(driver, DriverDTO.class);
+        return modelMapper.map(driver, DriverDTO.class);
     }
 
     @Override
@@ -58,18 +56,18 @@ public class DriverServiceImpl implements DriverService {
         }.getType());
     }
 
-    @Override
-    public BookingDetailsDTO getReturns(String vehicleRegID) {
-        BookingDetails bookingDetails = bookingDetailsRepo.findByVehicleRegID(vehicleRegID);
-        return new BookingDetailsDTO(
-                bookingDetails.getBookingDetailsID(),
-                bookingDetails.getLossDamageFee(),
-                bookingDetails.getLossDamageFeeSlip(),
-                bookingDetails.getBookingID(),
-                bookingDetails.getVehicleRegID(),
-                bookingDetails.getDriverNICNumber()
-        );
-    }
+//    @Override
+//    public BookingDetailsDTO getReturns(String vehicleRegID) {
+//        BookingDetails bookingDetails = bookingDetailsRepo.findByVehicleRegID(vehicleRegID);
+//        return new BookingDetailsDTO(
+//                bookingDetails.getBookingDetailsID(),
+//                bookingDetails.getLossDamageFee(),
+//                bookingDetails.getLossDamageFeeSlip(),
+//                bookingDetails.getBookingID(),
+//                bookingDetails.getVehicleRegID(),
+//                bookingDetails.getDriverNICNumber()
+//        );
+//    }
 
     @Override
     public ArrayList<CustomDTO> getReturn(String vehicleRegID) {
@@ -94,7 +92,7 @@ public class DriverServiceImpl implements DriverService {
     @Override
     public void updateDriverStatus(DriverDTO driverNICNumber) {
         Optional<Driver> byId = driverRepo.findById(driverNICNumber.getDriverNICNumber());
-        if(byId.isPresent())
+        if (byId.isPresent())
             driverRepo.updateStatusForDriver(driverNICNumber.getDriverNICNumber());
     }
 

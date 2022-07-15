@@ -3,7 +3,7 @@ package lk.ijse.easyCarRentalSystem.controller;
 import lk.ijse.easyCarRentalSystem.dto.VehicleDTO;
 import lk.ijse.easyCarRentalSystem.dto.VehicleIDDTO;
 import lk.ijse.easyCarRentalSystem.exception.NotFoundException;
-import lk.ijse.easyCarRentalSystem.dto.service.VehicleService;
+import lk.ijse.easyCarRentalSystem.service.VehicleService;
 import lk.ijse.easyCarRentalSystem.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

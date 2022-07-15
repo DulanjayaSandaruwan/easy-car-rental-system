@@ -1,7 +1,7 @@
 package lk.ijse.easyCarRentalSystem.controller;
 
 import lk.ijse.easyCarRentalSystem.dto.CustomDTO;
-import lk.ijse.easyCarRentalSystem.dto.service.DriverService;
+import lk.ijse.easyCarRentalSystem.service.DriverService;
 import lk.ijse.easyCarRentalSystem.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

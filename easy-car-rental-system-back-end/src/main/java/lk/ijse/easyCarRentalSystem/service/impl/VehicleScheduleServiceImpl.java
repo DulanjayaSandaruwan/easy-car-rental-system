@@ -1,7 +1,7 @@
-package lk.ijse.easyCarRentalSystem.dto.service.impl;
+package lk.ijse.easyCarRentalSystem.service.impl;
 
 import lk.ijse.easyCarRentalSystem.dto.VehicleScheduleDTO;
-import lk.ijse.easyCarRentalSystem.dto.service.VehicleScheduleService;
+import lk.ijse.easyCarRentalSystem.service.VehicleScheduleService;
 import lk.ijse.easyCarRentalSystem.entity.VehicleSchedule;
 import lk.ijse.easyCarRentalSystem.repo.VehicleScheduleRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +27,7 @@ public class VehicleScheduleServiceImpl implements VehicleScheduleService {
         ArrayList<VehicleScheduleDTO> list = new ArrayList<>();
         List<VehicleSchedule> byVehicleRegID = vehicleScheduleRepo.findByVehicleRegID(vehicleRegID);
         for (VehicleSchedule vehicleSchedule : byVehicleRegID) {
-            list.add(new VehicleScheduleDTO(
-                    vehicleSchedule.getRideStartDate(),
-                    vehicleSchedule.getRideEndDate(),
-                    vehicleSchedule.getVehicleStatus(),
-                    vehicleSchedule.getVehicleRegID()
-            ));
+            list.add(new VehicleScheduleDTO(vehicleSchedule.getRideStartDate(), vehicleSchedule.getRideEndDate(), vehicleSchedule.getVehicleStatus(), vehicleSchedule.getVehicleRegID()));
         }
         return list;
     }

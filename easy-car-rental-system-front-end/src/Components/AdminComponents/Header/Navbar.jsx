@@ -1,31 +1,29 @@
 import React from 'react';
-import {AppBar, Box, Button, makeStyles, Menu, MenuItem, Toolbar, Typography} from "@material-ui/core";
-import Profile from "./Navtabs/Profile";
+import {AppBar, Box, Hidden, IconButton, Toolbar, Typography} from "@material-ui/core";
+import Profile from "./navtabs/Profile";
+import Notification from "./navtabs/Notification";
+import {useStyles} from "./HeaderStyles";
+import MenuIcon from "@material-ui/icons/Menu";
 
-const useStyles = makeStyles((theme) => ({
-    toolbar: {
-        display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "space-between",
-    },
-    logo: {
-        color: "white",
-    }
-}))
-
-export default function Navbar() {
+export default function Navbar({ handleDrawerOpen }) {
     const classes = useStyles()
-    return (
-        <AppBar position="static">
+    return (<AppBar position="static">
             <Toolbar className={classes.toolbar}>
                 <Typography variant="h6" className={classes.logo}>
                     Admin Dashboard
                 </Typography>
-                <Box>
-                    <Profile/>
-                </Box>
+                <Hidden smDown>
+                    <Box style={{ display: "flex" }}>
+                        <Notification />
+                        <Profile />
+                    </Box>
+                </Hidden>
+                <Hidden mdUp>
+                    <IconButton color='inherit' onClick={handleDrawerOpen}>
+                        <MenuIcon/>
+                    </IconButton>
+                </Hidden>
             </Toolbar>
-        </AppBar>
-    )
+        </AppBar>)
 }
 

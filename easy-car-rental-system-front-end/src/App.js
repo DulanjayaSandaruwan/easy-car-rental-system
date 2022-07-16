@@ -1,10 +1,9 @@
 import './App.css';
-import HeaderComponent from './Components/AdminComponents/Header/HeaderComponent';
-import Navbar from './Components/AdminComponents/Header/Navbar';
+import HeaderComponent from './components/adminComponents/header/HeaderComponent';
 
 function App() {
   return (
-    <Navbar/>
+    <HeaderComponent/>
   );
 }
 

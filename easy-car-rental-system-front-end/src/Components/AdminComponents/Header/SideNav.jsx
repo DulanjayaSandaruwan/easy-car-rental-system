@@ -1,6 +1,7 @@
 import React from "react";
-import {Drawer, Hidden, Typography} from "@material-ui/core";
+import {Drawer, Hidden} from "@material-ui/core";
 import {useStyles} from "./HeaderStyles";
+import SideNavData from "./SideNavData";
 
 export default function Sidenav() {
     const classes = useStyles();
@@ -23,7 +24,7 @@ export default function Sidenav() {
                     ModalProps={{
                         keepMounted: true, // Better open performance on mobile.
                     }}>
-                    <Typography variant="h6">Hello Dulan !</Typography>
+                    <SideNavData/>
                 </Drawer>
             </Hidden>
             <Hidden xsDown implementation='css'>
@@ -33,7 +34,7 @@ export default function Sidenav() {
                     }}
                     variant='permanent'
                     open>
-                    <Typography variant="h6">Hello Sonali !</Typography>
+                    <SideNavData/>
                 </Drawer>
             </Hidden>
         </nav>

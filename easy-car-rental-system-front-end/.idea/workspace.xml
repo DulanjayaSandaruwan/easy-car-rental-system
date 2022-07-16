@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3ca0e-e54b-49f7-ac10-4cba118b2c2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/HeaderStyles.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Images/dp.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/image/dp.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/Navtabs/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/Navtabs/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/HeaderStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/SideNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/SideNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AdminComponents/Header/SideNavData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AdminComponents/Header/SideNavData.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,17 +27,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE Studies/IJSE Official Projects/3rd Semester/spring-mvc-easy-car-rental-system/easy-car-rental-system-front-end&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/IJSE Studies/IJSE Official Projects/3rd Semester/spring-mvc-easy-car-rental-system/easy-car-rental-system-front-end",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2021.3.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IJSE Studies\IJSE Official Projects\3rd Semester\spring-mvc-easy-car-rental-system\easy-car-rental-system-front-end\src\Components\AdminComponents" />
@@ -56,6 +56,7 @@
       <workItem from="1657907913034" duration="7543000" />
       <workItem from="1657950014240" duration="1635000" />
       <workItem from="1657951716350" duration="10811000" />
+      <workItem from="1657981172367" duration="13416000" />
     </task>
     <servers />
   </component>

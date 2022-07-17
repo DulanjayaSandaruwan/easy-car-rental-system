@@ -1,31 +1,32 @@
 import React from 'react'
-import {Box, Grid, makeStyles, Typography} from "@material-ui/core";
-import {blueGrey} from "@material-ui/core/colors";
-
-const useStyle = makeStyles((theme) => ({
-    section:{
-        marginTop:theme.spacing(3, 0),
-    },
-    //page
-    pageTitle:{
-        color:blueGrey["800"],
-        marginBottom:theme.spacing(2),
-        textTransform:"uppercase"
-    },
-}))
+import {Box, Button, Card, CardContent, Grid, Typography} from "@material-ui/core";
+import {PageHeader} from "../../../../common/CommonComponent";
+import {useStyle} from "../BodyStyle";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Home() {
     const classes = useStyle();
     return (<Box>
-            {/*section title*/}
-            {/*section card*/}
-            {/*section graph*/}
-            {/*section posts*/}
+        {/*section title*/}
+        {/*section card*/}
+        {/*section graph*/}
+        {/*section posts*/}
+        <PageHeader label="Home" pageTitle="Overview"/>
 
-            <Grid>
-                <Grid item xs={12} sm={12}>
-                    <Typography variant='h5' className={classes.pageTitle}>Home</Typography>
-                </Grid>
+        <Grid container>
+            <Grid item xs={6} sm={3}>
+                <Card>
+                    <CardContent>
+                        <Typography variant="body2" className={classes.cardLable}>Vehicles</Typography>
+                        <Typography variant="h5" component="h6" className={classes.cardTitle}>50</Typography>
+                        <Typography component="p" style={{textAlign: "center", marginBottom: "0px"}}>
+                            <Button size="small" className={classes.ratioBtn}
+                                    startIcon={<ArrowDropDownIcon/>}>5%</Button>
+                        </Typography>
+                    </CardContent>
+                </Card>
             </Grid>
-        </Box>);
+        </Grid>
+
+    </Box>);
 }

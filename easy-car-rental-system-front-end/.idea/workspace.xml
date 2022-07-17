@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcb3ca0e-e54b-49f7-ac10-4cba118b2c2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IJSE Studies\IJSE Official Projects\3rd Semester\spring-mvc-easy-car-rental-system\easy-car-rental-system-front-end\src" />
       <recent name="D:\IJSE Studies\IJSE Official Projects\3rd Semester\spring-mvc-easy-car-rental-system\easy-car-rental-system-front-end\src\Components\AdminComponents" />
     </key>
   </component>
@@ -55,6 +54,7 @@
       <workItem from="1657981172367" duration="13416000" />
       <workItem from="1658033469137" duration="424000" />
       <workItem from="1658033905627" duration="10638000" />
+      <workItem from="1658062426734" duration="7644000" />
     </task>
     <servers />
   </component>

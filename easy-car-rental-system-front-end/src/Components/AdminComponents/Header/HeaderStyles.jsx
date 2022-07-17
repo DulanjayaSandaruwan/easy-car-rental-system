@@ -28,7 +28,7 @@ export const useStyles = makeStyles((theme) => ({
         // minHeight: "100vh",
         // height: "auto",
         // background: "#efefef",
-        // marginTop: "60px,"
+        // marginTop: "60px",
         padding: theme.spacing(2, 2, 0, 34),
         [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(2, 2),

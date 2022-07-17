@@ -9,35 +9,44 @@ export const useStyle = makeStyles((theme) => ({
 
     //page
     pageTitle: {
-        color: blueGrey["800"],
-        marginBottom: theme.spacing(2),
-        textTransform: "uppercase"
+        color: blueGrey["800"], marginBottom: theme.spacing(2), textTransform: "uppercase"
     }, pageSubTitle: {
-        color: blueGrey["500"],
-        margin: theme.spacing(1, 0),
+        color: blueGrey["500"], margin: theme.spacing(1, 0),
     },
 
     // Home
-    cardLable:{
+    cardLable: {
         textTransform: "uppercase",
-        color: blueGrey[500],
+        color: "#fff",
         textAlign: "center",
         margin: theme.spacing(1, 0),
-        [theme.breakpoints.down("xs")]:{
-          fontsize: "0.8rem",
+        [theme.breakpoints.down("xs")]: {
+            fontsize: "0.8rem",
         },
     },
-    cardTitle:{
+    cardTitle: {
         textTransform: "capitalize",
-        color: blueGrey[800],
+        color: "#fff",
         textAlign: "center",
         margin: theme.spacing(1, 0),
-        [theme.breakpoints.down("xs")]:{
+        [theme.breakpoints.down("xs")]: {
             fontsize: "1.8rem",
         },
     },
-    ratioBtn:{
-        fontsize: "1rem",
-        fontWeight: "bold"
+    card1: {
+        backgroundColor: "#028EA0",
+        borderRadius: "10px",
+    },
+    card2: {
+        backgroundColor: "#0589C4",
+        borderRadius: "10px",
+    },
+    card3: {
+        backgroundColor: "#EAC934",
+        borderRadius: "10px",
+    },
+    card4: {
+        backgroundColor: "#EA3F79",
+        borderRadius: "10px",
     },
 }))

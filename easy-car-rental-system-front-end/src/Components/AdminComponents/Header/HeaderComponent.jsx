@@ -1,28 +1,32 @@
 import React from 'react'
 import Navbar from "./Navbar";
 import Sidenav from "./SideNav";
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import ManageCar from "../bodyComponents/ManageCar";
-import {Box} from "@material-ui/core";
 import {useStyles} from "./HeaderStyles";
 import ManageDriver from "../bodyComponents/ManageDriver";
 import Home from "../bodyComponents/home/Home";
 import ManageCustomer from "../bodyComponents/ManageCustomer";
+import {Box} from "@mui/material";
 
 export default function HeaderComponent() {
-    const classes = useStyles();
+    const classes = useStyles()
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const handleDrawerOpen = () => {
+        setMobileOpen(!mobileOpen);
+    }
     return (
         <div>
-            <Navbar/>
-            <Sidenav/>
+            <Navbar handleDrawerOpen={handleDrawerOpen}/>
+            <Sidenav mobileOpen={mobileOpen} handleDrawerOpen={handleDrawerOpen}/>
             <Box className={classes.wrapper}>
                 <Routes>
-                    <Route exact path="/" render={() => <Home/>}/>
-                    <Route exact path="/manageCar" render={() => <ManageCar/>}/>
-                    <Route exact path="/manageDriver" render={() => <ManageDriver/>}/>
-                    <Route exact path="/manageCustomer" render={() => <ManageCustomer/>}/>
+                    <Route exact path="/" element={<Home/>}/>
+                    <Route exact path="/manageCar" element={<ManageCar/>}/>
+                    <Route exact path="/manageDriver" element={<ManageDriver/>}/>
+                    <Route exact path="/manageCustomer" element={<ManageCustomer/>}/>
                 </Routes>
             </Box>
         </div>
-    )
+    );
 }

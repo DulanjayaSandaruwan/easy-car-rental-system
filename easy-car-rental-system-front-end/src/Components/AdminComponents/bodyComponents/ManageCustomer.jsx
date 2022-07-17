@@ -5,5 +5,5 @@ export default function ManageCustomer() {
     <div>
       <h1>Manage Customer</h1>
     </div>
-  )
+  );
 }

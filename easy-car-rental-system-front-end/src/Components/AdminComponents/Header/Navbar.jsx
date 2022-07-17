@@ -5,7 +5,7 @@ import Notification from "./navtabs/Notification";
 import {useStyles} from "./HeaderStyles";
 import MenuIcon from "@material-ui/icons/Menu";
 
-export default function Navbar({ handleDrawerOpen }) {
+export default function Navbar({handleDrawerOpen}) {
     const classes = useStyles()
     return (<AppBar position="static">
             <Toolbar className={classes.toolbar}>

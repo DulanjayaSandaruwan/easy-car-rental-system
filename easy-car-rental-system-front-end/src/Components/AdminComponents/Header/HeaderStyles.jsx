@@ -28,22 +28,21 @@ export const useStyles = makeStyles((theme) => ({
         // minHeight: "100vh",
         // height: "auto",
         // background: "#efefef",
-        // marginTop: "60px",
-        // padding: theme.spacing(2, 2, 0, 34),
-        // [theme.breakpoints.down("sm")]: {
-        //     padding: theme.spacing(2, 2),
-        //     marginTop: "45px",
-        // },
-        padding: theme.spacing(2, 2, 0, 32),
+        // marginTop: "60px,"
+        padding: theme.spacing(2, 2, 0, 34),
+        [theme.breakpoints.down("sm")]: {
+            padding: theme.spacing(2, 2),
+            marginTop: "45px",
+        },
     },
 
     //Side nav
     drawerPaper: {
         width: "250px",
         marginTop: "65px",
-        // [theme.breakpoints.down("sm")]: {
-        //     marginTop: "0px",
-        // },
+        [theme.breakpoints.down("sm")]: {
+            marginTop: "0px",
+        },
     },
 
     navLinks: {
@@ -63,8 +62,8 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
 
-    // navButton: {
-    //     width: " 100%",
-    //     textTransform: "capitalize",
-    // },
+    navButton: {
+        width: " 100%",
+        textTransform: "capitalize",
+    },
 }));

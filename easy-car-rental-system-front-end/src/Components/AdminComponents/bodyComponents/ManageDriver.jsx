@@ -5,5 +5,5 @@ export default function ManageDriver() {
     <div>
       <h1>Manage Driver</h1>
     </div>
-  )
+  );
 }

@@ -5,5 +5,5 @@ export default function ManageCar() {
     <div>
       <h1>Manage Car</h1>
     </div>
-  )
+  );
 }

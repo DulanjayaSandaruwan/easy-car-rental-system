@@ -36,17 +36,21 @@ export const useStyle = makeStyles((theme) => ({
     card1: {
         backgroundColor: "#028EA0",
         borderRadius: "10px",
-    },
+        boxShadow: "3px 3px #B2C8DF",
+},
     card2: {
         backgroundColor: "#0589C4",
         borderRadius: "10px",
+        boxShadow: "3px 3px #B2C8DF",
     },
     card3: {
-        backgroundColor: "#EAC934",
+        backgroundColor: "#FAC213",
         borderRadius: "10px",
+        boxShadow: "3px 3px #B2C8DF",
     },
     card4: {
         backgroundColor: "#EA3F79",
         borderRadius: "10px",
+        boxShadow: "3px 3px #B2C8DF",
     },
 }))

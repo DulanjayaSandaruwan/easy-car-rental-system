@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Card, CardContent, Grid, Typography} from "@material-ui/core";
+import {Box, Card, CardContent, Divider, Grid, Typography} from "@material-ui/core";
 import {PageHeader} from "../../../../common/CommonComponent";
 import {useStyle} from "../BodyStyle";
 
@@ -9,7 +9,7 @@ export default function Home() {
     return (<Box>
         <PageHeader label="Home" pageTitle="Overview"/>
 
-        <Grid container spacing={5}>
+        <Grid container spacing={3}>
             <Grid item lg={3} md={3} sm={3} xm={3}>
                 <Card className={classes.card1}>
                     <CardContent>
@@ -43,6 +43,8 @@ export default function Home() {
                 </Card>
             </Grid>
         </Grid>
-
+        <Grid>
+            <Divider light/>
+        </Grid>
     </Box>);
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Registration</title>
+
+    <link href="../assets/img/logo.png" rel="icon">
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/registration.css" rel="stylesheet">
+
+</head>
+<body class="bgColor">
+<div class="container">
+    <div class="card shadow-lg o-hidden border-0 my-5 mb-5">
+        <div class="card-body p-0">
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-flex">
+                    <div class="flex-grow-1 bg-register-image">
+                        <div class="shadow" id="circle" style="position: relative; top: 105px; left: 20px;">
+                            <img src="../assets/img/logoBlack.png"
+                                 style="width: 190px; height: 170px; top: 20px; position: relative"></div>
+                        <h3 style="position: relative; top: 90px; left: 60px; color: black; font-family: Roboto,sans-serif">
+                            Easy Car Rental Service </h3>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h4 class="text-dark mb-5">Create an Account</h4>
+                        </div>
+
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtFullName" name="full_name"
+                                           placeholder="Full Name" type="text">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtAddress" name="user_address"
+                                           placeholder="Address" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtNICNumber" name="nic_number"
+                                           placeholder="NIC Number" type="text">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <!-- <input id="file" name="myFile" type="file" class="form-control"> -->
+                                    <input class="form-control form-control-user" id="txtNICImage" name="nic_image"
+                                           placeholder="NIC Image" type="file">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtContactNumber"
+                                           name="contact_number"
+                                           placeholder="Contact Number" type="text">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtPassword" name="user_password"
+                                           placeholder="Password" type="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input aria-describedby="emailHelp"
+                                       class="form-control form-control-user mb-4" id="txtEmail" name="user_email"
+                                       placeholder="Email Address" type="email">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtDLNumber"
+                                           name="DL_number"
+                                           placeholder="Driver License Number" type="text">
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <input class="form-control form-control-user" id="txtDLImage"
+                                           name="DL_image"
+                                           placeholder="Driver License Image" type="file">
+                                </div>
+                            </div>
+                            <button class="btn btn-block text-white btn-user mb-5 btnColor" type="button">
+                                <a id="btn_Register"> Register Account </a></button>
+                        </form>
+                        <div class="text-center"><a class="small" href="forgottenPassword.html">Forgot Password?</a>
+                        </div>
+                        <div class="text-center"><a class="small" href="login.html">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<!-- <script src="../js/login/Register.js"></script> -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

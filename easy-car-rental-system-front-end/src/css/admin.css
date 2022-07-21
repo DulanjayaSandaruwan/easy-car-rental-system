@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: #f39c12;
+    background-color: #003865;
 }
 .sidebar-brand-text{
     color: white;
@@ -34,10 +34,10 @@
 
 /*Customer*/
 #tblCustomerHeader{
-    background-color: #f39c12;
+    background-color: #33334f;
 }
 #tblProfile_Page{
-    background-color: #f39c12;
+    background-color: #33334f;
 }
 /*.......................*/
 .main-panel {
@@ -59,88 +59,88 @@
 }
 /*Profile page*/
 #admin_btn_change_pic{
-    background-color: #f39c12;
+    background-color: red;
     color: white;
 }
 #btnAdminSave{
-    background-color: #f39c12;
+    background-color: #009900;
     color: white;
 }
 #btnAdminDelete{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminUpdate{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #admin_name_title{
-    color: #f39c12;
+    color: #33334f;
 }
 #tblAdmin{
-    background-color: #f39c12;
+    background-color: #33334f;
 }
 #btnAdminCustomerDelete{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminCustomerSave{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminCustomerGetAll{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminCustomerUpdate{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #tblCarHeader{
-    background-color: #f39c12;
+    background-color: #33334f;
 }
 #btnAdminCarUpdate{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminCarSave{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminCarDelete{
-     background-color: #f39c12;
+     background-color: #33334f;
      color: white;
 }
 #btnAdminCarGetAll{
-      background-color: #f39c12;
+      background-color: #33334f;
       color: white;
 }
 
 #btnAdminDriverSave{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminDriverUpdate{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminDriverDelete{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #btnAdminDriverGetAll{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #tblDriver{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #tblOrders{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }
 #tblPayment{
-    background-color: #f39c12;
+    background-color: #33334f;
     color: white;
 }

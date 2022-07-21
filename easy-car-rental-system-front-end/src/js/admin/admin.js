@@ -8,7 +8,7 @@ $('#btn_mainPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -36,7 +36,7 @@ $('#btn_ProfilePage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -61,7 +61,7 @@ $('#btn_CustomerPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'block'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -78,7 +78,7 @@ $('#btn_CustomerPage').click(function () {
     // getCustomerDLIC();
 });
 
-$('#btn_CarPage').click(function () {
+$('#btn_VehiclePage').click(function () {
     $('#admin_Home_Page').css({
         'display': 'none'
     });
@@ -88,7 +88,7 @@ $('#btn_CarPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'block'
     });
     $('#admin_Driver_Page').css({
@@ -116,7 +116,7 @@ $('#btn_DriverPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -142,7 +142,7 @@ $('#btn_OrderPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -167,7 +167,7 @@ $('#btn_PaymentPage').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({
@@ -191,7 +191,7 @@ $('#btnAdminProfile').click(function () {
     $('#admin_Customer_Page').css({
         'display': 'none'
     });
-    $('#admin_Car_Page').css({
+    $('#admin_vehicle_Page').css({
         'display': 'none'
     });
     $('#admin_Driver_Page').css({

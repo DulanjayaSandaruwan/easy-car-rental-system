@@ -42,7 +42,7 @@
                          style="position:absolute; top: 7px; left: 125px; width: 30px; height: 30px;">
                 </li>
                 <li class="nav-item">
-                    <a class="text-white nav-link" id="btn_CarPage" style="cursor: pointer">Car</a>
+                    <a class="text-white nav-link" id="btn_VehiclePage" style="cursor: pointer">Car</a>
                     <img src="../assets/icon/admin/icons8_car_64.png"
                          style="position:absolute; top: 7px; left: 125px; width: 30px; height: 30px;">
                 </li>
@@ -128,7 +128,7 @@
                                     <div class="row align-items-center no-gutters">
                                         <div class="col mr-2">
                                             <div class="text-uppercase text-light font-weight-bold text-xs mb-1">
-                                                <span>Cars</span>
+                                                <span>Vehicles</span>
                                             </div>
                                             <div class="text-light font-weight-bold h5 mb-0"><span
                                                     id="txtCarCount">15</span></div>
@@ -369,15 +369,403 @@
 
             <!--  Start Admin Customer Page-->
             <div id="admin_Customer_Page" style="display: none">
-                <h1>customer</h1>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4 mt-4">Customers</h3>
+                    <div class="col-lg-12 p-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow mb-3">
+                                    <div class="card-header py-3">
+                                        <p class="m-0 font-weight-bold">Customer Settings</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>NIC No</strong></label>
+                                                        <input class="form-control"
+                                                               id="custNicNo"
+                                                               name="id"
+                                                               onkeypress="searchCustomer(this)"
+                                                               placeholder="727423210V"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Name</strong></label>
+                                                        <input class="form-control"
+                                                               id="custName"
+                                                               name="name"
+                                                               placeholder="user.name"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Address</strong></label>
+                                                        <input class="form-control"
+                                                               id="custAddress"
+                                                               name="address"
+                                                               placeholder="user.address"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Email</strong></label>
+                                                        <input class="form-control"
+                                                               id="custEmail"
+                                                               name="email"
+                                                               placeholder="user@example.com"
+                                                               type="email">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Contact</strong></label>
+                                                        <input class="form-control"
+                                                               id="custContact"
+                                                               name="contact"
+                                                               placeholder="user.contact"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Driving License No</strong></label>
+                                                        <input class="form-control"
+                                                               id="custDLNo"
+                                                               name="dlNumber"
+                                                               placeholder="user.drivingLicenseNumber"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Status</strong></label>
+                                                        <input class="form-control"
+                                                               id="custStatus"
+                                                               name="status"
+                                                               placeholder="user.status"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <button class="btn  btn-sm" id="btnAdminCustomerUpdate" type="button">
+                                                    Update
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="table-box" style="height: 250px; overflow: hidden">
+                        <div class="table-responsive-lg">
+                            <table class="table table-hover">
+                                <thead class="text-white" id="tblCustomerHeader">
+                                <tr>
+                                    <th scope="col">NIC No</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">E-Mail</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Driving Licence No</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tblCustomerBody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--  End Admin Customer Page-->
 
-            <!--  Start Admin Car Page-->
-            <div id="admin_Car_Page" style="display: none">
-                <h1>car</h1>
+            <!--  Start Admin Vehicle Page-->
+            <div id="admin_vehicle_Page" style="display: none">
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4 mt-4">Cars</h3>
+                    <div class="col-lg-12 p-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow mb-3">
+                                    <div class="card-header py-3">
+                                        <p class="m-0 font-weight-bold">Cars Settings</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>ID</strong></label>
+                                                        <input
+                                                                class="form-control"
+                                                                id="adCarId"
+                                                                name="id"
+                                                                onkeypress="searchCar(this)"
+                                                                placeholder="C###"
+                                                                type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Brand</strong></label>
+
+                                                        <select class="custom-select mb-3" id="adCarBrand">
+                                                            <option selected>Car Brand</option>
+                                                            <option value="Dodge">Dodge</option>
+                                                            <option value="Chevrolet">Chevrolet</option>
+                                                            <option value="BM2">BM2</option>
+                                                            <option value="Hyundai">Hyundai</option>
+                                                            <option value="Mazda">Mazda</option>
+                                                            <option value="Toyota">Toyota</option>
+                                                            <option value="Volvo">Volvo</option>
+                                                            <option value="Tesla">Tesla</option>
+                                                            <option value="Audi">Audi</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Color</strong></label>
+                                                        <select class="custom-select mb-3" id="adCarColor">
+                                                            <option selected>Car Color</option>
+                                                            <option value="Red">Red</option>
+                                                            <option value="Black">Black</option>
+                                                            <option value="White">White</option>
+                                                            <option value="Blue">Blue</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Type</strong></label>
+                                                        <select class="custom-select mb-3" id="adCarType">
+                                                            <option selected>Car Type</option>
+                                                            <option value="General">General</option>
+                                                            <option value="Premium">Premium</option>
+                                                            <option value="Luxury">Luxury</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Passengers</strong></label>
+                                                        <select class="custom-select mb-3" id="adCarPassengers">
+                                                            <option selected>Passengers</option>
+                                                            <option value=2>2</option>
+                                                            <option value=4>4</option>
+                                                            <option value=5>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>ID</strong></label>
+                                                        <input
+                                                                class="form-control"
+                                                                id="adCarId"
+                                                                name="id"
+                                                                onkeypress="searchCar(this)"
+                                                                placeholder="C###"
+                                                                type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Fuel Type</strong></label>
+                                                        <select class="custom-select mb-3" id="adCarFuel">
+                                                            <option selected>Fuel</option>
+                                                            <option value="Diesel">Diesel</option>
+                                                            <option value="prechtel">prechtel</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Price For Extra KM</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarExtraKm"
+                                                               name="extra_km"
+                                                               placeholder="car.extra km"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Registration No</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarRegistration"
+                                                               name="reg"
+                                                               placeholder="car.reg"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Daily Rate</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarDailyRate"
+                                                               name="daily"
+                                                               placeholder="car.daily"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Monthly Rate</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarMonthlyRate"
+                                                               name="monthly"
+                                                               placeholder="car.monthly"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Free Millage Price</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarMillagePrice"
+                                                               name="millage"
+                                                               placeholder="car.millage"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Free Millage Duration</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarDuration"
+                                                               name="duration"
+                                                               placeholder="car.duration"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Daily Rate</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarDailyRate"
+                                                               name="daily"
+                                                               placeholder="car.daily"
+                                                               type="file">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Monthly Rate</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarMonthlyRate"
+                                                               name="monthly"
+                                                               placeholder="car.monthly"
+                                                               type="file">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Free Millage Price</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarMillagePrice"
+                                                               name="millage"
+                                                               placeholder="car.millage"
+                                                               type="file">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Free Millage Duration</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCarDuration"
+                                                               name="duration"
+                                                               placeholder="car.duration"
+                                                               type="file">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-2">
+                                                <button class="btn  btn-sm" id="btnAdminCarSave" type="button">Save
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnAdminCarUpdate" type="button">
+                                                    Update
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnAdminCarDelete" type="button">
+                                                    Delete
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnAdminCarGetAll" type="button"> Get
+                                                    All
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-box" style="height: 250px; overflow: hidden">
+                        <div class="table-responsive-lg">
+                            <table class="table table-hover">
+                                <thead class="text-white" id="tblCarHeader">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Reg No</th>
+                                    <th scope="col">Brand</th>
+                                    <th scope="col">No Of Passengers</th>
+                                    <th scope="col">Transmission</th>
+                                    <th scope="col">Car Type</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Fuel Type</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tblCarBody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--  End Admin Car Page-->
+            <!--  End Admin Vehicle Page-->
 
             <!-- Start Admin Driver Page -->
             <div id="admin_Driver_Page" style="display: none">

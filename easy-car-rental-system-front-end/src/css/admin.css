@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: #003865;
+    background-color: #384f82;
 }
 .sidebar-brand-text{
     color: white;
@@ -34,7 +34,7 @@
 
 /*Customer*/
 #tblCustomerHeader{
-    background-color: #33334f;
+    background-color: #2155CD;
 }
 #tblProfile_Page{
     background-color: #33334f;
@@ -71,7 +71,7 @@
     color: white;
 }
 #btnAdminUpdate{
-    background-color: #33334f;
+    background-color: #3399ff;
     color: white;
 }
 #admin_name_title{
@@ -89,11 +89,11 @@
     color: white;
 }
 #btnAdminCustomerGetAll{
-    background-color: #33334f;
+    background-color: #D61C4E;
     color: white;
 }
 #btnAdminCustomerUpdate{
-    background-color: #33334f;
+    background-color: #3399ff;
     color: white;
 }
 #tblCarHeader{

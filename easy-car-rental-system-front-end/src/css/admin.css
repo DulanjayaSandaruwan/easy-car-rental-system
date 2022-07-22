@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: #243A73;
+    background-color: #4B6587;
 }
 .sidebar-brand-text{
     color: white;
@@ -34,7 +34,7 @@
 
 /*Customer*/
 #tblCustomerHeader{
-    background-color: #151515;
+    background-color: #18978F;
 }
 #tblProfile_Page{
     background-color: #33334f;
@@ -80,14 +80,6 @@
 #tblAdmin{
     background-color: #33334f;
 }
-#btnAdminCustomerDelete{
-    background-color: #33334f;
-    color: white;
-}
-#btnAdminCustomerSave{
-    background-color: #33334f;
-    color: white;
-}
 #btnAdminCustomerGetAll{
     background-color: #D61C4E;
     color: white;
@@ -96,23 +88,27 @@
     background-color: #FF0063;
     color: white;
 }
+#btnAdminCustomerClear{
+    background-color: #B22727;
+    color: white;
+}
 #tblCarHeader{
-    background-color: #33334f;
+    background-color: #18978F;
 }
 #btnAdminCarUpdate{
-    background-color: #33334f;
+    background-color: #FF0063;
     color: white;
 }
 #btnAdminCarSave{
-    background-color: #33334f;
+    background-color: #3399ff;
     color: white;
 }
 #btnAdminCarDelete{
-     background-color: #33334f;
+     background-color: #B22727;
      color: white;
 }
-#btnAdminCarGetAll{
-      background-color: #33334f;
+#btnAdminCarClear{
+      background-color: #3CCF4E;
       color: white;
 }
 

@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: #4B6587;
+    background-color: #00092C;
 }
 .sidebar-brand-text{
     color: white;
@@ -111,32 +111,47 @@
       background-color: #3CCF4E;
       color: white;
 }
-
 #btnAdminDriverSave{
-    background-color: #33334f;
+    background-color: #3399ff;
     color: white;
 }
 #btnAdminDriverUpdate{
-    background-color: #33334f;
+    background-color: #FF0063;
     color: white;
 }
 #btnAdminDriverDelete{
-    background-color: #33334f;
+    background-color: #B22727;
     color: white;
 }
-#btnAdminDriverGetAll{
-    background-color: #33334f;
+#btnAdminDriverClear{
+    background-color: #3CCF4E;
     color: white;
 }
 #tblDriver{
-    background-color: #33334f;
+    background-color: #18978F;
     color: white;
 }
 #tblOrders{
-    background-color: #33334f;
+    background-color: #18978F;
     color: white;
 }
 #tblPayment{
-    background-color: #33334f;
+    background-color: #18978F;
+    color: white;
+}
+#btnPaymentClear{
+    background-color: #3CCF4E;
+    color: white;
+}
+#btnPaymentSave{
+    background-color: #3399ff;
+    color: white;
+}
+#btnPaymentUpdate{
+    background-color: #FF0063;
+    color: white;
+}
+#btnPaymentDelete{
+    background-color: #B22727;
     color: white;
 }

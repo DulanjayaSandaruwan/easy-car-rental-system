@@ -52,7 +52,7 @@
                          style="position:absolute; top: 7px; left: 125px; width: 30px; height: 30px;">
                 </li>
                 <li class="nav-item">
-                    <a class="text-white nav-link" id="btn_OrderPage" style="cursor: pointer">Orders</a>
+                    <a class="text-white nav-link" id="btn_OrderPage" style="cursor: pointer">Bookings</a>
                     <img src="../assets/icon/admin/icons8_Create_Order_64.png"
                          style="position:absolute; top: 7px; left: 125px; width: 30px; height: 30px;">
                 </li>
@@ -301,7 +301,7 @@
 
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label><strong>Email Address</strong></label>
+                                                            <label><strong>Email</strong></label>
                                                             <input
                                                                     class="form-control"
                                                                     id="adminEmail"
@@ -387,7 +387,6 @@
                                                         <input class="form-control"
                                                                id="custNicNo"
                                                                name="id"
-                                                               onkeypress="searchCustomer(this)"
                                                                placeholder="727423210V"
                                                                type="text">
                                                     </div>
@@ -629,9 +628,6 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
-
-                                            <div class="form-row">
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label><strong>Monthly Rate</strong></label>
@@ -642,7 +638,9 @@
                                                                type="text">
                                                     </div>
                                                 </div>
+                                            </div>
 
+                                            <div class="form-row">
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label><strong>Free KM For a Day</strong></label>
@@ -672,6 +670,17 @@
                                                                id="adPriceForExtraKm"
                                                                name="priceForExtraKm"
                                                                placeholder="Price For Extra KM"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Vehicle Status</strong></label>
+                                                        <input class="form-control"
+                                                               id="adVehicleStatus"
+                                                               name="vehicleStatus"
+                                                               placeholder="Status"
                                                                type="text">
                                                     </div>
                                                 </div>
@@ -748,12 +757,13 @@
                             <table class="table table-hover">
                                 <thead class="text-white" id="tblCarHeader">
                                 <tr>
-                                    <th scope="col">Reg No</th>
+                                    <th scope="col">Reg ID</th>
                                     <th scope="col">Brand</th>
                                     <th scope="col">No Of Passengers</th>
                                     <th scope="col">Transmission</th>
                                     <th scope="col">Color</th>
                                     <th scope="col">Fuel Type</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                                 </thead>
                                 <tbody id="tblCarBody">
@@ -808,21 +818,11 @@
                                                         <input class="form-control"
                                                                id="adDriverName"
                                                                name="name"
-                                                               placeholder="driver.name"
+                                                               placeholder="Name"
                                                                type="text">
                                                     </div>
                                                 </div>
 
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label><strong>Contact</strong></label>
-                                                        <input class="form-control"
-                                                               id="adDriverContact"
-                                                               name="contact"
-                                                               placeholder="07#"
-                                                               type="text">
-                                                    </div>
-                                                </div>
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label><strong>Email</strong></label>
@@ -833,56 +833,68 @@
                                                                type="email">
                                                     </div>
                                                 </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Contact</strong></label>
+                                                        <input class="form-control"
+                                                               id="adDriverContact"
+                                                               name="contact"
+                                                               placeholder="0769654764"
+                                                               type="text">
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label><strong>Monthly Rate</strong></label>
+                                                        <label><strong>Driver License Number</strong></label>
                                                         <input class="form-control"
-                                                               id="adMonthlyRate"
-                                                               name="MonthlyRate"
-                                                               placeholder="Monthly Rate (Rs)"
+                                                               id="adDriverLicenseNumber"
+                                                               name="DLicenseNumber"
+                                                               placeholder="Driver License Number"
                                                                type="text">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label><strong>Free KM For a Day</strong></label>
+                                                        <label><strong>Driver License Image</strong></label>
                                                         <input class="form-control"
-                                                               id="adFreeKmForDay"
-                                                               name="freeKmForDay"
-                                                               placeholder="Free KM For a Day"
-                                                               type="text">
+                                                               id="adDriverLicenseImage"
+                                                               name="DLicenseImage"
+                                                               placeholder="Driver License Image"
+                                                               type="file">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label><strong>Free KM For a Month</strong></label>
+                                                        <label><strong>Password</strong></label>
                                                         <input class="form-control"
-                                                               id="adFreeKmForMonth"
-                                                               name="freeKmForMonth"
-                                                               placeholder="Free KM For a Month"
-                                                               type="text">
+                                                               id="adPassword"
+                                                               name="password"
+                                                               placeholder="####"
+                                                               type="password">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label><strong>Price For Extra KM</strong></label>
+                                                        <label><strong>Driver Status</strong></label>
                                                         <input class="form-control"
-                                                               id="adPriceForExtraKm"
-                                                               name="priceForExtraKm"
-                                                               placeholder="Price For Extra KM"
+                                                               id="adDriverStatus"
+                                                               name="driverStatus"
+                                                               placeholder="Status"
                                                                type="text">
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="form-group mb-2">
-                                                <button class="btn  btn-sm" id="btnAdminDriverSave" type="button">Save
+                                            <div class="form-group mb-2 text-right">
+                                                <button class="btn  btn-sm" id="btnAdminDriverSave" type="button">
+                                                    Save
                                                 </button>
                                                 <button class="btn  btn-sm" id="btnAdminDriverUpdate" type="button">
                                                     Update
@@ -890,9 +902,8 @@
                                                 <button class="btn  btn-sm" id="btnAdminDriverDelete" type="button">
                                                     Delete
                                                 </button>
-                                                <button class="btn  btn-sm" id="btnAdminDriverGetAll" type="button">
-                                                    Get
-                                                    All
+                                                <button class="btn  btn-sm" id="btnAdminDriverClear" type="button">
+                                                    Clear
                                                 </button>
                                             </div>
                                         </form>
@@ -902,17 +913,16 @@
                         </div>
                     </div>
 
-
                     <div class="table-box" style="height: 250px; overflow: hidden">
                         <div class="table-responsive-lg">
                             <table class="table table-hover">
                                 <thead class="text-white" id="tblDriver">
                                 <tr>
-                                    <th scope="col">ID</th>
+                                    <th scope="col">NIC No</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">NIC</th>
-                                    <th scope="col">Contact</th>
                                     <th scope="col">Email</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Status</th>
                                 </tr>
                                 </thead>
                                 <tbody id="tblDriverBody">
@@ -923,19 +933,138 @@
                     </div>
                 </div>
             </div>
-            <!--  End Admin Customer Page-->
+            <!--  End Admin Driver Page-->
 
-            <!-- Start Admin Driver Page -->
+            <!-- Start Admin Order Page -->
             <div id="admin_Order_Page" style="display: none">
-                <h1>order</h1>
-            </div>
-            <!--  End Admin Customer Page-->
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4 mt-4">Bookings</h3>
+                    <div class="table-box" style="height: 250px; overflow: hidden">
+                        <div class="table-responsive-lg">
+                            <table class="table table-hover">
+                                <thead class="text-white" id="tblOrders">
+                                <tr>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Vehicle Reg ID</th>
+                                    <th scope="col">Driver NIC Number</th>
+                                    <th scope="col">Customer NIC Number</th>
+                                    <th scope="col">Booking Status</th>
+                                    <th scope="col">Rent Status</th>
+                                    <th scope="col">Rent Date</th>
+                                    <th scope="col">Return Status</th>
+                                    <th scope="col">Return Date</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tblOrderBody">
 
-            <!-- Start Admin Driver Page -->
-            <div id="admin_Payment_Page" style="display: none">
-                <h1>payment</h1>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--  End Admin Customer Page-->
+            <!--  End Admin Order Page-->
+
+            <!-- Start Admin Payment Page -->
+            <div id="admin_Payment_Page" style="display: none">
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4 mt-4">Payments</h3>
+                    <div class="col-lg-12 p-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow mb-3">
+                                    <div class="card-header py-3">
+                                        <p class="m-0 font-weight-bold">Payment Settings</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Payment ID</strong></label>
+                                                        <input class="form-control"
+                                                               id="adPaymentID"
+                                                               name="id"
+                                                               placeholder="P###"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Final Payment</strong></label>
+                                                        <input class="form-control"
+                                                               id="adFinalPayment"
+                                                               name="finalPayment"
+                                                               placeholder="Final Payment"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Customer NIC Number</strong></label>
+                                                        <input class="form-control"
+                                                               id="adCustomerNICNumber"
+                                                               name="customerNICNumber"
+                                                               placeholder="244545#"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label><strong>Booking ID</strong></label>
+                                                        <input class="form-control"
+                                                               id="adBookingID"
+                                                               name="bookingID"
+                                                               placeholder="B###"
+                                                               type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group mb-2 text-right">
+                                                <button class="btn  btn-sm" id="btnPaymentSave" type="button">
+                                                    Save
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnPaymentUpdate" type="button">
+                                                    Update
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnPaymentDelete" type="button">
+                                                    Delete
+                                                </button>
+                                                <button class="btn  btn-sm" id="btnPaymentClear" type="button">
+                                                    Clear
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-box" style="height: 250px; overflow: hidden">
+                        <div class="table-responsive-lg">
+                            <table class="table table-hover">
+                                <thead class="text-white" id="tblPayment">
+                                <tr>
+                                    <th scope="col">Payment ID</th>
+                                    <th scope="col">Final Payment</th>
+                                    <th scope="col">Customer NIC No</th>
+                                    <th scope="col">Booking ID</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tblPaymentBody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  End Admin Payment Page-->
 
         </div>
     </div>

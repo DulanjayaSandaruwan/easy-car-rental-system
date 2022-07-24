@@ -11,9 +11,9 @@
     <link href="../css/customer.css" rel="stylesheet">
 
 </head>
-<body>
+<body style="overflow-x: hidden">
 
-<div class="navbar m-0 p-0" style="background-color: #33334f">
+<div class="navbar m-0 p-0" style="background-color: #00AFC1">
     <div class="m-0 p-0 ml-2"><img id="admin_logo" src="../assets/img/logo.png"></div>
     <div class="text-white position-absolute" id="title">Easy Car Rental</div>
     <div><a class="text-white" id="btnCustProfile" style="cursor: pointer">Profile</a></div>
@@ -41,11 +41,11 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label><strong>ID</strong></label>
+                                                <label><strong>NIC Number</strong></label>
                                                 <input class="form-control"
-                                                       id="custId"
+                                                       id="custNICNumber"
                                                        name="id"
-                                                       placeholder="C###"
+                                                       placeholder="###"
                                                        type="text"
                                                 >
                                             </div>
@@ -88,16 +88,6 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <label><strong>NIC</strong></label>
-                                                <input class="form-control"
-                                                       id="custNic"
-                                                       name="nic"
-                                                       placeholder="customer.nic"
-                                                       type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="form-group">
                                                 <label><strong>Driving License</strong></label>
                                                 <input class="form-control"
                                                        id="custDl"
@@ -127,9 +117,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-2">
+                                    <div class="form-group mb-2 text-right">
                                         <button class="btn  ml-2 btn-sm text-white" id="btnCustomerUpdate"
-                                                style="background-color: #16a085"
+                                                style="background-color: #FF0063"
                                                 type="button">
                                             Update
                                         </button>
@@ -145,7 +135,7 @@
                                      width="170"/>
                                 <div class="mb-3">
                                     <button class="btn btn-sm mb-2 mt-2 text-white" id=btn_customer_change_pic"
-                                            style="background-color: #16a085" type="button">
+                                            style="background-color: red" type="button">
                                         Change Photo
                                     </button>
                                 </div>
@@ -158,5 +148,148 @@
     </div>
 </div>
 
+<div class="p-1" id="customer_Car_Page" style="display: none">
+    <h3 class="text-dark mt-3 mb-3" style="left: 44%; position: relative">All Vehicles</h3>
+    <div class="container-fluid">
+        <div class="table-box" style="height: 250px; overflow: hidden">
+            <div class="table-responsive-lg">
+                <table class="table table-hover">
+                    <thead class="text-white" id="tblCarHeader">
+                    <tr>
+                        <th scope="col">Reg ID</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">No Of Passengers</th>
+                        <th scope="col">Transmission Type</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Fuel Type</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblCarBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-1" id="custOrderPage" style="display: none">
+    <div class="container-fluid mt-1">
+        <h3 class="text-dark mt-3 mb-4" style="left: 44%; position: relative">Booking Vehicle</h3>
+
+        <div class="row">
+            <div class="col-2">
+                <div class="form-group">
+                    <label><strong>Booking ID</strong></label>
+                    <input
+                            class="form-control"
+                            id="custBookingID"
+                            name="id"
+                            placeholder="B###"
+                            type="text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="custom-select mb-3" id="driver">
+                    <option selected>Driver</option>
+                    <option value="withoutDriver">Without Driver</option>
+                    <option value="D001">D001</option>
+                </select>
+            </div>
+
+            <label class="mt-2" style="margin-right: 5px; margin-left: 10px">Rent Date</label>
+            <div class="col-2">
+                <div class="form-inline">
+                    <input class="form-control" id="pickUpDate" type="date">
+                </div>
+            </div>
+
+            <label class="mt-2" style="margin-right: 5px;">Return Date</label>
+            <div class="col-2 " style="margin-right: 10px">
+                <div class="form-inline">
+                    <input class="form-control" id="returnDate" type="date">
+                </div>
+            </div>
+
+            <div class="col-2" style="margin-right:20px">
+                <select class="custom-select mb-3" id="carType">
+                    <option selected>Car Type</option>
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+            </div>
+
+            <div class="col-2">
+                <div style="width: 100%; text-align: right">
+                    <input class="form-control"
+                           id="carid"
+                           placeholder="CR###"
+                           type="text">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="table-box p-1" style="height: auto; overflow: hidden">
+            <div class="table-responsive-lg">
+                <table class="table table-hover">
+                    <thead class="text-white" id="tblCustOrder">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">No Of Passengers</th>
+                        <th scope="col">Transmission</th>
+                        <th scope="col">Car Type</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Fuel Type</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblOrderBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2" style="display: none">
+                <div class="form-group">
+                    <label><strong>Total</strong></label>
+                    <input
+                            class="form-control"
+                            id="Total"
+                            name="total"
+                            placeholder="Rs."
+                            type="text">
+                </div>
+            </div>
+            <div class="col-2" style="display: none">
+                <div class="form-group">
+                    <label><strong>carPrice</strong></label>
+                    <input
+                            class="form-control"
+                            id="carPrice"
+                            name="total"
+                            placeholder="Rs."
+                            type="text">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div style="width: 100%; text-align: right">
+                <button class=" btn text-white" id="btnPlaceOrder" style="background-color: #16a085">Place Order
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/customer/customer.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -33,7 +33,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/1c85ac19-3004-47d2-8f45-c6247718c5c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1c85ac19-3004-47d2-8f45-c6247718c5c0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/config/JPAConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/META-INF/MANIFEST.MF" beforeDir="false" />
@@ -173,22 +172,6 @@
       <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/WEB-INF/lib/spring-webmvc-5.3.20.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/BMW 5 530e PHEV (1).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/BMW 5 530e PHEV/BMW 5 530e PHEV (1).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/BMW 5 530e PHEV (2).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/BMW 5 530e PHEV/BMW 5 530e PHEV (2).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/BMW 5 530e PHEV (3).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/BMW 5 530e PHEV/BMW 5 530e PHEV (3).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/BMW 5 530e PHEV (4).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/BMW 5 530e PHEV/BMW 5 530e PHEV (4).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Ford Fusion 2.0 Plug-in Hybrid (1).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Ford Fusion 2.0 Plug-in Hybrid/Ford Fusion 2.0 Plug-in Hybrid (1).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Ford Fusion 2.0 Plug-in Hybrid (2).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Ford Fusion 2.0 Plug-in Hybrid/Ford Fusion 2.0 Plug-in Hybrid (2).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Ford Fusion 2.0 Plug-in Hybrid (3).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Ford Fusion 2.0 Plug-in Hybrid/Ford Fusion 2.0 Plug-in Hybrid (3).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Ford Fusion 2.0 Plug-in Hybrid (4).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Ford Fusion 2.0 Plug-in Hybrid/Ford Fusion 2.0 Plug-in Hybrid (4).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Mercedes E-class E 350e Plug-In (1).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Mercedes E-class E 350e Plug-In/Mercedes E-class E 350e Plug-In (1).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Mercedes E-class E 350e Plug-In (2).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Mercedes E-class E 350e Plug-In/Mercedes E-class E 350e Plug-In (2).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Mercedes E-class E 350e Plug-In (3).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Mercedes E-class E 350e Plug-In/Mercedes E-class E 350e Plug-In (3).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Mercedes E-class E 350e Plug-In (4).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Mercedes E-class E 350e Plug-In/Mercedes E-class E 350e Plug-In (4).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Toyota Prius Prime 1.8 plug-in hybrid (1).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Toyota Prius Prime 1.8 plug-in hybrid/Toyota Prius Prime 1.8 plug-in hybrid (1).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Toyota Prius Prime 1.8 plug-in hybrid (2).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Toyota Prius Prime 1.8 plug-in hybrid/Toyota Prius Prime 1.8 plug-in hybrid (2).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Toyota Prius Prime 1.8 plug-in hybrid (3).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Toyota Prius Prime 1.8 plug-in hybrid/Toyota Prius Prime 1.8 plug-in hybrid (3).jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/target/BackEnd-1.0.0/uploads/Toyota Prius Prime 1.8 plug-in hybrid (4).jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/carImages/Toyota Prius Prime 1.8 plug-in hybrid/Toyota Prius Prime 1.8 plug-in hybrid (4).jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/WebAppInitializer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/advisor/AppAdvisor.class" beforeDir="false" />
@@ -456,6 +439,7 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/IJSE Studies/IJSE Official Projects/3rd Semester/spring-mvc-easy-car-rental-system",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -627,7 +611,7 @@
       <workItem from="1659460076651" duration="1593000" />
       <workItem from="1659496457826" duration="7000" />
       <workItem from="1659496471088" duration="4000" />
-      <workItem from="1659496503500" duration="811000" />
+      <workItem from="1659496503500" duration="1646000" />
     </task>
     <servers />
   </component>

@@ -82,7 +82,7 @@ $(document).ready(function () {
         aforhomeBtn.ariaCurrent = 'page';
         aforhomeBtn.href = "#homeSection";
         aforhomeBtn.innerHTML = "Home";
-        aforhomeBtn.className = "text-black text-decoration-none";
+        aforhomeBtn.className = "text-light text-decoration-none";
         homeBtn.append(aforhomeBtn);
 
         $(navBarItems).children('div:nth-child(2)').children('ul').append(homeBtn);
@@ -182,7 +182,7 @@ $(loginBtn).click(function () {
                             aforhomeBtn.ariaCurrent = 'page';
                             aforhomeBtn.href = "#adminSection";
                             aforhomeBtn.innerHTML = "Home";
-                            aforhomeBtn.className = "text-black text-decoration-none";
+                            aforhomeBtn.className = "text-light text-decoration-none";
                             homeBtn.append(aforhomeBtn);
                             $(homeBtn).click(function () {
                                 $(headerNav).css('display', 'block');
@@ -216,7 +216,7 @@ $(loginBtn).click(function () {
                             aforCustomerBtn.ariaCurrent = 'page';
                             aforCustomerBtn.href = "#";
                             aforCustomerBtn.innerHTML = "Customer";
-                            aforCustomerBtn.className = "text-black text-decoration-none";
+                            aforCustomerBtn.className = "text-light text-decoration-none";
                             customerBtn.append(aforCustomerBtn);
                             $(customerBtn).click(function () {
                                 getAllCustomers();
@@ -250,7 +250,7 @@ $(loginBtn).click(function () {
                             aforDriverBtn.ariaCurrent = 'page';
                             aforDriverBtn.href = "#";
                             aforDriverBtn.innerHTML = "Driver";
-                            aforDriverBtn.className = "text-black text-decoration-none";
+                            aforDriverBtn.className = "text-light text-decoration-none";
                             driverBtn.append(aforDriverBtn);
 
                             let driverTextFieldContainer = $("#driverTextFieldContainer");
@@ -299,7 +299,7 @@ $(loginBtn).click(function () {
                             aforCarBtn.ariaCurrent = 'page';
                             aforCarBtn.href = "#carSection";
                             aforCarBtn.innerHTML = "Car";
-                            aforCarBtn.className = "text-black text-decoration-none";
+                            aforCarBtn.className = "text-light text-decoration-none";
                             carBtn.append(aforCarBtn);
 
                             let carScheduleTableContainer = $("#carScheduleTableContainer");
@@ -362,7 +362,7 @@ $(loginBtn).click(function () {
                             aforIncomeBtn.ariaCurrent = 'page';
                             aforIncomeBtn.href = "#";
                             aforIncomeBtn.innerHTML = "Income";
-                            aforIncomeBtn.className = "text-black text-decoration-none";
+                            aforIncomeBtn.className = "text-light text-decoration-none";
                             incomeBtn.append(aforIncomeBtn);
                             $(incomeBtn).click(function () {
                                 setDataToIncomeTable();
@@ -399,7 +399,7 @@ $(loginBtn).click(function () {
                             aforBookingRequestBtn.ariaCurrent = 'page';
                             aforBookingRequestBtn.href = "#bookingRequestSection";
                             aforBookingRequestBtn.innerHTML = "Booking Request";
-                            aforBookingRequestBtn.className = "text-black text-decoration-none";
+                            aforBookingRequestBtn.className = "text-light text-decoration-none";
 
                             let bookingRequestTableContainer = $("#bookingRequestTableContainer");
                             let bookingRequestDetailsTableContainer = $("#bookingRequestDetailsTableContainer");
@@ -451,7 +451,7 @@ $(loginBtn).click(function () {
                             aforBookingBtn.ariaCurrent = 'page';
                             aforBookingBtn.href = "#";
                             aforBookingBtn.innerHTML = "Booking";
-                            aforBookingBtn.className = "text-black text-decoration-none";
+                            aforBookingBtn.className = "text-light text-decoration-none";
                             bookingBtn.append(aforBookingBtn);
 
                             let currentBookingsTableContainer = $("#currentBookingsTableContainer");
@@ -516,7 +516,7 @@ $(loginBtn).click(function () {
                             aforViewBookingBtn.ariaCurrent = 'page';
                             aforViewBookingBtn.href = "#";
                             aforViewBookingBtn.innerHTML = "View All Bookings";
-                            aforViewBookingBtn.className = "text-black text-decoration-none";
+                            aforViewBookingBtn.className = "text-light text-decoration-none";
                             viewAllBookingsBtn.append(aforViewBookingBtn);
                             let viewAllBookingInViewAllBookingSection = $("#viewAllBookingInViewAllBookingSection");
                             $(viewAllBookingsBtn).click(function () {
@@ -568,7 +568,7 @@ $(loginBtn).click(function () {
                             aforNotificationsBtn.ariaCurrent = 'page';
                             aforNotificationsBtn.href = "#notificationsForCustomer";
                             aforNotificationsBtn.innerHTML = "Notifications";
-                            aforNotificationsBtn.className = "text-black text-decoration-none";
+                            aforNotificationsBtn.className = "text-light text-decoration-none";
 
                             div1.append(aforNotificationsBtn);
 
@@ -682,7 +682,7 @@ $(loginBtn).click(function () {
                             aforhomeBtn.ariaCurrent = 'page';
                             aforhomeBtn.href = "#homeSection";
                             aforhomeBtn.innerHTML = "Home";
-                            aforhomeBtn.className = "text-black text-decoration-none";
+                            aforhomeBtn.className = "text-light text-decoration-none";
                             homeBtn.append(aforhomeBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(homeBtn);
 
@@ -718,7 +718,7 @@ $(loginBtn).click(function () {
                             aForViewCarsBtn.ariaCurrent = 'page';
                             aForViewCarsBtn.href = "#viewAllCarsInCustomerSection";
                             aForViewCarsBtn.innerHTML = "View Cars";
-                            aForViewCarsBtn.className = "text-black text-decoration-none";
+                            aForViewCarsBtn.className = "text-light text-decoration-none";
                             viewCarsBtn.append(aForViewCarsBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(viewCarsBtn);
 
@@ -770,7 +770,7 @@ $(loginBtn).click(function () {
                             aForViewMyBookingsBtn.ariaCurrent = 'page';
                             aForViewMyBookingsBtn.href = "#viewAllBookingsForCustomerSection";
                             aForViewMyBookingsBtn.innerHTML = "View My Bookings";
-                            aForViewMyBookingsBtn.className = "text-black text-decoration-none";
+                            aForViewMyBookingsBtn.className = "text-light text-decoration-none";
                             viewMyBookingsBtn.append(aForViewMyBookingsBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(viewMyBookingsBtn);
                             let viewBookingDetailsBtnInCustomer = $("#viewBookingDetailsBtnInCustomer");
@@ -818,7 +818,7 @@ $(loginBtn).click(function () {
                             aForMyAccountBtn.ariaCurrent = 'page';
                             aForMyAccountBtn.href = "#viewMyAccountForCustomerSection";
                             aForMyAccountBtn.innerHTML = "My Account";
-                            aForMyAccountBtn.className = "text-black text-decoration-none";
+                            aForMyAccountBtn.className = "text-light text-decoration-none";
                             myAccountBtn.append(aForMyAccountBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(myAccountBtn);
                             $(myAccountBtn).click(function () {
@@ -852,7 +852,7 @@ $(loginBtn).click(function () {
                             aForPlaceBookingRequestBtn.ariaCurrent = 'page';
                             aForPlaceBookingRequestBtn.href = "#placingBookingRequestInCustomer";
                             aForPlaceBookingRequestBtn.innerHTML = "Place Booking Request";
-                            aForPlaceBookingRequestBtn.className = "text-black text-decoration-none";
+                            aForPlaceBookingRequestBtn.className = "text-light text-decoration-none";
                             placeBookingRequestBtn.append(aForPlaceBookingRequestBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(placeBookingRequestBtn);
                             $(placeBookingRequestBtn).click(function () {
@@ -872,7 +872,7 @@ $(loginBtn).click(function () {
                             aforNotificationsBtn.ariaCurrent = 'page';
                             aforNotificationsBtn.href = "#notificationsForCustomer";
                             aforNotificationsBtn.innerHTML = "Notifications";
-                            aforNotificationsBtn.className = "text-black text-decoration-none";
+                            aforNotificationsBtn.className = "text-light text-decoration-none";
 
                             div1.append(aforNotificationsBtn);
 
@@ -955,7 +955,7 @@ $(loginBtn).click(function () {
                             aforDriverScheduleBtn.ariaCurrent = 'page';
                             aforDriverScheduleBtn.href = "#viewDriverScheduleInDriverSection";
                             aforDriverScheduleBtn.innerHTML = "Schedule";
-                            aforDriverScheduleBtn.className = "text-black text-decoration-none";
+                            aforDriverScheduleBtn.className = "text-light text-decoration-none";
                             driverScheduleBtn.append(aforDriverScheduleBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(driverScheduleBtn);
 
@@ -991,7 +991,7 @@ $(loginBtn).click(function () {
                             aforViewMyAccountBtn.ariaCurrent = 'page';
                             aforViewMyAccountBtn.href = "#viewDriverAccountSection";
                             aforViewMyAccountBtn.innerHTML = "My Acount";
-                            aforViewMyAccountBtn.className = "text-black text-decoration-none";
+                            aforViewMyAccountBtn.className = "text-light text-decoration-none";
                             viewMyAccountBtn.append(aforViewMyAccountBtn);
                             $(navBarItems).children('div:nth-child(2)').children('ul').append(viewMyAccountBtn);
 
@@ -1356,6 +1356,4 @@ function checkWhetherCarIsAlreadyBookedOrNot(regNo) {
 
     })
     return car;
-
-
 }

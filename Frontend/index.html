@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Car Rental System</title>
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="/assets/css/stylesheet.css" rel="stylesheet">
+</head>
+<body class="overflow-hidden">
+<header class="position-relative" id="headerNav" style="width: 100%;display: block;height: 7.5vh;">
+    <nav class="navbar navbar-expand-lg d-flex" style="background-color:#DCD4D3;height: 100%;">
+        <div class="position-relative container-fluid d-flex flex-row  align-items-center" id="navBarItems"
+             style="height: 100%;">
+            <a class="navbar-brand d-flex text-black" href="#">Easy Car Rentals</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 100%;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="height: 100%;">
+
+                </ul>
+            </div>
+            <a style="display: none;" href="#customerSection" id="signupBtn">
+                <div class="logout position-absolute">
+                    <i class="fas fa-user-plus text-white fs-3 position-absolute"></i>
+                    <h3 class="position-absolute text-white fs-6">Sign Up</h3>
+                </div>
+            </a>
+            <a class="d-lg-block" href="#loginSection" id="logoutBtn">
+                <div class="logout position-absolute">
+                    <i class="fas fa-sign-out-alt text-white fs-3 position-absolute"></i>
+                    <h3 class="position-absolute text-white fs-6">Logout</h3>
+                </div>
+            </a>
+        </div>
+    </nav>
+</header>
+<main class="position-relative" style="width: 100%;">
+    <section class="position-relative flex-column justify-content-center align-items-center" id="homeSection"
+             style="width: 100%;height: 92.5vh;display: block;">
+        <div class="row position-absolute d-flex flex-column justify-content-center align-items-center"
+             style="width: 101.8%;height: 100%;left: 0;">
+            <div class="col w-100 h-100 position-relative">
+                <img alt="" src="/assets/images/morgan-rovang-t38nvd1DF3o-unsplash.jpg"
+                     style="object-fit: cover;width: 100%;height: 100%;">
+                <div class="textAndBtnContainer">
+                    <div class="mainTopContainer">
+                        <h1 class="fa-2x d-flex flex-column justify-content-center align-items-center">Easy Car Rental
+                            <br/> <span class="mainTopicSpan">Service</span></h1>
+                    </div>
+                    <p class="text-center">Best Car Rental Rates. No Hidden Extra Charges</p>
+                    <div class="container d-flex flex-column align-items-center justify-content-center"
+                         style="width: 50%;height: 25%;">
+                        <div class="btnContainer d-flex flex-column align-items-center justify-content-center"
+                             style="width: 45%;height: 70%;">
+                            <a id="viewAllCarsForUserBtn"
+                               class="d-flex text-decoration-none w-100 h-100">
+                                <Button class="btn text-white w-100 h-100" style="border: 0;">View Cars</Button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="position-relative d-flex flex-column align-items-center justify-content-center"
+                         style="width: 80%;height: 35%;">
+                        <div class="social-links d-flex flex-row align-items-center justify-content-center position-absolute"
+                             style="width: 100%;height: 70%;">
+                            <a href="https://www.facebook.com/punarjeewa.rashmitha" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/Punarjeewa2001" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/punarjeewa-rashmitha-59a4a3223/" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="login container-fluid position-relative" id="loginSection"
+             style="height: 100vh;width: 100%;background-color: rgb(231, 231, 231) !important;display: block!important;">
+        <div><img alt="" src="assets/shapes/small%20icon-01.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-02.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-03.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-04.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-05.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-06.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-07.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-08.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-09.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-10.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-11.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-12.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-13.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-14.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-12.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-13.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-14.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-04.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-05.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-12.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-13.png"></div>
+        <div><img alt="" src="assets/shapes/small%20icon-05.png"></div>
+        <div class="container-fluid shadow"
+             style="position: absolute;inset: 0 0 0 0;margin: auto;width: 50%;height: 70%;background-color: rgb(228, 225, 225) !important;border-radius: 20px;">
+            <h3 style="position: absolute;left: 0;right: 0;margin: auto;width: max-content;top: 40px;">WebPos</h3>
+            <div class="row position-absolute"
+                 style="top: 25%;left: 0;right: 0;margin: auto;width: 400px;height: max-content;">
+                <div class="col">
+                    <div class="form-floating position-relative shadow">
+                        <input class="form-control bg-transparent" id="userNameLoginId" placeholder="Tel"
+                               style="height: 50px;"
+                               type="text">
+                        <label class="position-absolute" for="userNameLoginId"><span>User Name</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row position-absolute"
+                 style="top: 40%;left: 0;right: 0;margin: auto;width: 400px;height: max-content;">
+                <div class="col">
+                    <div class="form-floating position-relative shadow">
+                        <input class="form-control  bg-transparent" id="passwordLoginId" placeholder="Tel"
+                               style="height: 50px;" type="password">
+                        <label class="position-absolute" for="passwordLoginId"><span>Password</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row"
+                 style="position:absolute;top: 63%;left: 0;right: 0;margin: auto;width: 200px;height: 40px;">
+                <div class="col-12">
+                    <a href="#" id="loginBtn">
+                        <button class="btn btn-outline-success shadow w-100">Login</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row"
+                 style="position:absolute;top: 75%;left: 0;right: 0;margin: auto;width: 200px;height: 40px;">
+                <div class="col-12">
+                    <a href="#adminSection" id="signupBtnInLogin">
+                        <button class="btn btn-outline-secondary shadow w-100">Signup</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customer container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="customerSection"
+             style="width: 100%;height: 100vh;background-color: rgb(231, 231, 231);display: none;">
+        <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;height: 8%;">
+            <div class="col d-flex flex-column justify-content-center align-items-end">
+                <a class="d-flex flex-column justify-content-center align-items-center" href="#loginSection"
+                   id="logoutBtnInCustomerForm" style="width: 10%;height:100%;">
+                    <div class="logout position-absolute d-flex flex-row justify-content-center align-items-center">
+                        <i class="fas fa-sign-out-alt text-black fs-3 position-absolute"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;height: 92%;">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-column shadow-lg justify-content-center align-items-center"
+                     style="border-radius: 2%;width: 85%;height: 85%;">
+                    <div class="row d-flex flex-column justify-content-center align-items-center"
+                         style="width: 90%;height: 92%;">
+                        <div class="col" style="width: 100%;height: 100%;">
+                            <div class="position-relative d-flex flex-row w-100 h-100 flex-wrap">
+                                <form class="cusTextFiledContainer position-relative d-flex flex-row flex-wrap justify-content-center"
+                                      style="width: 100%;height: 80%;">
+                                    <div class="mb-1 ms-4 me-4 col-5 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label d-flex" for="cusNicField">Nic</label>
+                                        <input aria-describedby="Nic" class="form-control d-flex"
+                                               id="cusNicField" placeholder="Enter Your Nic Number" type="text">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label d-flex" for="cusNameField">Name</label>
+                                        <input aria-describedby="Name" class="form-control d-flex"
+                                               id="cusNameField" placeholder="Enter Your Full Name" type="text">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*2);">
+                                        <label for="cusNicFile">Nic Picture</label>
+                                        <input class="form-control" id="cusNicFile" name="nicPhoto" type="file">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*2);">
+                                        <label for="cusLicenseFile">License Picture</label>
+                                        <input class="form-control" id="cusLicenseFile" name="licensePhoto" type="file">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label" for="cusLicenseField">License No</label>
+                                        <input aria-describedby="License No" class="form-control" id="cusLicenseField"
+                                               placeholder="Enter Your License Number" type="text">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label" for="cusContactNoField">Contact No</label>
+                                        <input aria-describedby="Cus Contact No" class="form-control"
+                                               id="cusContactNoField" placeholder="Enter Your Contact Number"
+                                               type="number">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label" for="cusEmailField">Email address</label>
+                                        <input aria-describedby="emailHelp" class="form-control" id="cusEmailField"
+                                               placeholder="Enter Your Email" type="email">
+                                    </div>
+                                    <div class="mb-1 col-5 ms-4 me-4 d-flex flex-column justify-content-center align-items-start"
+                                         style="height: calc(100%/8*1);">
+                                        <label class="form-label" for="cusPasswordField">Password</label>
+                                        <input class="form-control" id="cusPasswordField"
+                                               placeholder="Enter Your Password"
+                                               type="password">
+                                    </div>
+                                </form>
+                                <div class="btnContainer d-flex flex-row align-items-center justify-content-center"
+                                     style="width: 100%;height: 20%;">
+                                    <div class="row d-flex flex-row justify-content-center align-items-center"
+                                         style="width: 100%;height: 100%;">
+                                        <div class="col-10 d-flex flex-row h-50 justify-content-center align-items-center">
+                                            <button id="cusSaveBtnInCustomer" class="btn btn-primary ms-2 me-2 col-4"
+                                                    type="button">
+                                                Save
+                                            </button>
+                                            <button id="cusUpdateBtnInCustomer"
+                                                    class="btn btn-secondary ms-2 me-2 col-4" type="button">Update
+                                            </button>
+                                            <button id="cusDeleteBtnInCustomer" class="btn btn-danger ms-2 me-2  col-4"
+                                                    type="button">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="admin container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="adminSection"
+             style="width: 100%;height: 92.5vh;background-color:#F9F9F9!important;display: none">
+        <div class="dashBoard container-fluid  position-relative flex-column justify-content-center align-items-center shadow-lg"
+             style="height: 80%;width: 95%;background-color: #C9D6BD;">
+            <div class="row d-flex flex-row flex-wrap"
+                 style="height: calc(100%/2*1);border-bottom: 2px solid black;border-bottom-right-radius: 3px;">
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center"
+                     style="border-right: 2px solid black;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #B2D545 ;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="numberOfRegisteredCustomersId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">Number of Registered</br>Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-users d-flex fa-3x text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center"
+                     style="border-right: 2px solid black;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #82E723;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="totalBookingsOfTheDayId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">Total Bookings Of The</br>Day</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-calendar-day text-white d-flex fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #45D57C;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="numberOfAvailableAndReservedCarsId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">The number of available</br> and reserved
+                                            cars</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-car text-white d-flex fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex flex-row flex-wrap" style="height: calc(100%/2*1);">
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center"
+                     style="border-right: 2px solid black;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #459CD5;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="numberOfBookingsActiveTodayId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">The number of bookings</br>active for the
+                                            day</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-chart-line d-flex text-white fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center"
+                     style="border-right: 2px solid black;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #A145D5;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="numberOfAvailableAndOccupiedDriversId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">The number of available</br>and occupied
+                                            drivers</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-taxi d-flex text-white fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-center align-items-center">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #D54586;">
+                        <div class="row" style="width: 100%;height: 100%;">
+                            <div class="col-9 d-flex flex-column align-items-center justify-content-center">
+                                <div class="d-flex flex-row justify-content-center align-items-center"
+                                     style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center position-relative"
+                                         style="height: 50%;">
+                                        <h5 id="numberOfCarsUnderMaintenanceAndNeedMaintenanceId"
+                                            class="text-center position-absolute fa-3x text-white"
+                                            style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
+                                    </div>
+                                </div>
+                                <div class="row d-flex" style="width: 100%;height: 50%;">
+                                    <div class="col-12 flex-column align-items-center justify-content-center text-center">
+                                        <p class="card-text text-white">The number of cars that</br>need maintenance
+                                            and</br>under
+                                            maintenance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-screwdriver-wrench d-flex text-white fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="carSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="carSection"
+             style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="row d-flex flex-column justify-content-center align-items-center" style="width: 100%;height: 100%;">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-column shadow-lg justify-content-center align-items-center"
+                     style="border-radius: 2%;width: 85%;height: 85%;">
+                    <div class="row d-flex flex-column justify-content-center align-items-center"
+                         style="width: 100%;height: 92%;">
+                        <div class="col" style="width: 100%;height: 100%;">
+                            <div class="position-relative d-flex flex-row w-100 h-100 flex-wrap">
+                                <div class="container position-relative d-flex flex-row flex-wrap justify-content-center"
+                                     style="width: 100%;height: 85%;">
+
+                                    <form id="carTextFieldContainer"
+                                          class="carTextFieldContainer position-relative flex-row flex-wrap justify-content-center"
+                                          style="width: 100%;height: 100%;">
+                                        <div class="container-fluid d-flex flex-row flex-wrap justify-content-center"
+                                             style="width: 100%;height: 100%;">
+                                            <div class="mt-0 mb-0 col-3 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label d-flex" for="carRegNoFieldInCar">Registration
+                                                    No</label>
+                                                <input aria-describedby="carRegNoFieldInCar" class="form-control d-flex"
+                                                       id="carRegNoFieldInCar" placeholder="Enter Car Reg Number"
+                                                       type="text" style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label d-flex" for="carBrandFieldInCar">Brand</label>
+                                                <input aria-describedby="carBrandFieldInCar" class="form-control d-flex"
+                                                       id="carBrandFieldInCar"
+                                                       placeholder="Enter Car Brand" type="text" style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carTypeMenuInCar">Car Type</label>
+                                                <select class="form-select d-flex align-items-center justify-content-center"
+                                                        style="width: 90%;height: 50%;"
+                                                        aria-label="Default select example" id="carTypeMenuInCar">
+                                                    <option value="1">Luxury</option>
+                                                    <option value="2">Semi-Luxury</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="transmissionTypeMenuInCar">Transmission
+                                                    Type</label>
+                                                <select class="form-select d-flex align-items-center justify-content-center"
+                                                        style="width: 90%;height: 50%;"
+                                                        aria-label="Default select example"
+                                                        id="transmissionTypeMenuInCar">
+                                                    <option value="1">Auto</option>
+                                                    <option value="2">Manual</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="fuelTypeMenuInCar">Transmission
+                                                    Type</label>
+                                                <select class="form-select d-flex align-items-center justify-content-center"
+                                                        style="width: 90%;height: 50%;"
+                                                        aria-label="Default select example" id="fuelTypeMenuInCar">
+                                                    <option value="1">Petrol</option>
+                                                    <option value="2">Diesel</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carPassengersFieldInCar">No of
+                                                    Passengers</label>
+                                                <input aria-describedby="carPassengersFieldInCar" class="form-control"
+                                                       id="carPassengersFieldInCar"
+                                                       placeholder="Enter No of Passengers" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carMileageInKmFieldInCar">Mileage In
+                                                    KM</label>
+                                                <input aria-describedby="carMileageInKmFieldInCar" class="form-control"
+                                                       id="carMileageInKmFieldInCar"
+                                                       placeholder="Enter Car Mileage" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="freeKmPerDayFieldInCar">Free Km Per
+                                                    Day</label>
+                                                <input aria-describedby="freeKmPerDayFieldInCar" class="form-control"
+                                                       id="freeKmPerDayFieldInCar"
+                                                       placeholder="Enter Free Km Per Day" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="freeKmPerMonthFieldInCar">Free Km Per
+                                                    Month</label>
+                                                <input aria-describedby="freeKmPerMonthFieldInCar" class="form-control"
+                                                       id="freeKmPerMonthFieldInCar"
+                                                       placeholder="Enter Free Km Per Month" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carPriceForExtraKmFieldInCar">Price For
+                                                    Extra
+                                                    KM</label>
+                                                <input aria-describedby="carPriceForExtraKmFieldInCar"
+                                                       class="form-control"
+                                                       id="carPriceForExtraKmFieldInCar"
+                                                       placeholder="Enter Car Price For Extra KM"
+                                                       type="number" style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carDailyRateFieldInCar">Daily
+                                                    Rate</label>
+                                                <input aria-describedby="carDailyRateFieldInCar" class="form-control"
+                                                       id="carDailyRateFieldInCar"
+                                                       placeholder="Enter Car Daily Rate" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="carMonthlyRateFieldInCar">Monthly
+                                                    Rate</label>
+                                                <input aria-describedby="carMonthlyRateFieldInCar" class="form-control"
+                                                       id="carMonthlyRateFieldInCar"
+                                                       placeholder="Enter Car Monthly Rate" type="number"
+                                                       style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="bookedStatusMenuInCar">Booked
+                                                    Status</label>
+                                                <select class="form-select d-flex align-items-center justify-content-center"
+                                                        style="width: 90%;height: 50%;"
+                                                        aria-label="Default select example" id="bookedStatusMenuInCar">
+                                                    <option value="1">Booked</option>
+                                                    <option value="2">Not Booked</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label" for="maintenanceStatusMenuInCar">Maintenance
+                                                    Status</label>
+                                                <select class="form-select d-flex align-items-center justify-content-center"
+                                                        style="width: 90%;height: 50%;"
+                                                        aria-label="Default select example"
+                                                        id="maintenanceStatusMenuInCar">
+                                                    <option value="1">No Maintenance Required</option>
+                                                    <option value="2">Under Maintenance</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label for="carImgFile" class="form-label">Car Images</label>
+                                                <input class="form-control" class="d-flex" id="carImgFile" multiple
+                                                       name="carImgFile"
+                                                       type="file" style="width: 90%;">
+                                            </div>
+                                            <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
+                                                 style="height: calc(100%/5*1);">
+                                                <label class="form-label"
+                                                       for="carLossDamageWaiverFieldInCar">Loss Damage Waiver</label>
+                                                <input aria-describedby="carLossDamageWaiverFieldInCar"
+                                                       class="form-control"
+                                                       id="carLossDamageWaiverFieldInCar"
+                                                       placeholder="Enter Car Loss Damage Waiver"
+                                                       type="number" style="width: 90%;">
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div id="carScheduleTableContainer"
+                                         class="carScheduleTableContainer position-relative flex-row flex-wrap justify-content-center"
+                                         style="width: 100%;height: 100%;overflow: auto;display: none;">
+                                        <table id="carScheduleTable" class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Row No</th>
+                                                <th scope="col">Car Reg No</th>
+                                                <th scope="col">Booked Status</th>
+                                                <th scope="col">Booked Date</th>
+                                                <th scope="col">Booked Time</th>
+                                                <th scope="col">Return Date</th>
+                                                <th scope="col">Return Time</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div id="carViewAllTableContainer"
+                                         class="carViewAllTableContainer position-relative flex-row"
+                                         style="width: 100%;height: 100%;overflow: auto;display: none;">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Row No</th>
+                                                <th scope="col">Reg No</th>
+                                                <th scope="col">Brand</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Transmission Type</th>
+                                                <th scope="col">Fuel Type</th>
+                                                <th scope="col">No Of Passengers</th>
+                                                <th scope="col">Mileage In KM</th>
+                                                <th scope="col">Free Km Per Day</th>
+                                                <th scope="col">Free Km Per Month</th>
+                                                <th scope="col">Price For Extra KM</th>
+                                                <th scope="col">Daily Rate</th>
+                                                <th scope="col">Monthly Rate</th>
+                                                <th scope="col">Booked Status</th>
+                                                <th scope="col">Maintenance Status</th>
+                                                <th scope="col">Loss Damage Waiver</th>
+                                                <th scope="col">Car Image 1</th>
+                                                <th scope="col">Car Image 2</th>
+                                                <th scope="col">Car Image 3</th>
+                                                <th scope="col">Car Image 4</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                                <div class="btnContainer d-flex flex-row align-items-center justify-content-end"
+                                     style="width: 100%;height: 15%;">
+                                    <div class="row d-flex flex-row justify-content-center align-items-center"
+                                         style="width: 100%;height: 100%;">
+                                        <div class="col-12 d-flex flex-row justify-content-center align-items-center"
+                                             style="height: 80%;">
+                                            <button id="carSaveBtnInCar" class="btn btn-primary ms-3 me-3 col-2"
+                                                    type="button">Save
+                                            </button>
+                                            <button id="carUpdateBtnInCar" class="btn btn-secondary ms-3 me-3 col-2"
+                                                    type="button">
+                                                Update
+                                            </button>
+                                            <button id="carDeleteBtnInCar" class="btn btn-danger ms-3 me-3 col-2"
+                                                    type="button">Delete
+                                            </button>
+                                            <a class="ms-3 me-3 col-2" id="carViewAllBtn">
+                                                <button class="col-12 btn btn-info" type="button">View All</button>
+                                            </a>
+                                            <a class="ms-3 me-3 col-2"
+                                               id="viewCarScheduleBtn">
+                                                <button class="col-12 btn btn-outline-success" type="button">View
+                                                    Schedule
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="customerDetailsSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="customerDetailsSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
+             style="width: 80%;height: 80%;">
+            <div class="row position-relative d-flex" style="height: 90%;width: 90%;">
+                <div id="customerDetailsTableContainer" class="col shadow position-relative d-flex"
+                     style="height: 100%;overflow: auto">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Row No</th>
+                            <th scope="col">Nic</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">License No</th>
+                            <th scope="col">Contact NO</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Nic Photo</th>
+                            <th scope="col">License Photo</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="driverSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="driverSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid shadow-lg d-flex flex-column justify-content-center align-items-center"
+             style="width: 80%;height: 95%;">
+            <div class="row d-flex" style="width: 100%;height: 100%;">
+                <div class="col d-flex" style="width: 100%;height: 100%;">
+                    <div class="position-relative d-flex flex-column justify-content-center align-items-center"
+                         style="width: 100%;height: 100%;">
+
+                        <div class="container d-flex flex-row flex-wrap justify-content-center"
+                             style="width: 90%;height: 80%;">
+                            <div id="driverTextFieldContainer"
+                                 class="driverTextFieldContainer flex-row flex-wrap justify-content-center"
+                                 style="width: 100%;height: 100%;">
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label d-flex" for="driverNicField">Nic</label>
+                                        <input aria-describedby="Nic" class="form-control d-flex" id="driverNicField"
+                                               placeholder="Enter Your Nic Number" type="text">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label d-flex" for="driverNameField">Name</label>
+                                        <input aria-describedby="Name" class="form-control d-flex" id="driverNameField"
+                                               placeholder="Enter Your Full Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="driverLicenseField">License No</label>
+                                        <input aria-describedby="License No" class="form-control"
+                                               id="driverLicenseField"
+                                               placeholder="Enter Your License Number" type="text">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="driverContactNoField">Contact No</label>
+                                        <input aria-describedby="Contact No" class="form-control"
+                                               id="driverContactNoField"
+                                               placeholder="Enter Your Contact Number" type="number">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="driverEmailField">Email address</label>
+                                        <input aria-describedby="emailHelp" class="form-control" id="driverEmailField"
+                                               placeholder="Enter Your Email" type="email">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="driverPasswordField">Password</label>
+                                        <input class="form-control" id="driverPasswordField"
+                                               placeholder="Enter Your Password"
+                                               type="password">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="availabilityStatusMenuInDriver">Availability
+                                            Status</label>
+                                        <select class="form-select d-flex align-items-center justify-content-center"
+                                                style="width: 90%;height: 50%;" aria-label="Default select example"
+                                                id="availabilityStatusMenuInDriver">
+                                            <option value="1">Available</option>
+                                            <option value="2">Not Available</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label class="form-label" for="driverAddressField">Address</label>
+                                        <input class="form-control" id="driverAddressField"
+                                               placeholder="Enter Your Address"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label for="nicFileInDriver">Nic Picture</label>
+                                        <input class="form-control" id="nicFileInDriver" name="nicPhoto" type="file">
+                                    </div>
+                                </div>
+                                <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                     style="height: calc(100%/4*1);">
+                                    <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                        <label for="licenseFileInDriver">License Picture</label>
+                                        <input class="form-control" id="licenseFileInDriver" name="licensePhoto"
+                                               type="file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="driverViewAllTableContainer"
+                                 class="driverViewAllTableContainer flex-row"
+                                 style="width: 100%;height: 100%;overflow: auto;display: none;">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Row No</th>
+                                        <th scope="col">Nic No</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">License No</th>
+                                        <th scope="col">Contact No</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Available Status</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Password</th>
+                                        <th scope="col">License Photo</th>
+                                        <th scope="col">Nic Photo</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="btnContainer d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: 20%;">
+                            <div class="row d-flex flex-row justify-content-center align-items-center"
+                                 style="width: 100%;height: 100%;">
+                                <div class="col-12 d-flex flex-row h-50 justify-content-center align-items-center">
+                                    <button id="driverSaveBtn" class="btn btn-primary ms-2 me-2 col-3" type="button">
+                                        Save
+                                    </button>
+                                    <button id="driverUpdateBtn" class="btn btn-secondary ms-2 me-2 col-3"
+                                            type="button">Update
+                                    </button>
+                                    <button id="driverDeleteBtn" class="btn btn-danger ms-2 me-2  col-3" type="button">
+                                        Delete
+                                    </button>
+                                    <a class="ms-2 me-2 col-3"
+                                       id="driverViewAllBtn">
+                                        <button class="btn btn-info w-100 h-100" type="button">View All</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="bookingRequestSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="bookingRequestSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid shadow-lg position-absolute d-flex  flex-column align-items-center"
+             style="width: 90%;height: 95%;inset: 0 0 0 0;margin: auto;">
+            <div class="row d-flex flex-row align-items-center justify-content-center" style="width: 90%;height:10%;">
+                <div class="col-10 d-flex">
+                    <input aria-describedby="bookingRequestSearchField" class="form-control d-flex"
+                           id="bookingRequestSearchFieldInAcceptRequest"
+                           placeholder="Search Booking Request" type="text">
+                </div>
+                <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
+                    <button id="bookingRequestSearchFieldInAcceptRequestBtn" class="btn btn-primary ms-2 me-2 col-10"
+                            type="button">Search
+                    </button>
+                </div>
+            </div>
+            <div class="row d-flex" style="width: 90%;height:40%;">
+                <div id="bookingRequestTableContainer" class="col" style="width: 100%;height: 100%;overflow: auto;">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Row No</th>
+                            <th scope="col">Booking ID</th>
+                            <th scope="col">Customer Nic</th>
+                            <th scope="col">Request Date</th>
+                            <th scope="col">Request Time</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="bookingRequestDetailsTableContainer" class="col"
+                     style="width: 100%;height: 100%;overflow: auto;display: none;">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th scope="col">Row No</th>
+                            <th scope="col">Booking ID</th>
+                            <th scope="col">Car_RegNo</th>
+                            <th scope="col">Driver Nic</th>
+                            <th scope="col">Car Type</th>
+                            <th scope="col">Rental Type</th>
+                            <th scope="col">Date Of Pickup</th>
+                            <th scope="col">Time Of Pickup</th>
+                            <th scope="col">Pickup Venue</th>
+                            <th scope="col">Returned Date</th>
+                            <th scope="col">Returned Time</th>
+                            <th scope="col">Returned Venue</th>
+                            <th scope="col">Loss Damage</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row d-flex flex-column align-items-center justify-content-center"
+                 style="width: 90%;height:50%;">
+                <div class="col d-flex flex-column align-items-center justify-content-center"
+                     style="width: 100%;height: 100%;">
+                    <div class="position-relative d-flex flex-column justify-content-center align-items-center"
+                         style="width: 90%;height: 90%;">
+                        <div class="bookingRequestTextFiledContainer d-flex flex-row flex-wrap justify-content-center"
+                             style="width: 90%;height: 70%;">
+                            <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                 style="height: calc(100%/4*1);">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <label class="form-label d-flex" for="bookingRequestIdInAcceptAdmin">Booking Request
+                                        ID</label>
+                                    <input aria-describedby="bookingRequestIdInAcceptAdmin" class="form-control d-flex"
+                                           id="bookingRequestIdInAcceptAdmin" placeholder="Enter Booking Request Id"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                 style="height: calc(100%/4*1);">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <label class="form-label d-flex" for="bookingRequestCusNicInAcceptAdmin">Customer
+                                        Nic</label>
+                                    <input aria-describedby="bookingRequestCusNicInAcceptAdmin"
+                                           class="form-control d-flex"
+                                           id="bookingRequestCusNicInAcceptAdmin"
+                                           placeholder="Enter Customer Nic" type="text">
+                                </div>
+                            </div>
+                            <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
+                                 style="height: calc(100%/4*1);">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <label class="form-label" for="bookingRequestDateInAcceptAdmin">Booking Request
+                                        Date</label>
+                                    <input aria-describedby="bookingRequestDateInAcceptAdmin" class="form-control"
+                                           id="bookingRequestDateInAcceptAdmin"
+                                           placeholder="Enter Booking Request Date" type="text">
+                                </div>
+                            </div>
+                            <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                 style="height: calc(100%/4*1);">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <label class="form-label" for="bookingRequestTimeInAcceptAdmin">Booking Request
+                                        Time</label>
+                                    <input aria-describedby="bookingRequestTimeInAcceptAdmin" class="form-control"
+                                           id="bookingRequestTimeInAcceptAdmin"
+                                           placeholder="Enter  Booking Request Time" type="text">
+                                </div>
+                            </div>
+                            <div class="mb-1 col-6 d-flex flex-column justify-content-center align-items-center"
+                                 style="height: calc(100%/4*1);">
+                                <div class="w-75 d-flex flex-column justify-content-center align-items-center">
+                                    <label class="form-label" for="bookingRequestCostInAcceptAdmin">Booking Request
+                                        Cost</label>
+                                    <input aria-describedby="bookingRequestCostInAcceptAdmin" class="form-control"
+                                           id="bookingRequestCostInAcceptAdmin"
+                                           placeholder="Enter Booking Request Cost" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btnContainer d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: 30%;">
+                            <div class="row d-flex flex-row justify-content-center align-items-center"
+                                 style="width: 100%;height: 100%;">
+                                <div class="col-12 d-flex flex-row h-50 justify-content-center align-items-center">
+                                    <button id="bookingRequestSaveBtnInAcceptAdmin"
+                                            class="btn btn-primary ms-2 me-2 col-3" type="button">Save
+                                    </button>
+                                    <button id="bookingRequestDeleteBtnInAcceptAdmin"
+                                            class="btn btn-danger ms-2 me-2  col-3" type="button">Delete
+                                    </button>
+                                    <a class="ms-2 me-2 col-3"
+                                       id="bookingRequestDetailsBtn">
+                                        <button type="button" class="btn btn-info w-100 h-100">View All</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="bookingSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="bookingSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid shadow-lg d-flex flex-column align-items-center justify-content-center"
+             style="width: 98%;height: 90%;">
+
+            <div class="row d-flex flex-row align-items-center justify-content-center" style="width: 100%;height: 10%;">
+                <div class="col-2 d-flex flex-column align-items-center justify-content-center" style="height: 80%;">
+                    <button class="btn btn-primary ms-2 me-2" id="placeBookingBtn"
+                            style="width: 90%;height: 100%;"
+                            type="button"
+                    >Place Booking
+                    </button>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center" style="height: 80%;">
+                    <button class="btn btn-outline-primary ms-2 me-2" id="addToListBtnInBooking"
+                            style="width: 90%;height: 100%;"
+                            type="button"
+                    >Add To List
+                    </button>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center" style="height: 80%;">
+                    <button class="btn btn-outline-danger ms-2 me-2" id="clearListBtnInBooking"
+                            style="width: 90%;height: 100%;"
+                            type="button"
+                    >Clear List
+                    </button>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center" style="height: 80%;">
+                    <button class="btn btn-outline-success ms-2 me-2" id="viewListTableBtn"
+                            style="width: 90%;height: 100%;"
+                            type="button"
+                    >View List
+                    </button>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center" style="height: 80%;">
+                    <a class="d-flex text-decoration-none col-12"
+                       id="viewCurrentBookingsBtn" style="height: 100%;">
+                        <button class="btn btn-success w-100 h-100" type="button">View Current Bookings</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row d-flex flex-row align-items-center justify-content-center shadow-lg"
+                 style="width: 100%;height: 90%;">
+                <!-- Placing Booking Section -->
+                <div class="col-11 flex-column align-items-center justify-content-center"
+                     id="placingBookingInAdminBookingSection"
+                     style="height: 90%;">
+                    <form class="position-relative d-flex flex-column justify-content-center align-items-center"
+                          style="width: 100%;height: 100%;">
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex align-items-center justify-content-center" style="height: 100%;">
+                                <div class="col-3 d-flex flex-column align-items-center justify-content-center"
+                                     style="height: 100%;">
+                                    <input aria-describedby="bookingIdInBooking" class="form-control d-flex"
+                                           id="bookingIdInBooking"
+                                           placeholder="Enter Booking Id" type="text">
+                                </div>
+                                <div class="col-3 d-flex flex-column position-relative align-items-center justify-content-center text-center"
+                                     style="height: 100%;">
+                                    <button id="searchBookingBtn"
+                                            class="btn btn-outline-success d-flex text-center align-items-center justify-content-center"
+                                            style="width: 80%;height: 50%;"
+                                            type="button">
+                                        <span class="d-flex">Search Pending Booking</span>
+                                    </button>
+                                </div>
+                                <div class="col-3 d-flex flex-column position-relative align-items-center justify-content-center text-center"
+                                     style="height: 100%;">
+                                    <div class="dropdown d-flex align-items-center justify-content-center"
+                                         style="width: 100%;">
+                                        <button id="carRegDropDownBtnInBookingAdmin" type="button"
+                                                class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-center"
+                                                data-bs-toggle="dropdown" style="width: 80%;">
+                                            <span class="d-flex text-center">Car Reg No</span>
+                                        </button>
+                                        <ul class="dropdown-menu" id="dropDownMenuForCarRegNoInBookingInAdmin">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3 d-flex flex-column align-items-center justify-content-center"
+                                     style="height: 100%;">
+                                    <input aria-describedby="totalCostInBooking" class="form-control d-flex"
+                                           id="totalCostInBooking"
+                                           placeholder="Enter Total Cost In Booking" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="cusNicInBooking">Customer Id</label>
+                                    <input aria-describedby="cusNicInBooking" class="form-control"
+                                           id="cusNicInBooking"
+                                           placeholder="Enter Customer ID" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="driverNicInBooking">Driver Nic</label>
+                                    <input aria-describedby="driverNicInBooking" class="form-control"
+                                           id="driverNicInBooking"
+                                           placeholder="Enter Driver Nic" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="carTypeInBooking">Car Type</label>
+                                    <input aria-describedby="carTypeInBooking" class="form-control"
+                                           id="carTypeInBooking"
+                                           placeholder="Enter Car Type" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="rentalTypeInBooking">Rental Type</label>
+                                    <input aria-describedby="rentalTypeInBooking" class="form-control"
+                                           id="rentalTypeInBooking"
+                                           placeholder="Enter Rental Type" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="tripInKMInBooking">Trip In KM</label>
+                                    <input aria-describedby="tripInKMInBooking" class="form-control"
+                                           id="tripInKMInBooking"
+                                           placeholder="Enter Trip In KM" type="number">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="extraKmDrivenInBooking">Extra KM
+                                        Driven</label>
+                                    <input aria-describedby="extraKmDrivenInBooking" class="form-control"
+                                           id="extraKmDrivenInBooking"
+                                           placeholder="Enter Extra KM Driven" type="number">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="dateOfPickupInBooking">Date Of
+                                        Pickup</label>
+                                    <input aria-describedby="dateOfPickupInBooking" class="form-control"
+                                           id="dateOfPickupInBooking"
+                                           placeholder="Enter Date OF Pickup" type="date">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="timeOfPickupInBooking">Time Of
+                                        Pickup</label>
+                                    <input aria-describedby="timeOfPickupInBooking" class="form-control"
+                                           id="timeOfPickupInBooking"
+                                           placeholder="Enter Time Of Pickup" type="time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="pickupVenueInBooking">Pickup Venue</label>
+                                    <input aria-describedby="pickupVenueInBooking" class="form-control"
+                                           id="pickupVenueInBooking"
+                                           placeholder="Enter Pickup Venue" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnedDateInBooking">Return Date</label>
+                                    <input aria-describedby="returnedDateInBooking" class="form-control"
+                                           id="returnedDateInBooking"
+                                           placeholder="Enter Returned Date" type="date">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnedTimeInBooking">Return Time</label>
+                                    <input aria-describedby="returnedTimeInBooking" class="form-control"
+                                           id="returnedTimeInBooking"
+                                           placeholder="Enter Returned Time" type="time">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnVenueInBooking">Return Venue</label>
+                                    <input aria-describedby="returnVenueInBooking" class="form-control"
+                                           id="returnVenueInBooking"
+                                           placeholder="EnterReturn Venue" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="damageStatusMenuInBooking">Damaged Status</label>
+                                    <select class="form-select d-flex align-items-center justify-content-center"
+                                            style="width: 100%;height: 50%;" aria-label="Default select example"
+                                            id="damageStatusMenuInBooking">
+                                        <option value="1">Not Damaged</option>
+                                        <option value="2">Damaged</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="lossDamageWaiverInBooking">Loss Damage
+                                        Waiver</label>
+                                    <input aria-describedby="lossDamageWaiverInBooking" class="form-control"
+                                           id="lossDamageWaiverInBooking"
+                                           placeholder="Enter Loss Damage Waiver" type="number">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="lossDamageWaiverSlipInBooking">Loss Damage
+                                        Waiver
+                                        Slip Path</label>
+                                    <input aria-describedby="lossDamageWaiverSlipInBooking"
+                                           class="form-control"
+                                           id="lossDamageWaiverSlipInBooking"
+                                           placeholder="Enter Loss Damage Waiver Slip Path"
+                                           type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="costInBooking">Cost</label>
+                                    <input aria-describedby="costInBooking" class="form-control"
+                                           id="costInBooking"
+                                           placeholder="Enter Booking Cost" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Placing Booking End -->
+                <div class="col-11 flex-column align-items-center justify-content-center"
+                     id="viewCurrentBookingsSection" style="height: 90%;">
+                    <div class="row d-flex flex-row align-items-center justify-content-center "
+                         style="width: 100%;height: 10%;">
+                        <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                            <div class="row d-flex flex-row align-items-center justify-content-center"
+                                 style="width: 90%;height:10%;">
+                                <div class="col-6 d-flex">
+                                    <input aria-describedby="CurrentBookingsDetailsSearchField"
+                                           class="form-control d-flex"
+                                           id="CurrentBookingsDetailsSearchField"
+                                           placeholder="Search Current Booking Details" type="text">
+                                </div>
+                                <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
+                                    <button id="CurrentBookingsDetailsSearchBtn"
+                                            class="btn btn-primary ms-2 me-2 col-10" type="button">Search
+                                    </button>
+                                </div>
+                                <div class="col-4 d-flex flex-row align-items-center justify-content-center">
+                                    <a class="ms-2 me-2 col-10 d-flex text-decoration-none flex-column"
+                                       id="viewCurrentBookingDetailsBtn">
+                                        <button class="btn btn-success w-100 h-100" type="button">View Booking Details
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex flex-row  align-items-center justify-content-center "
+                         style="width: 100%;height: 90%;">
+                        <div id="currentBookingsTableContainer"
+                             class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                             style="height: 90%;overflow: auto;border: 1px solid black;">
+                            <table class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Row No</th>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Customer Nic</th>
+                                    <th scope="col">Booked Date</th>
+                                    <th scope="col">Booked Time</th>
+                                    <th scope="col">Cost</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="currentBookingsDetailsTableContainer"
+                             class="col-12 flex-column align-items-start justify-content-center shadow-lg"
+                             style="height: 90%;overflow: auto;border: 1px solid black;display: none;">
+                            <table class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Row No</th>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Car_RegNo</th>
+                                    <th scope="col">Driver Nic</th>
+                                    <th scope="col">Car Type</th>
+                                    <th scope="col">Rental Type</th>
+                                    <th scope="col">Date Of Pickup</th>
+                                    <th scope="col">Time Of Pickup</th>
+                                    <th scope="col">Pickup Venue</th>
+                                    <th scope="col">Returned Date</th>
+                                    <th scope="col">Returned Time</th>
+                                    <th scope="col">Returned Venue</th>
+                                    <th scope="col">Loss Damage</th>
+                                    <th scope="col">Cost</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 flex-column align-items-center justify-content-center"
+                     id="viewAddToListBookingsSectionInAdmin" style="height: 90%;">
+                    <div class="row d-flex flex-row  align-items-center justify-content-center "
+                         style="width: 100%;height: 90%;">
+                        <div id="addToListBookingsTableContainer"
+                             class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                             style="height: 90%;overflow: auto;border: 1px solid black;">
+                            <table id="addToListBookingsTableContainerTable" class="table table-hover table-bordered"
+                                   style="width: 100%;height: 100%;">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Row No</th>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Car_RegNo</th>
+                                    <th scope="col">Driver Nic</th>
+                                    <th scope="col">Car Type</th>
+                                    <th scope="col">Trip In KM</th>
+                                    <th scope="col">Extra KM Driven</th>
+                                    <th scope="col">Rental Type</th>
+                                    <th scope="col">Date Of Pickup</th>
+                                    <th scope="col">Time Of Pickup</th>
+                                    <th scope="col">Pickup Venue</th>
+                                    <th scope="col">Returned Date</th>
+                                    <th scope="col">Returned Time</th>
+                                    <th scope="col">Returned Venue</th>
+                                    <th scope="col">Damage Status</th>
+                                    <th scope="col">Loss Damage</th>
+                                    <th scope="col">Cost</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="viewAllBookingsSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewAllBookingsSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid shadow-lg d-flex flex-column justify-content-center align-items-center"
+             style="width: 90%;height: 90%;">
+            <div class="container col-11" style="height: 80%;">
+                <div class="row d-flex flex-row justify-content-center align-items-center"
+                     style="width: 100%;height: 10%;">
+                    <div class="col-12">
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 90%;height:10%;">
+                            <div class="col-6 d-flex">
+                                <input aria-describedby="bookingSearchField" class="form-control d-flex"
+                                       id="bookingSearchField"
+                                       placeholder="Search Booking" type="text">
+                            </div>
+                            <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
+                                <button id="bookingSearchFieldBtn" class="btn btn-primary ms-2 me-2 col-10"
+                                        type="button">Search
+                                </button>
+                            </div>
+                            <div class="col-4 d-flex flex-row align-items-center justify-content-center">
+                                <a class="ms-2 me-2 col-10 d-flex text-decoration-none flex-column"
+                                   id="viewAllBookingDetailsBtn">
+                                    <button class="btn btn-success w-100 h-100" type="button">View Booking Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="viewForBothBookingAndDetailsTableInAdmin"
+                     class="row d-flex flex-row justify-content-center align-items-center"
+                     style="width: 100%;height: 90%;">
+                    <div id="viewAllBookingInViewAllBookingSection" class="col-12 shadow-lg"
+                         style="height: 90%;display: flex;overflow: auto;">
+                        <table id="viewAllBookingTable" class="table table-hover table-bordered"
+                               style="width: 100%;height: 100%;">
+                            <thead>
+                            <tr>
+                                <th scope="col">Row No</th>
+                                <th scope="col">Booking ID</th>
+                                <th scope="col">Customer Nic</th>
+                                <th scope="col">Booked Date</th>
+                                <th scope="col">Booked Time</th>
+                                <th scope="col">Cost</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="viewAllBookingDetailsSection" class="col-12 shadow-lg"
+                         style="height: 90%;display: none;overflow: auto;">
+                        <table id="viewAllBookingDetailsTable" class="table table-hover table-bordered"
+                               style="width: 100%;height: 100%;">
+                            <thead>
+                            <tr>
+                                <th scope="col">Row No</th>
+                                <th scope="col">Booking ID</th>
+                                <th scope="col">Car_RegNo</th>
+                                <th scope="col">Driver Nic</th>
+                                <th scope="col">Car Type</th>
+                                <th scope="col">Rental Type</th>
+                                <th scope="col">Trip In KM</th>
+                                <th scope="col">Extra KM Driven</th>
+                                <th scope="col">Date Of Pickup</th>
+                                <th scope="col">Time Of Pickup</th>
+                                <th scope="col">Pickup Venue</th>
+                                <th scope="col">Returned Date</th>
+                                <th scope="col">Returned Time</th>
+                                <th scope="col">Returned Venue</th>
+                                <th scope="col">Damaged Status</th>
+                                <th scope="col">Loss Damage</th>
+                                <th scope="col">Cost</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+            class="incomeSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="incomeSection"
+            style="width: 100%;height: 92.5vh;background-color: rgb(231, 231, 231);display: none">
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-center shadow-lg"
+             style="width: 90%;height: 90%;">
+            <div class="row d-flex flex-row align-items-center justify-content-center" style="width: 90%;height: 40%;">
+                <div class="col-12 d-flex align-items-center justify-content-center" style="height: 100%;">
+                    <div class="row d-flex flex-row align-items-center justify-content-center"
+                         style="width: 100%;height: 100%;">
+                        <div class="col-4 d-flex flex-column align-items-center justify-content-center shadow-lg"
+                             style="height: 95%;">
+                            <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
+                                <div class="card-header">Daily Income</div>
+                                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                    <h5 id="dailyIncomeHTag" class="card-title d-flex">10</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center justify-content-center shadow-lg"
+                             style="height: 95%;">
+                            <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
+                                <div class="card-header">Monthly Income</div>
+                                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                    <h5 id="monthlyIncomeHTag" class="card-title d-flex">10</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex flex-column align-items-center justify-content-center shadow-lg"
+                             style="height: 95%;">
+                            <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
+                                <div class="card-header">Annual Income</div>
+                                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                    <h5 id="annualIncomeHTag" class="card-title d-flex">10</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex flex-row align-items-center justify-content-center"
+                 style="width: 90%;height: 60%;">
+                <div class="col-11 d-flex shadow-lg" style="height: 90%;overflow: auto;">
+                    <table id="incomeTableInIncome" class="table table-hover table-bordered"
+                           style="width: 100%;height: 100%;">
+                        <thead>
+                        <tr>
+                            <th scope="col">Row No</th>
+                            <th scope="col">Payments Id</th>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Nic</th>
+                            <th scope="col">Date of Payment</th>
+                            <th scope="col">Time Of Payment</th>
+                            <th scope="col">Loss Damage Waiver</th>
+                            <th scope="col">Loss Damage Waiver Slip</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="notificationsForAdmin"
+             class="notificationsForAdmin container-fluid position-relative flex-column justify-content-center align-items-center"
+             style="background-color:rgb(223 233 230);">
+        <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
+             style="width: 80%;height: 80%;">
+            <div class="container d-flex justify-content-center align-items-start flex-wrap"
+                 style="width: 90%;height: 90%;overflow-y: scroll;">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customers Section Start -->
+
+    <section id="viewAllCarsInCustomerSection"
+             class="viewAllCarsInCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
+             style="width: 80%;height: 90%;">
+            <div class="row d-flex flex-row" style="width: 100%;height: 100%;">
+                <div class="col-2 d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                    <div class="iconContainer d-flex flex-column align-items-center justify-content-center"
+                         style="width: 50%;height: 30%;"><i id="leftNavBtnForCarView"
+                                                            class="fa-solid fa-chevron-left d-flex fa-2x"></i></div>
+                </div>
+                <div class="col-8 d-flex flex-column align-items-start justify-content-center"
+                     style="height: 100%;overflow-x: scroll;">
+                    <div id="cardsContainingContainerInCustomerSection"
+                         class="position-relative d-flex flex-row justify-content-start align-items-center"
+                         style="width: 500%;height: 70%;">
+                    </div>
+                </div>
+                <div class="col-2 d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                    <div class="iconContainer d-flex flex-column align-items-center justify-content-center"
+                         style="width: 50%;height: 30%;"><i id="rightNavBtnForCarView"
+                                                            class="fa-solid fa-chevron-right d-flex fa-2x"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="viewAllBookingsForCustomerSection"
+             class="viewAllBookingsForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
+             style="width: 80%;height: 80%;">
+            <div class="col-11 flex-column align-items-center justify-content-center"
+                 style="height: 90%;">
+                <div class="row d-flex flex-row align-items-center justify-content-center "
+                     style="width: 100%;height: 10%;">
+                    <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 90%;height:10%;">
+                            <div class="col-6 d-flex">
+                                <input aria-describedby="bookingRequestSearchField" class="form-control d-flex"
+                                       id="customerOwnBookingDetailsSearchField"
+                                       placeholder="Search Booking Request" type="text">
+                            </div>
+                            <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
+                                <button id="searchBookingDetailsBtnInCustomer" class="btn btn-primary ms-2 me-2 col-10" type="button">Search</button>
+                            </div>
+                            <div class="col-4 d-flex flex-row align-items-center justify-content-center">
+                                <a class="ms-2 me-2 col-10 d-flex text-decoration-none flex-column"
+                                   id="viewBookingDetailsBtnInCustomer">
+                                    <button class="btn btn-success w-100 h-100" type="button">View Booking Details
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex flex-row  align-items-center justify-content-center "
+                     style="width: 100%;height: 90%;">
+                    <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                         style="height: 90%;overflow: auto;width: 90%;">
+                        <div id="viewAllBookingInViewAllCustomerSection" class="col-12 shadow-lg"
+                             style="height: 100%;display: flex;">
+                            <table id="cusOwnBookingsTable" class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Row No</th>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Customer Nic</th>
+                                    <th scope="col">Booked Date</th>
+                                    <th scope="col">Booked Time</th>
+                                    <th scope="col">Cost</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="viewAllBookingDetailsInCustomerSection" class="col-12"
+                             style="height: 100%;display: none;width: auto;">
+                            <table id="cusOwnBookingsDetailsTable" class="table table-hover table-bordered" style="height: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Row No</th>
+                                         <th scope="col">Booking ID</th>
+                                         <th scope="col">Car_RegNo</th>
+                                         <th scope="col">Driver Nic</th>
+                                         <th scope="col">Car Type</th>
+                                         <th scope="col">Rental Type</th>
+                                         <th scope="col">Date Of Pickup</th>
+                                         <th scope="col">Time Of Pickup</th>
+                                         <th scope="col">Pickup Venue</th>
+                                         <th scope="col">Returned Date</th>
+                                         <th scope="col">Returned Time</th>
+                                         <th scope="col">Returned Venue</th>
+                                         <th scope="col">Loss Damage</th>
+                                         <th scope="col">Cost</th>
+                                     </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="viewMyAccountForCustomerSection"
+             class="viewMyAccountForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
+             style="width: 90%;height: 90%;">
+            <div class="col-12 flex-column align-items-center shadow-lg"
+                 style="height: 95%;overflow: auto;">
+                <table id="customerAccountDetailsTable" class="table table-hover table-bordered"
+                       style="width: 100%;height: 100%;">
+                    <thead>
+                    <tr>
+                        <th scope="col">Row No</th>
+                        <th scope="col">Nic</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">License No</th>
+                        <th scope="col">Contact No</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Nic Photo</th>
+                        <th scope="col">License Photo</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="placingBookingRequestInCustomer"
+             class="placingBookingRequestInCustomer container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid shadow-lg d-flex flex-column align-items-center justify-content-center"
+             style="width: 90%;height: 95%;">
+            <div class="row d-flex justify-content-center align-items-center" style="width: 90%;height: 60%;">
+                <div class="col-11 flex-column align-items-center justify-content-center"
+                     style="height: 100%;">
+                    <form class="position-relative d-flex flex-column justify-content-center align-items-center"
+                          style="width: 100%;height: 95%;">
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="bookingReqIdInPlacingBookingRequest">Booking
+                                        Id</label>
+                                    <input aria-describedby="bookingReqIdInPlacingBookingRequest" class="form-control"
+                                           id="bookingReqIdInPlacingBookingRequest"
+                                           placeholder="Enter Booking Id" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div id="appendCarSelectionOrInputContainerId" class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="cusNicInPlacingBookingRequest">Customer Nic</label>
+                                    <input aria-describedby="cusNicInPlacingBookingRequest" class="form-control"
+                                           id="cusNicInPlacingBookingRequest"
+                                           placeholder="Enter Customer Nic" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column shadow-lg text-center align-items-center justify-content-center"
+                                     style="width: 100%;height: 50%;">
+                                    <label class="col form-label text-center d-flex"
+                                           for="ifDriverNeedsForBookingRequestCheckBox">Tick If You Need A
+                                        Driver</label>
+                                    <input type="checkbox" class="col form-check d-flex"
+                                           id="ifDriverNeedsForBookingRequestCheckBox"
+                                           style="width: 20%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="carTypeInPlacingBookingRequestMenu">Car Type</label>
+                                    <select class="form-select d-flex align-items-center justify-content-center"
+                                            style="width: 100%;height: 50%;" aria-label="Default select example"
+                                            id="carTypeInPlacingBookingRequestMenu">
+                                        <option value="1">Luxury</option>
+                                        <option value="2">Semi-Luxury</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="rentalTypeInPlacingBookingRequestDropdownMenu">Rental
+                                        Type</label>
+                                    <select class="form-select d-flex align-items-center justify-content-center"
+                                            style="width: 100%;height: 50%;" aria-label="Default select example"
+                                            id="rentalTypeInPlacingBookingRequestDropdownMenu">
+                                        <option value="1">Daily</option>
+                                        <option value="2">Monthly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="dateOfPickupInPlacingBookingRequest">Date Of
+                                        Pickup</label>
+                                    <input aria-describedby="dateOfPickupInPlacingBookingRequest" class="form-control"
+                                           id="dateOfPickupInPlacingBookingRequest"
+                                           placeholder="Enter Date OF Pickup" type="date">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="timeOfPickupInPlacingBookingRequest">Time Of
+                                        Pickup</label>
+                                    <input aria-describedby="timeOfPickupInPlacingBookingRequest" class="form-control"
+                                           id="timeOfPickupInPlacingBookingRequest"
+                                           placeholder="Enter Time Of Pickup" type="time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="pickupVenueInPlacingBookingRequest">Pickup
+                                        Venue</label>
+                                    <input aria-describedby="pickupVenueInPlacingBookingRequest" class="form-control"
+                                           id="pickupVenueInPlacingBookingRequest"
+                                           placeholder="Enter Pickup Venue" type="text">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnedDateInPlacingBookingRequest">Return
+                                        Date</label>
+                                    <input aria-describedby="returnedDateInPlacingBookingRequest" class="form-control"
+                                           id="returnedDateInPlacingBookingRequest"
+                                           placeholder="Enter Returned Date" type="date">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnedTimeInPlacingBookingRequest">Return
+                                        Time</label>
+                                    <input aria-describedby="returnedTimeInPlacingBookingRequest" class="form-control"
+                                           id="returnedTimeInPlacingBookingRequest"
+                                           placeholder="Enter Returned Time" type="time">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="returnVenueInPlacingBookingRequest">Return
+                                        Venue</label>
+                                    <input aria-describedby="returnVenueInPlacingBookingRequest" class="form-control"
+                                           id="returnVenueInPlacingBookingRequest"
+                                           placeholder="EnterReturn Venue" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-row align-items-center justify-content-center"
+                             style="width: 100%;height: calc(100%/4*1);">
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="lossDamageWaiverInPlacingBookingRequest">Loss Damage
+                                        Waiver</label>
+                                    <input aria-describedby="lossDamageWaiverInPlacingBookingRequest"
+                                           class="form-control"
+                                           id="lossDamageWaiverInPlacingBookingRequest"
+                                           placeholder="Enter Loss Damage Waiver" type="number">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="lossDamageWaiverSlipInPlacingBookingRequest">Loss
+                                        Damage Waiver
+                                        Slip Path</label>
+                                    <input aria-describedby="lossDamageWaiverSlipInPlacingBookingRequest"
+                                           class="form-control"
+                                           id="lossDamageWaiverSlipInPlacingBookingRequest"
+                                           placeholder="Upload Loss Damage Waiver Slip"
+                                           type="file"
+                                           name="lossDamageWaiverSlip">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="costInPlacingBookingRequest">Cost Per One Car
+                                        Booking</label>
+                                    <input aria-describedby="costInPlacingBookingRequest" class="form-control"
+                                           id="costInPlacingBookingRequest"
+                                           placeholder="Enter Cost Per One Car Booking" type="number">
+                                </div>
+                            </div>
+                            <div class="col d-flex">
+                                <div class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                    <label class="form-label" for="totalCostInPlacingBookingRequest">Cost</label>
+                                    <input aria-describedby="totalCostInPlacingBookingRequest" class="form-control"
+                                           id="totalCostInPlacingBookingRequest"
+                                           placeholder="Enter Total For Booking Request" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-start align-items-center shadow-lg"
+                 style="width: 90%;height: 40%;overflow: auto;">
+                <table id="addToCartTableInBookingRequest" class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Row No</th>
+                        <th scope="col">Booking ID</th>
+                        <th scope="col">Car_RegNo</th>
+                        <th scope="col">Driver Nic</th>
+                        <th scope="col">Car Type</th>
+                        <th scope="col">Rental Type</th>
+                        <th scope="col">Date Of Pickup</th>
+                        <th scope="col">Time Of Pickup</th>
+                        <th scope="col">Pickup Venue</th>
+                        <th scope="col">Returned Date</th>
+                        <th scope="col">Returned Time</th>
+                        <th scope="col">Returned Venue</th>
+                        <th scope="col">Loss Damage</th>
+                        <th scope="col">Cost</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center" style="width: 90%;height: 10%;">
+                <button id="placeBookingRequestBtn" class="btn btn-primary ms-2 me-2 col-2" type="button">Request
+                    Booking
+                </button>
+                <button id="updateBookingRequestBtn" class="btn btn-secondary ms-2 me-2 col-2" type="button">Update
+                    Booking
+                </button>
+                <button id="deleteBookingRequestBtn" class="btn btn-danger ms-2 me-2  col-2" type="button">Delete
+                    Booking
+                </button>
+                <button id="addToCartInBookingRequestBtn" class="btn btn-outline-success ms-2 me-2  col-2"
+                        type="button">Add To List
+                </button>
+                <button id="clearCartBtnInBookingRequest" class="btn btn-outline-danger ms-2 me-2  col-2" type="button">
+                    Clear From
+                    List
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="notificationsForCustomer"
+             class="notificationsForCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+             style="background-color:rgb(223 233 230);">
+        <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
+             style="width: 80%;height: 80%;">
+            <div class="container d-flex justify-content-center align-items-start flex-wrap"
+                 style="width: 90%;height: 90%;overflow-y: scroll;">
+
+            </div>
+        </div>
+    </section>
+    <!-- Customer Section End -->
+
+    <!-- Driver Section Start -->
+    <section id="viewDriverScheduleInDriverSection"
+             class="viewDriverScheduleInDriverSection container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid shadow-lg d-flex flex-column justify-content-center align-items-center"
+             style="width: 80%;height: 80%;overflow: auto;">
+            <table id="driverScheduleTable" class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+                <thead>
+                <tr>
+                    <th scope="col">Row No</th>
+                    <th scope="col">Nic</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Booking Id</th>
+                    <th scope="col">License No</th>
+                    <th scope="col">Available Status</th>
+                    <th scope="col">Pickup Date</th>
+                    <th scope="col">Pickup Time</th>
+                    <th scope="col">Return Date</th>
+                    <th scope="col">Return Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="viewDriverAccountSection"
+             class="viewDriverAccountSection container-fluid position-relative flex-column justify-content-center align-items-center">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
+             style="width: 90%;height: 90%;">
+            <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                 style="height: 95%;overflow: auto;">
+                <table id="driverAccountTable" class="table table-hover table-bordered"
+                       style="width: 100%;height: 100%;">
+                    <thead>
+                    <tr>
+                        <th scope="col">Row No</th>
+                        <th scope="col">Nic</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nic Photo</th>
+                        <th scope="col">License No</th>
+                        <th scope="col">License Photo</th>
+                        <th scope="col">Contact No</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Available Status</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver Section End -->
+</main>
+<script src="/assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/loginLogout.js"></script>
+<script src="/util/baseUrl.js"></script>
+<script src="/util/carBookingChooserBtn.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/util/Validator.js"></script>
+<script src="/controllers/customerController.js"></script>
+<script src="/controllers/carController.js"></script>
+<script src="/controllers/driverController.js"></script>
+<script src="/models/tm/AddToCartTm.js"></script>
+<script src="/models/tm/AddToCartBookingTm.js"></script>
+<script src="/controllers/placingBookingRequestController.js"></script>
+<script src="/controllers/bookingRequestAcceptController.js"></script>
+<script src="/controllers/placeBookingController.js"></script>
+<script src="/controllers/viewAllBookingsController.js"></script>
+<script src="/controllers/incomeController.js"></script>
+<script src="/controllers/dashboardController.js"></script>
+<script src="controllers/customerOwnBookingsController.js"></script>
+</body>
+</html>

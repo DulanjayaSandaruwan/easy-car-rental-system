@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="spring-mvc-easy-car-rental@localhost" uuid="96eadc27-21ed-480c-bb35-7b0797f2dff8">
+    <data-source source="LOCAL" name="easy-car-rental-system@localhost" uuid="c12e2914-a21e-4dc8-89ab-aa21c39d81d9">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/spring-mvc-easy-car-rental</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/easy-car-rental-system</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

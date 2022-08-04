@@ -766,9 +766,10 @@ function setBookingIdToField() {
             console.log('condition last last last');
             bookingReqIdInPlacingBookingRequest.val(boIdInBooking);
         }
-
+        else if ((idBookingInt > idPendingInt) || (idBookingInt > idRequestInt)) {
+            bookingReqIdInPlacingBookingRequest.val(boIdInBooking);
+        }
         /*Generating Customer Id When Payments Id Consists In One of The Pending Or Request Table*/
-
 
         console.log("BookingRequestPayment - " + paymentIdInBookingRequest);
         console.log("PendingBookingPayment - " + paymentIdInPendingBooking);
@@ -832,6 +833,9 @@ function setBookingIdToField() {
             console.log("condition last")
             paymentsId = paymentIdInBooking;
         } else if ((idPendingPaymentInt == undefined) && (idRequestPaymentInt == undefined)) {
+            paymentsId = paymentIdInBooking;
+        }
+        else if ((idBookingPaymentInt > idPendingPaymentInt) || (idBookingPaymentInt > idRequestPaymentInt)) {
             paymentsId = paymentIdInBooking;
         }
     }

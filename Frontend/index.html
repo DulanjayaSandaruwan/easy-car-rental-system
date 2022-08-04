@@ -77,9 +77,12 @@
 
     <section class="login container-fluid position-relative" id="loginSection"
              style="height: 100vh;width: 100%;background-color: rgb(231, 231, 231) !important;display: block!important;">
+        <img alt="" src="assets/images/home.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute;
+            inset: 0 0 0 0; margin: auto">
         <div class="container-fluid shadow"
-             style="position: absolute;inset: 0 0 0 0;margin: auto;width: 50%;height: 70%;background-color: rgb(228, 225, 225) !important;border-radius: 20px;">
-            <h3 style="position: absolute;left: 0;right: 0;margin: auto;width: max-content;top: 40px;">Easy Car Rental Service</h3>
+             style="position: absolute;inset: 0 0 0 0;margin: auto;width: 50%;height: 70%;background-color: rgb(241,238,238) !important;border-radius: 20px;">
+            <h3 style="position: absolute;left: 0;right: 0;margin: auto;width: max-content;top: 40px;">Easy Car Rental
+                Service</h3>
             <div class="row position-absolute"
                  style="top: 25%;left: 0;right: 0;margin: auto;width: 400px;height: max-content;">
                 <div class="col">
@@ -419,9 +422,8 @@
                                                 <select aria-label="Default select example"
                                                         class="form-select d-flex align-items-center justify-content-center"
                                                         id="carTypeMenuInCar" style="width: 90%;height: 50%;">
-                                                    <option value="1">Select Car Type</option>
-                                                    <option value="2">Luxury</option>
-                                                    <option value="3">Semi-Luxury</option>
+                                                    <option value="1">Luxury</option>
+                                                    <option value="2">Semi-Luxury</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -432,9 +434,8 @@
                                                         class="form-select d-flex align-items-center justify-content-center"
                                                         id="transmissionTypeMenuInCar"
                                                         style="width: 90%;height: 50%;">
-                                                    <option value="1">Select Transmission Type</option>
-                                                    <option value="2">Auto</option>
-                                                    <option value="3">Manual</option>
+                                                    <option value="1">Auto</option>
+                                                    <option value="2">Manual</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -444,9 +445,8 @@
                                                 <select aria-label="Default select example"
                                                         class="form-select d-flex align-items-center justify-content-center"
                                                         id="fuelTypeMenuInCar" style="width: 90%;height: 50%;">
-                                                    <option value="1">Select Fuel Type</option>
-                                                    <option value="2">Petrol</option>
-                                                    <option value="3">Diesel</option>
+                                                    <option value="1">Petrol</option>
+                                                    <option value="2">Diesel</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -521,9 +521,8 @@
                                                 <select aria-label="Default select example"
                                                         class="form-select d-flex align-items-center justify-content-center"
                                                         id="bookedStatusMenuInCar" style="width: 90%;height: 50%;">
-                                                    <option value="1">Select Booking Status</option>
-                                                    <option value="2">Booked</option>
-                                                    <option value="3">Not Booked</option>
+                                                    <option value="1">Booked</option>
+                                                    <option value="2">Not Booked</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -534,9 +533,8 @@
                                                         class="form-select d-flex align-items-center justify-content-center"
                                                         id="maintenanceStatusMenuInCar"
                                                         style="width: 90%;height: 50%;">
-                                                    <option value="1">Select Maintenance</option>
-                                                    <option value="2">No Maintenance Required</option>
-                                                    <option value="3">Under Maintenance</option>
+                                                    <option value="1">No Maintenance Required</option>
+                                                    <option value="2">Under Maintenance</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -754,7 +752,8 @@
                                         <label class="form-label" for="availabilityStatusMenuInDriver">Availability
                                             Status</label>
                                         <select aria-label="Default select example"
-                                                class="form-select d-flex align-items-center justify-content-center" id="availabilityStatusMenuInDriver"
+                                                class="form-select d-flex align-items-center justify-content-center"
+                                                id="availabilityStatusMenuInDriver"
                                                 style="width: 90%;height: 50%;">
                                             <option value="1">Available</option>
                                             <option value="2">Not Available</option>
@@ -1055,7 +1054,8 @@
                                      style="height: 100%;">
                                     <div class="dropdown d-flex align-items-center justify-content-center"
                                          style="width: 100%;">
-                                        <button class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-center" data-bs-toggle="dropdown"
+                                        <button class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-center"
+                                                data-bs-toggle="dropdown"
                                                 id="carRegDropDownBtnInBookingAdmin"
                                                 style="width: 80%;" type="button">
                                             <span class="d-flex text-center">Car Reg No</span>
@@ -1186,7 +1186,8 @@
                                 <div class="d-flex flex-column" style="width: 100%;height: 50%;">
                                     <label class="form-label" for="damageStatusMenuInBooking">Damaged Status</label>
                                     <select aria-label="Default select example"
-                                            class="form-select d-flex align-items-center justify-content-center" id="damageStatusMenuInBooking"
+                                            class="form-select d-flex align-items-center justify-content-center"
+                                            id="damageStatusMenuInBooking"
                                             style="width: 100%;height: 50%;">
                                         <option value="1">Not Damaged</option>
                                         <option value="2">Damaged</option>
@@ -1492,9 +1493,10 @@
             </div>
         </div>
     </section>
-    <section class="notificationsForAdmin container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="notificationsForAdmin"
-             style="background-color:rgb(223 233 230);">
+    <section
+            class="notificationsForAdmin container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="notificationsForAdmin"
+            style="background-color:rgb(223 233 230);">
         <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
              style="width: 80%;height: 80%;">
             <div class="container d-flex justify-content-center align-items-start flex-wrap"
@@ -1506,8 +1508,9 @@
 
     <!-- Customers Section Start -->
 
-    <section class="viewAllCarsInCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="viewAllCarsInCustomerSection">
+    <section
+            class="viewAllCarsInCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewAllCarsInCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 80%;height: 90%;">
             <div class="row d-flex flex-row" style="width: 100%;height: 100%;">
@@ -1532,8 +1535,9 @@
         </div>
     </section>
 
-    <section class="viewAllBookingsForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="viewAllBookingsForCustomerSection">
+    <section
+            class="viewAllBookingsForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewAllBookingsForCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 80%;height: 80%;">
             <div class="col-11 flex-column align-items-center justify-content-center"
@@ -1619,8 +1623,9 @@
         </div>
     </section>
 
-    <section class="viewMyAccountForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="viewMyAccountForCustomerSection">
+    <section
+            class="viewMyAccountForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewMyAccountForCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 90%;height: 90%;">
             <div class="col-12 flex-column align-items-center shadow-lg"
@@ -1695,8 +1700,9 @@
         </div>
     </section>
 
-    <section class="placingBookingRequestInCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="placingBookingRequestInCustomer">
+    <section
+            class="placingBookingRequestInCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="placingBookingRequestInCustomer">
         <div class="container-fluid shadow-lg d-flex flex-column align-items-center justify-content-center"
              style="width: 90%;height: 95%;">
             <div class="row d-flex justify-content-center align-items-center" style="width: 90%;height: 60%;">
@@ -1746,7 +1752,8 @@
                                 <div class="d-flex flex-column" style="width: 100%;height: 50%;">
                                     <label class="form-label" for="carTypeInPlacingBookingRequestMenu">Car Type</label>
                                     <select aria-label="Default select example"
-                                            class="form-select d-flex align-items-center justify-content-center" id="carTypeInPlacingBookingRequestMenu"
+                                            class="form-select d-flex align-items-center justify-content-center"
+                                            id="carTypeInPlacingBookingRequestMenu"
                                             style="width: 100%;height: 50%;">
                                         <option value="1">Luxury</option>
                                         <option value="2">Semi-Luxury</option>
@@ -1758,7 +1765,8 @@
                                     <label class="form-label" for="rentalTypeInPlacingBookingRequestDropdownMenu">Rental
                                         Type</label>
                                     <select aria-label="Default select example"
-                                            class="form-select d-flex align-items-center justify-content-center" id="rentalTypeInPlacingBookingRequestDropdownMenu"
+                                            class="form-select d-flex align-items-center justify-content-center"
+                                            id="rentalTypeInPlacingBookingRequestDropdownMenu"
                                             style="width: 100%;height: 50%;">
                                         <option value="1">Daily</option>
                                         <option value="2">Monthly</option>
@@ -1915,9 +1923,10 @@
         </div>
     </section>
 
-    <section class="notificationsForCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="notificationsForCustomer"
-             style="background-color:rgb(223 233 230);">
+    <section
+            class="notificationsForCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="notificationsForCustomer"
+            style="background-color:rgb(223 233 230);">
         <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
              style="width: 80%;height: 80%;">
             <div class="container d-flex justify-content-center align-items-start flex-wrap"
@@ -1929,8 +1938,9 @@
     <!-- Customer Section End -->
 
     <!-- Driver Section Start -->
-    <section class="viewDriverScheduleInDriverSection container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="viewDriverScheduleInDriverSection">
+    <section
+            class="viewDriverScheduleInDriverSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewDriverScheduleInDriverSection">
         <div class="container-fluid shadow-lg d-flex flex-column justify-content-center align-items-center"
              style="width: 80%;height: 80%;overflow: auto;">
             <table class="table table-hover table-bordered" id="driverScheduleTable" style="width: 100%;height: 100%;">
@@ -1953,8 +1963,9 @@
             </table>
         </div>
     </section>
-    <section class="viewDriverAccountSection container-fluid position-relative flex-column justify-content-center align-items-center"
-             id="viewDriverAccountSection">
+    <section
+            class="viewDriverAccountSection container-fluid position-relative flex-column justify-content-center align-items-center"
+            id="viewDriverAccountSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 90%;height: 90%;">
             <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"

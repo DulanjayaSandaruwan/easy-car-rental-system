@@ -50,7 +50,7 @@ carRegNoFieldInCar.off('keyup');
 carRegNoFieldInCar.keyup(function (e) {
     let index = 0;
     validate(carRegNoFieldInCarPattern, carInputsArr, index, e, carSaveBtnInCar, carUpdateBtnInCar, carDeleteBtnInCar)
-    if (carRegNoFieldInCar.val().length == 7) {
+    if (carRegNoFieldInCar.val().length == 6) {
         if (e.key == 'Shift') {
             let car = searchCarInCarController();
             carBrandFieldInCar.val(car.brand);
@@ -170,6 +170,7 @@ $(carSaveBtnInCar).click(function () {
         maintenanceStatus: $('#maintenanceStatusMenuInCar :selected').text(),
         lossDamageWaiver: carLossDamageWaiverFieldInCar.val()
     }
+    console.log(dto);
     data.append("dto", new Blob([JSON.stringify(dto)], {type: "application/json"}));
     for (let i = 0; i < file.length; i++) {
         data.append("carImgFile", file[i], file[i].name);

@@ -5,14 +5,14 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Car Rental System</title>
-    <link href="../frontend/assets/images/logoBlack.png" rel="icon">
+    <title>Easy Car Rental System</title>
+    <link href="../Frontend/assets/images/logoBlack.png" rel="icon">
 
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+          referrerpolicy="no-referrer" rel="stylesheet"/>
 
     <link href="/assets/css/stylesheet.css" rel="stylesheet">
 
@@ -29,7 +29,7 @@
 
                 </ul>
             </div>
-            <a style="display: none;" href="#loginSection" id="signupBtn">
+            <a href="#loginSection" id="signupBtn" style="display: none;">
                 <div class="logout position-absolute">
                     <i class="fas fa-user-plus text-white fs-3 position-absolute"></i>
                     <h3 class="position-absolute text-white fs-6">Sign Up</h3>
@@ -64,8 +64,8 @@
                          style="width: 50%;height: 25%;">
                         <div class="btnContainer d-flex flex-column align-items-center justify-content-center"
                              style="width: 45%;height: 70%;">
-                            <a id="viewAllCarsForUserBtn"
-                               class="d-flex text-decoration-none w-100 h-100">
+                            <a class="d-flex text-decoration-none w-100 h-100"
+                               id="viewAllCarsForUserBtn">
                                 <Button class="btn text-white w-100 h-100" style="border: 0;">View Cars</Button>
                             </a>
                         </div>
@@ -79,7 +79,7 @@
              style="height: 100vh;width: 100%;background-color: rgb(231, 231, 231) !important;display: block!important;">
         <div class="container-fluid shadow"
              style="position: absolute;inset: 0 0 0 0;margin: auto;width: 50%;height: 70%;background-color: rgb(228, 225, 225) !important;border-radius: 20px;">
-            <h3 style="position: absolute;left: 0;right: 0;margin: auto;width: max-content;top: 40px;">WebPos</h3>
+            <h3 style="position: absolute;left: 0;right: 0;margin: auto;width: max-content;top: 40px;">Easy Car Rental Service</h3>
             <div class="row position-absolute"
                  style="top: 25%;left: 0;right: 0;margin: auto;width: 400px;height: max-content;">
                 <div class="col">
@@ -197,7 +197,7 @@
                                     <div class="row d-flex flex-row justify-content-center align-items-center"
                                          style="width: 100%;height: 100%;">
                                         <div class="col-10 d-flex flex-row h-50 justify-content-center align-items-center">
-                                            <button id="cusSaveBtnInCustomer" class="btn btn-primary ms-2 me-2 col-4"
+                                            <button class="btn btn-primary ms-2 me-2 col-4" id="cusSaveBtnInCustomer"
                                                     type="button">
                                                 Register
                                             </button>
@@ -216,20 +216,20 @@
              id="adminSection"
              style="width: 100%;height: 92.5vh;background-color:#F9F9F9!important;display: none">
         <div class="dashBoard container-fluid  position-relative flex-column justify-content-center align-items-center shadow-lg"
-             style="height: 80%;width: 95%;background-color: #C9D6BD;">
+             style="height: 80%;width: 95%;background-color: #F9F9F9;">
             <div class="row d-flex flex-row flex-wrap"
-                 style="height: calc(100%/2*1);border-bottom: 2px solid black;border-bottom-right-radius: 3px;">
+                 style="height: calc(100%/2*1);border-bottom: 2px solid white;border-bottom-right-radius: 3px;">
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center"
-                     style="border-right: 2px solid black;">
-                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #B2D545 ;">
+                     style="border-right: 2px solid white;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #0589C4 ;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
                                 <div class="d-flex flex-row justify-content-center align-items-center"
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="numberOfRegisteredCustomersId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="numberOfRegisteredCustomersId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
@@ -246,16 +246,16 @@
                     </div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center"
-                     style="border-right: 2px solid black;">
-                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #82E723;">
+                     style="border-right: 2px solid white;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #EA3F79;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
                                 <div class="d-flex flex-row justify-content-center align-items-center"
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="totalBookingsOfTheDayId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="totalBookingsOfTheDayId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
@@ -272,15 +272,15 @@
                     </div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #45D57C;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #028EA0;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
                                 <div class="d-flex flex-row justify-content-center align-items-center"
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="numberOfAvailableAndReservedCarsId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="numberOfAvailableAndReservedCarsId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
@@ -299,23 +299,22 @@
             </div>
             <div class="row d-flex flex-row flex-wrap" style="height: calc(100%/2*1);">
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center"
-                     style="border-right: 2px solid black;">
-                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #459CD5;">
+                     style="border-right: 2px solid white;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #FAC213;;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
                                 <div class="d-flex flex-row justify-content-center align-items-center"
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="numberOfBookingsActiveTodayId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="numberOfBookingsActiveTodayId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
                                 <div class="row d-flex" style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center text-center">
-                                        <p class="card-text text-white">The number of bookings<br>active for the
-                                            day</p>
+                                        <p class="card-text text-white">On Rent</p>
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +325,7 @@
                     </div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center"
-                     style="border-right: 2px solid black;">
+                     style="border-right: 2px solid white;">
                     <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #A145D5;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
@@ -334,8 +333,8 @@
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="numberOfAvailableAndOccupiedDriversId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="numberOfAvailableAndOccupiedDriversId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
@@ -352,22 +351,21 @@
                     </div>
                 </div>
                 <div class="col-4 d-flex flex-column justify-content-center align-items-center">
-                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #D54586;">
+                    <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;background-color: #198754;">
                         <div class="row" style="width: 100%;height: 100%;">
                             <div class="col-9 d-flex flex-column align-items-center justify-content-center">
                                 <div class="d-flex flex-row justify-content-center align-items-center"
                                      style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center position-relative"
                                          style="height: 50%;">
-                                        <h5 id="numberOfCarsUnderMaintenanceAndNeedMaintenanceId"
-                                            class="text-center position-absolute fa-3x text-white"
+                                        <h5 class="text-center position-absolute fa-3x text-white"
+                                            id="numberOfCarsUnderMaintenanceAndNeedMaintenanceId"
                                             style="inset: 0 0 0 0;margin: auto;width: 100%;height: 100%;">10</h5>
                                     </div>
                                 </div>
                                 <div class="row d-flex" style="width: 100%;height: 50%;">
                                     <div class="col-12 flex-column align-items-center justify-content-center text-center">
-                                        <p class="card-text text-white">The number of cars that<br>need maintenance
-                                            and<br>under maintenance</p>
+                                        <p class="card-text text-white">Under Maintaining Cars</p>
                                     </div>
                                 </div>
                             </div>
@@ -395,8 +393,8 @@
                                 <div class="container position-relative d-flex flex-row flex-wrap justify-content-center"
                                      style="width: 100%;height: 85%;">
 
-                                    <form id="carTextFieldContainer"
-                                          class="carTextFieldContainer position-relative flex-row flex-wrap justify-content-center"
+                                    <form class="carTextFieldContainer position-relative flex-row flex-wrap justify-content-center"
+                                          id="carTextFieldContainer"
                                           style="width: 100%;height: 100%;">
                                         <div class="container-fluid d-flex flex-row flex-wrap justify-content-center"
                                              style="width: 100%;height: 100%;">
@@ -406,46 +404,49 @@
                                                     No</label>
                                                 <input aria-describedby="carRegNoFieldInCar" class="form-control d-flex"
                                                        id="carRegNoFieldInCar" placeholder="Enter Car Reg Number"
-                                                       type="text" style="width: 90%;">
+                                                       style="width: 90%;" type="text">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
                                                 <label class="form-label d-flex" for="carBrandFieldInCar">Brand</label>
                                                 <input aria-describedby="carBrandFieldInCar" class="form-control d-flex"
                                                        id="carBrandFieldInCar"
-                                                       placeholder="Enter Car Brand" type="text" style="width: 90%;">
+                                                       placeholder="Enter Car Brand" style="width: 90%;" type="text">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
                                                 <label class="form-label" for="carTypeMenuInCar">Car Type</label>
-                                                <select class="form-select d-flex align-items-center justify-content-center"
-                                                        style="width: 90%;height: 50%;"
-                                                        aria-label="Default select example" id="carTypeMenuInCar">
-                                                    <option value="1">Luxury</option>
-                                                    <option value="2">Semi-Luxury</option>
+                                                <select aria-label="Default select example"
+                                                        class="form-select d-flex align-items-center justify-content-center"
+                                                        id="carTypeMenuInCar" style="width: 90%;height: 50%;">
+                                                    <option value="1">Select Car Type</option>
+                                                    <option value="2">Luxury</option>
+                                                    <option value="3">Semi-Luxury</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
                                                 <label class="form-label" for="transmissionTypeMenuInCar">Transmission
                                                     Type</label>
-                                                <select class="form-select d-flex align-items-center justify-content-center"
-                                                        style="width: 90%;height: 50%;"
-                                                        aria-label="Default select example"
-                                                        id="transmissionTypeMenuInCar">
-                                                    <option value="1">Auto</option>
-                                                    <option value="2">Manual</option>
+                                                <select aria-label="Default select example"
+                                                        class="form-select d-flex align-items-center justify-content-center"
+                                                        id="transmissionTypeMenuInCar"
+                                                        style="width: 90%;height: 50%;">
+                                                    <option value="1">Select Transmission Type</option>
+                                                    <option value="2">Auto</option>
+                                                    <option value="3">Manual</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
-                                                <label class="form-label" for="fuelTypeMenuInCar">Transmission
+                                                <label class="form-label" for="fuelTypeMenuInCar">Fuel
                                                     Type</label>
-                                                <select class="form-select d-flex align-items-center justify-content-center"
-                                                        style="width: 90%;height: 50%;"
-                                                        aria-label="Default select example" id="fuelTypeMenuInCar">
-                                                    <option value="1">Petrol</option>
-                                                    <option value="2">Diesel</option>
+                                                <select aria-label="Default select example"
+                                                        class="form-select d-flex align-items-center justify-content-center"
+                                                        id="fuelTypeMenuInCar" style="width: 90%;height: 50%;">
+                                                    <option value="1">Select Fuel Type</option>
+                                                    <option value="2">Petrol</option>
+                                                    <option value="3">Diesel</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
@@ -454,8 +455,8 @@
                                                     Passengers</label>
                                                 <input aria-describedby="carPassengersFieldInCar" class="form-control"
                                                        id="carPassengersFieldInCar"
-                                                       placeholder="Enter No of Passengers" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter No of Passengers" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -463,8 +464,8 @@
                                                     KM</label>
                                                 <input aria-describedby="carMileageInKmFieldInCar" class="form-control"
                                                        id="carMileageInKmFieldInCar"
-                                                       placeholder="Enter Car Mileage" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter Car Mileage" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -472,8 +473,8 @@
                                                     Day</label>
                                                 <input aria-describedby="freeKmPerDayFieldInCar" class="form-control"
                                                        id="freeKmPerDayFieldInCar"
-                                                       placeholder="Enter Free Km Per Day" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter Free Km Per Day" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -481,8 +482,8 @@
                                                     Month</label>
                                                 <input aria-describedby="freeKmPerMonthFieldInCar" class="form-control"
                                                        id="freeKmPerMonthFieldInCar"
-                                                       placeholder="Enter Free Km Per Month" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter Free Km Per Month" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -493,7 +494,7 @@
                                                        class="form-control"
                                                        id="carPriceForExtraKmFieldInCar"
                                                        placeholder="Enter Car Price For Extra KM"
-                                                       type="number" style="width: 90%;">
+                                                       style="width: 90%;" type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -501,8 +502,8 @@
                                                     Rate</label>
                                                 <input aria-describedby="carDailyRateFieldInCar" class="form-control"
                                                        id="carDailyRateFieldInCar"
-                                                       placeholder="Enter Car Daily Rate" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter Car Daily Rate" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -510,38 +511,40 @@
                                                     Rate</label>
                                                 <input aria-describedby="carMonthlyRateFieldInCar" class="form-control"
                                                        id="carMonthlyRateFieldInCar"
-                                                       placeholder="Enter Car Monthly Rate" type="number"
-                                                       style="width: 90%;">
+                                                       placeholder="Enter Car Monthly Rate" style="width: 90%;"
+                                                       type="number">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
                                                 <label class="form-label" for="bookedStatusMenuInCar">Booked
                                                     Status</label>
-                                                <select class="form-select d-flex align-items-center justify-content-center"
-                                                        style="width: 90%;height: 50%;"
-                                                        aria-label="Default select example" id="bookedStatusMenuInCar">
-                                                    <option value="1">Booked</option>
-                                                    <option value="2">Not Booked</option>
+                                                <select aria-label="Default select example"
+                                                        class="form-select d-flex align-items-center justify-content-center"
+                                                        id="bookedStatusMenuInCar" style="width: 90%;height: 50%;">
+                                                    <option value="1">Select Booking Status</option>
+                                                    <option value="2">Booked</option>
+                                                    <option value="3">Not Booked</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
                                                 <label class="form-label" for="maintenanceStatusMenuInCar">Maintenance
                                                     Status</label>
-                                                <select class="form-select d-flex align-items-center justify-content-center"
-                                                        style="width: 90%;height: 50%;"
-                                                        aria-label="Default select example"
-                                                        id="maintenanceStatusMenuInCar">
-                                                    <option value="1">No Maintenance Required</option>
-                                                    <option value="2">Under Maintenance</option>
+                                                <select aria-label="Default select example"
+                                                        class="form-select d-flex align-items-center justify-content-center"
+                                                        id="maintenanceStatusMenuInCar"
+                                                        style="width: 90%;height: 50%;">
+                                                    <option value="1">Select Maintenance</option>
+                                                    <option value="2">No Maintenance Required</option>
+                                                    <option value="3">Under Maintenance</option>
                                                 </select>
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
-                                                <label for="carImgFile" class="form-label">Car Images</label>
+                                                <label class="form-label" for="carImgFile">Car Images</label>
                                                 <input class="form-control" class="d-flex" id="carImgFile" multiple
                                                        name="carImgFile"
-                                                       type="file" style="width: 90%;">
+                                                       style="width: 90%;" type="file">
                                             </div>
                                             <div class="col-3 mt-0 mb-0 d-flex flex-column justify-content-center align-items-start"
                                                  style="height: calc(100%/5*1);">
@@ -551,15 +554,15 @@
                                                        class="form-control"
                                                        id="carLossDamageWaiverFieldInCar"
                                                        placeholder="Enter Car Loss Damage Waiver"
-                                                       type="number" style="width: 90%;">
+                                                       style="width: 90%;" type="number">
                                             </div>
                                         </div>
                                     </form>
 
-                                    <div id="carScheduleTableContainer"
-                                         class="carScheduleTableContainer position-relative flex-row flex-wrap justify-content-center"
+                                    <div class="carScheduleTableContainer position-relative flex-row flex-wrap justify-content-center"
+                                         id="carScheduleTableContainer"
                                          style="width: 100%;height: 100%;overflow: auto;display: none;">
-                                        <table id="carScheduleTable" class="table table-hover">
+                                        <table class="table table-hover" id="carScheduleTable">
                                             <thead>
                                             <tr>
                                                 <th scope="col">Row No</th>
@@ -576,8 +579,8 @@
                                         </table>
                                     </div>
 
-                                    <div id="carViewAllTableContainer"
-                                         class="carViewAllTableContainer position-relative flex-row"
+                                    <div class="carViewAllTableContainer position-relative flex-row"
+                                         id="carViewAllTableContainer"
                                          style="width: 100%;height: 100%;overflow: auto;display: none;">
                                         <table class="table table-hover">
                                             <thead>
@@ -618,14 +621,14 @@
                                          style="width: 100%;height: 100%;">
                                         <div class="col-12 d-flex flex-row justify-content-center align-items-center"
                                              style="height: 80%;">
-                                            <button id="carSaveBtnInCar" class="btn btn-primary ms-3 me-3 col-2"
+                                            <button class="btn btn-primary ms-3 me-3 col-2" id="carSaveBtnInCar"
                                                     type="button">Save
                                             </button>
-                                            <button id="carUpdateBtnInCar" class="btn btn-secondary ms-3 me-3 col-2"
+                                            <button class="btn btn-secondary ms-3 me-3 col-2" id="carUpdateBtnInCar"
                                                     type="button">
                                                 Update
                                             </button>
-                                            <button id="carDeleteBtnInCar" class="btn btn-danger ms-3 me-3 col-2"
+                                            <button class="btn btn-danger ms-3 me-3 col-2" id="carDeleteBtnInCar"
                                                     type="button">Delete
                                             </button>
                                             <a class="ms-3 me-3 col-2" id="carViewAllBtn">
@@ -647,6 +650,7 @@
             </div>
         </div>
     </section>
+
     <section
             class="customerDetailsSection container-fluid position-relative flex-column justify-content-center align-items-center"
             id="customerDetailsSection"
@@ -654,7 +658,7 @@
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 80%;height: 80%;">
             <div class="row position-relative d-flex" style="height: 90%;width: 90%;">
-                <div id="customerDetailsTableContainer" class="col shadow position-relative d-flex"
+                <div class="col shadow position-relative d-flex" id="customerDetailsTableContainer"
                      style="height: 100%;overflow: auto">
                     <table class="table table-hover">
                         <thead>
@@ -665,7 +669,6 @@
                             <th scope="col">License No</th>
                             <th scope="col">Contact NO</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Password</th>
                             <th scope="col">Nic Photo</th>
                             <th scope="col">License Photo</th>
                         </tr>
@@ -677,6 +680,7 @@
             </div>
         </div>
     </section>
+
     <section
             class="driverSection container-fluid position-relative flex-column justify-content-center align-items-center"
             id="driverSection"
@@ -690,8 +694,8 @@
 
                         <div class="container d-flex flex-row flex-wrap justify-content-center"
                              style="width: 90%;height: 80%;">
-                            <div id="driverTextFieldContainer"
-                                 class="driverTextFieldContainer flex-row flex-wrap justify-content-center"
+                            <div class="driverTextFieldContainer flex-row flex-wrap justify-content-center"
+                                 id="driverTextFieldContainer"
                                  style="width: 100%;height: 100%;">
                                 <div class="mb-1 col-4 d-flex flex-column justify-content-center align-items-center"
                                      style="height: calc(100%/4*1);">
@@ -749,9 +753,9 @@
                                     <div class="w-75 d-flex flex-column justify-content-center align-items-center">
                                         <label class="form-label" for="availabilityStatusMenuInDriver">Availability
                                             Status</label>
-                                        <select class="form-select d-flex align-items-center justify-content-center"
-                                                style="width: 90%;height: 50%;" aria-label="Default select example"
-                                                id="availabilityStatusMenuInDriver">
+                                        <select aria-label="Default select example"
+                                                class="form-select d-flex align-items-center justify-content-center" id="availabilityStatusMenuInDriver"
+                                                style="width: 90%;height: 50%;">
                                             <option value="1">Available</option>
                                             <option value="2">Not Available</option>
                                         </select>
@@ -782,8 +786,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="driverViewAllTableContainer"
-                                 class="driverViewAllTableContainer flex-row"
+                            <div class="driverViewAllTableContainer flex-row"
+                                 id="driverViewAllTableContainer"
                                  style="width: 100%;height: 100%;overflow: auto;display: none;">
                                 <table class="table table-hover">
                                     <thead>
@@ -812,13 +816,13 @@
                             <div class="row d-flex flex-row justify-content-center align-items-center"
                                  style="width: 100%;height: 100%;">
                                 <div class="col-12 d-flex flex-row h-50 justify-content-center align-items-center">
-                                    <button id="driverSaveBtn" class="btn btn-primary ms-2 me-2 col-3" type="button">
+                                    <button class="btn btn-primary ms-2 me-2 col-3" id="driverSaveBtn" type="button">
                                         Save
                                     </button>
-                                    <button id="driverUpdateBtn" class="btn btn-secondary ms-2 me-2 col-3"
+                                    <button class="btn btn-secondary ms-2 me-2 col-3" id="driverUpdateBtn"
                                             type="button">Update
                                     </button>
-                                    <button id="driverDeleteBtn" class="btn btn-danger ms-2 me-2  col-3" type="button">
+                                    <button class="btn btn-danger ms-2 me-2  col-3" id="driverDeleteBtn" type="button">
                                         Delete
                                     </button>
                                     <a class="ms-2 me-2 col-3"
@@ -846,13 +850,13 @@
                            placeholder="Search Booking Request" type="text">
                 </div>
                 <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
-                    <button id="bookingRequestSearchFieldInAcceptRequestBtn" class="btn btn-primary ms-2 me-2 col-10"
+                    <button class="btn btn-primary ms-2 me-2 col-10" id="bookingRequestSearchFieldInAcceptRequestBtn"
                             type="button">Search
                     </button>
                 </div>
             </div>
             <div class="row d-flex" style="width: 90%;height:40%;">
-                <div id="bookingRequestTableContainer" class="col" style="width: 100%;height: 100%;overflow: auto;">
+                <div class="col" id="bookingRequestTableContainer" style="width: 100%;height: 100%;overflow: auto;">
                     <table class="table table-hover table-bordered">
                         <thead>
                         <tr>
@@ -868,7 +872,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div id="bookingRequestDetailsTableContainer" class="col"
+                <div class="col" id="bookingRequestDetailsTableContainer"
                      style="width: 100%;height: 100%;overflow: auto;display: none;">
                     <table class="table table-hover">
                         <thead>
@@ -959,15 +963,15 @@
                             <div class="row d-flex flex-row justify-content-center align-items-center"
                                  style="width: 100%;height: 100%;">
                                 <div class="col-12 d-flex flex-row h-50 justify-content-center align-items-center">
-                                    <button id="bookingRequestSaveBtnInAcceptAdmin"
-                                            class="btn btn-primary ms-2 me-2 col-3" type="button">Save
+                                    <button class="btn btn-primary ms-2 me-2 col-3"
+                                            id="bookingRequestSaveBtnInAcceptAdmin" type="button">Save
                                     </button>
-                                    <button id="bookingRequestDeleteBtnInAcceptAdmin"
-                                            class="btn btn-danger ms-2 me-2  col-3" type="button">Delete
+                                    <button class="btn btn-danger ms-2 me-2  col-3"
+                                            id="bookingRequestDeleteBtnInAcceptAdmin" type="button">Delete
                                     </button>
                                     <a class="ms-2 me-2 col-3"
                                        id="bookingRequestDetailsBtn">
-                                        <button type="button" class="btn btn-info w-100 h-100">View All</button>
+                                        <button class="btn btn-info w-100 h-100" type="button">View All</button>
                                     </a>
                                 </div>
                             </div>
@@ -1040,8 +1044,8 @@
                                 </div>
                                 <div class="col-3 d-flex flex-column position-relative align-items-center justify-content-center text-center"
                                      style="height: 100%;">
-                                    <button id="searchBookingBtn"
-                                            class="btn btn-outline-success d-flex text-center align-items-center justify-content-center"
+                                    <button class="btn btn-outline-success d-flex text-center align-items-center justify-content-center"
+                                            id="searchBookingBtn"
                                             style="width: 80%;height: 50%;"
                                             type="button">
                                         <span class="d-flex">Search Pending Booking</span>
@@ -1051,9 +1055,9 @@
                                      style="height: 100%;">
                                     <div class="dropdown d-flex align-items-center justify-content-center"
                                          style="width: 100%;">
-                                        <button id="carRegDropDownBtnInBookingAdmin" type="button"
-                                                class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-center"
-                                                data-bs-toggle="dropdown" style="width: 80%;">
+                                        <button class="btn btn-secondary dropdown-toggle d-flex align-items-center justify-content-center" data-bs-toggle="dropdown"
+                                                id="carRegDropDownBtnInBookingAdmin"
+                                                style="width: 80%;" type="button">
                                             <span class="d-flex text-center">Car Reg No</span>
                                         </button>
                                         <ul class="dropdown-menu" id="dropDownMenuForCarRegNoInBookingInAdmin">
@@ -1181,9 +1185,9 @@
                             <div class="col d-flex">
                                 <div class="d-flex flex-column" style="width: 100%;height: 50%;">
                                     <label class="form-label" for="damageStatusMenuInBooking">Damaged Status</label>
-                                    <select class="form-select d-flex align-items-center justify-content-center"
-                                            style="width: 100%;height: 50%;" aria-label="Default select example"
-                                            id="damageStatusMenuInBooking">
+                                    <select aria-label="Default select example"
+                                            class="form-select d-flex align-items-center justify-content-center" id="damageStatusMenuInBooking"
+                                            style="width: 100%;height: 50%;">
                                         <option value="1">Not Damaged</option>
                                         <option value="2">Damaged</option>
                                     </select>
@@ -1236,8 +1240,8 @@
                                            placeholder="Search Current Booking Details" type="text">
                                 </div>
                                 <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
-                                    <button id="CurrentBookingsDetailsSearchBtn"
-                                            class="btn btn-primary ms-2 me-2 col-10" type="button">Search
+                                    <button class="btn btn-primary ms-2 me-2 col-10"
+                                            id="CurrentBookingsDetailsSearchBtn" type="button">Search
                                     </button>
                                 </div>
                                 <div class="col-4 d-flex flex-row align-items-center justify-content-center">
@@ -1252,8 +1256,8 @@
                     </div>
                     <div class="row d-flex flex-row  align-items-center justify-content-center "
                          style="width: 100%;height: 90%;">
-                        <div id="currentBookingsTableContainer"
-                             class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                        <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                             id="currentBookingsTableContainer"
                              style="height: 90%;overflow: auto;border: 1px solid black;">
                             <table class="table table-hover table-bordered" style="width: 100%;height: 100%;">
                                 <thead>
@@ -1270,8 +1274,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div id="currentBookingsDetailsTableContainer"
-                             class="col-12 flex-column align-items-start justify-content-center shadow-lg"
+                        <div class="col-12 flex-column align-items-start justify-content-center shadow-lg"
+                             id="currentBookingsDetailsTableContainer"
                              style="height: 90%;overflow: auto;border: 1px solid black;display: none;">
                             <table class="table table-hover table-bordered" style="width: 100%;height: 100%;">
                                 <thead>
@@ -1302,10 +1306,10 @@
                      id="viewAddToListBookingsSectionInAdmin" style="height: 90%;">
                     <div class="row d-flex flex-row  align-items-center justify-content-center "
                          style="width: 100%;height: 90%;">
-                        <div id="addToListBookingsTableContainer"
-                             class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                        <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
+                             id="addToListBookingsTableContainer"
                              style="height: 90%;overflow: auto;border: 1px solid black;">
-                            <table id="addToListBookingsTableContainerTable" class="table table-hover table-bordered"
+                            <table class="table table-hover table-bordered" id="addToListBookingsTableContainerTable"
                                    style="width: 100%;height: 100%;">
                                 <thead>
                                 <tr>
@@ -1355,7 +1359,7 @@
                                        placeholder="Search Booking" type="text">
                             </div>
                             <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
-                                <button id="bookingSearchFieldBtn" class="btn btn-primary ms-2 me-2 col-10"
+                                <button class="btn btn-primary ms-2 me-2 col-10" id="bookingSearchFieldBtn"
                                         type="button">Search
                                 </button>
                             </div>
@@ -1369,12 +1373,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="viewForBothBookingAndDetailsTableInAdmin"
-                     class="row d-flex flex-row justify-content-center align-items-center"
+                <div class="row d-flex flex-row justify-content-center align-items-center"
+                     id="viewForBothBookingAndDetailsTableInAdmin"
                      style="width: 100%;height: 90%;">
-                    <div id="viewAllBookingInViewAllBookingSection" class="col-12 shadow-lg"
+                    <div class="col-12 shadow-lg" id="viewAllBookingInViewAllBookingSection"
                          style="height: 90%;display: flex;overflow: auto;">
-                        <table id="viewAllBookingTable" class="table table-hover table-bordered"
+                        <table class="table table-hover table-bordered" id="viewAllBookingTable"
                                style="width: 100%;height: 100%;">
                             <thead>
                             <tr>
@@ -1390,9 +1394,9 @@
                             </tbody>
                         </table>
                     </div>
-                    <div id="viewAllBookingDetailsSection" class="col-12 shadow-lg"
+                    <div class="col-12 shadow-lg" id="viewAllBookingDetailsSection"
                          style="height: 90%;display: none;overflow: auto;">
-                        <table id="viewAllBookingDetailsTable" class="table table-hover table-bordered"
+                        <table class="table table-hover table-bordered" id="viewAllBookingDetailsTable"
                                style="width: 100%;height: 100%;">
                             <thead>
                             <tr>
@@ -1438,7 +1442,7 @@
                             <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
                                 <div class="card-header">Daily Income</div>
                                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                    <h5 id="dailyIncomeHTag" class="card-title d-flex">10</h5>
+                                    <h5 class="card-title d-flex" id="dailyIncomeHTag">10</h5>
                                 </div>
                             </div>
                         </div>
@@ -1447,7 +1451,7 @@
                             <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
                                 <div class="card-header">Monthly Income</div>
                                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                    <h5 id="monthlyIncomeHTag" class="card-title d-flex">10</h5>
+                                    <h5 class="card-title d-flex" id="monthlyIncomeHTag">10</h5>
                                 </div>
                             </div>
                         </div>
@@ -1456,7 +1460,7 @@
                             <div class="card text-bg-primary mb-3" style="width: 80%;height: 80%;">
                                 <div class="card-header">Annual Income</div>
                                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                    <h5 id="annualIncomeHTag" class="card-title d-flex">10</h5>
+                                    <h5 class="card-title d-flex" id="annualIncomeHTag">10</h5>
                                 </div>
                             </div>
                         </div>
@@ -1466,7 +1470,7 @@
             <div class="row d-flex flex-row align-items-center justify-content-center"
                  style="width: 90%;height: 60%;">
                 <div class="col-11 d-flex shadow-lg" style="height: 90%;overflow: auto;">
-                    <table id="incomeTableInIncome" class="table table-hover table-bordered"
+                    <table class="table table-hover table-bordered" id="incomeTableInIncome"
                            style="width: 100%;height: 100%;">
                         <thead>
                         <tr>
@@ -1488,8 +1492,8 @@
             </div>
         </div>
     </section>
-    <section id="notificationsForAdmin"
-             class="notificationsForAdmin container-fluid position-relative flex-column justify-content-center align-items-center"
+    <section class="notificationsForAdmin container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="notificationsForAdmin"
              style="background-color:rgb(223 233 230);">
         <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
              style="width: 80%;height: 80%;">
@@ -1502,34 +1506,34 @@
 
     <!-- Customers Section Start -->
 
-    <section id="viewAllCarsInCustomerSection"
-             class="viewAllCarsInCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="viewAllCarsInCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="viewAllCarsInCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 80%;height: 90%;">
             <div class="row d-flex flex-row" style="width: 100%;height: 100%;">
                 <div class="col-2 d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                     <div class="iconContainer d-flex flex-column align-items-center justify-content-center"
-                         style="width: 50%;height: 30%;"><i id="leftNavBtnForCarView"
-                                                            class="fa-solid fa-chevron-left d-flex fa-2x"></i></div>
+                         style="width: 50%;height: 30%;"><i class="fa-solid fa-chevron-left d-flex fa-2x"
+                                                            id="leftNavBtnForCarView"></i></div>
                 </div>
                 <div class="col-8 d-flex flex-column align-items-start justify-content-center"
                      style="height: 100%;overflow-x: scroll;">
-                    <div id="cardsContainingContainerInCustomerSection"
-                         class="position-relative d-flex flex-row justify-content-start align-items-center"
+                    <div class="position-relative d-flex flex-row justify-content-start align-items-center"
+                         id="cardsContainingContainerInCustomerSection"
                          style="width: 500%;height: 70%;">
                     </div>
                 </div>
                 <div class="col-2 d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
                     <div class="iconContainer d-flex flex-column align-items-center justify-content-center"
-                         style="width: 50%;height: 30%;"><i id="rightNavBtnForCarView"
-                                                            class="fa-solid fa-chevron-right d-flex fa-2x"></i></div>
+                         style="width: 50%;height: 30%;"><i class="fa-solid fa-chevron-right d-flex fa-2x"
+                                                            id="rightNavBtnForCarView"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="viewAllBookingsForCustomerSection"
-             class="viewAllBookingsForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="viewAllBookingsForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="viewAllBookingsForCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 80%;height: 80%;">
             <div class="col-11 flex-column align-items-center justify-content-center"
@@ -1545,7 +1549,9 @@
                                        placeholder="Search Booking Request" type="text">
                             </div>
                             <div class="col-2 btnContainer d-flex flex-row align-items-center justify-content-center">
-                                <button id="searchBookingDetailsBtnInCustomer" class="btn btn-primary ms-2 me-2 col-10" type="button">Search</button>
+                                <button class="btn btn-primary ms-2 me-2 col-10" id="searchBookingDetailsBtnInCustomer"
+                                        type="button">Search
+                                </button>
                             </div>
                             <div class="col-4 d-flex flex-row align-items-center justify-content-center">
                                 <a class="ms-2 me-2 col-10 d-flex text-decoration-none flex-column"
@@ -1561,9 +1567,10 @@
                      style="width: 100%;height: 90%;">
                     <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
                          style="height: 90%;overflow: auto;width: 90%;">
-                        <div id="viewAllBookingInViewAllCustomerSection" class="col-12 shadow-lg"
+                        <div class="col-12 shadow-lg" id="viewAllBookingInViewAllCustomerSection"
                              style="height: 100%;display: flex;">
-                            <table id="cusOwnBookingsTable" class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+                            <table class="table table-hover table-bordered" id="cusOwnBookingsTable"
+                                   style="width: 100%;height: 100%;">
                                 <thead>
                                 <tr>
                                     <th scope="col">Row No</th>
@@ -1579,26 +1586,27 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div id="viewAllBookingDetailsInCustomerSection" class="col-12"
+                        <div class="col-12" id="viewAllBookingDetailsInCustomerSection"
                              style="height: 100%;display: none;width: auto;">
-                            <table id="cusOwnBookingsDetailsTable" class="table table-hover table-bordered" style="height: 100%;">
+                            <table class="table table-hover table-bordered" id="cusOwnBookingsDetailsTable"
+                                   style="height: 100%;">
                                 <thead>
-                                    <tr>
-                                        <th scope="col">Row No</th>
-                                         <th scope="col">Booking ID</th>
-                                         <th scope="col">Car_RegNo</th>
-                                         <th scope="col">Driver Nic</th>
-                                         <th scope="col">Car Type</th>
-                                         <th scope="col">Rental Type</th>
-                                         <th scope="col">Date Of Pickup</th>
-                                         <th scope="col">Time Of Pickup</th>
-                                         <th scope="col">Pickup Venue</th>
-                                         <th scope="col">Returned Date</th>
-                                         <th scope="col">Returned Time</th>
-                                         <th scope="col">Returned Venue</th>
-                                         <th scope="col">Loss Damage</th>
-                                         <th scope="col">Cost</th>
-                                     </tr>
+                                <tr>
+                                    <th scope="col">Row No</th>
+                                    <th scope="col">Booking ID</th>
+                                    <th scope="col">Car_RegNo</th>
+                                    <th scope="col">Driver Nic</th>
+                                    <th scope="col">Car Type</th>
+                                    <th scope="col">Rental Type</th>
+                                    <th scope="col">Date Of Pickup</th>
+                                    <th scope="col">Time Of Pickup</th>
+                                    <th scope="col">Pickup Venue</th>
+                                    <th scope="col">Returned Date</th>
+                                    <th scope="col">Returned Time</th>
+                                    <th scope="col">Returned Venue</th>
+                                    <th scope="col">Loss Damage</th>
+                                    <th scope="col">Cost</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
@@ -1611,13 +1619,13 @@
         </div>
     </section>
 
-    <section id="viewMyAccountForCustomerSection"
-             class="viewMyAccountForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="viewMyAccountForCustomerSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="viewMyAccountForCustomerSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 90%;height: 90%;">
             <div class="col-12 flex-column align-items-center shadow-lg"
                  style="height: 95%;overflow: auto;">
-                <table id="customerAccountDetailsTable" class="table table-hover table-bordered"
+                <table class="table table-hover table-bordered" id="customerAccountDetailsTable"
                        style="width: 100%;height: 100%;">
                     <thead>
                     <tr>
@@ -1687,8 +1695,8 @@
         </div>
     </section>
 
-    <section id="placingBookingRequestInCustomer"
-             class="placingBookingRequestInCustomer container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="placingBookingRequestInCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="placingBookingRequestInCustomer">
         <div class="container-fluid shadow-lg d-flex flex-column align-items-center justify-content-center"
              style="width: 90%;height: 95%;">
             <div class="row d-flex justify-content-center align-items-center" style="width: 90%;height: 60%;">
@@ -1708,7 +1716,8 @@
                                 </div>
                             </div>
                             <div class="col d-flex">
-                                <div id="appendCarSelectionOrInputContainerId" class="d-flex flex-column" style="width: 100%;height: 50%;">
+                                <div class="d-flex flex-column" id="appendCarSelectionOrInputContainerId"
+                                     style="width: 100%;height: 50%;">
                                 </div>
                             </div>
                             <div class="col d-flex">
@@ -1725,9 +1734,9 @@
                                     <label class="col form-label text-center d-flex"
                                            for="ifDriverNeedsForBookingRequestCheckBox">Tick If You Need A
                                         Driver</label>
-                                    <input type="checkbox" class="col form-check d-flex"
-                                           id="ifDriverNeedsForBookingRequestCheckBox"
-                                           style="width: 20%">
+                                    <input class="col form-check d-flex" id="ifDriverNeedsForBookingRequestCheckBox"
+                                           style="width: 20%"
+                                           type="checkbox">
                                 </div>
                             </div>
                         </div>
@@ -1736,9 +1745,9 @@
                             <div class="col d-flex">
                                 <div class="d-flex flex-column" style="width: 100%;height: 50%;">
                                     <label class="form-label" for="carTypeInPlacingBookingRequestMenu">Car Type</label>
-                                    <select class="form-select d-flex align-items-center justify-content-center"
-                                            style="width: 100%;height: 50%;" aria-label="Default select example"
-                                            id="carTypeInPlacingBookingRequestMenu">
+                                    <select aria-label="Default select example"
+                                            class="form-select d-flex align-items-center justify-content-center" id="carTypeInPlacingBookingRequestMenu"
+                                            style="width: 100%;height: 50%;">
                                         <option value="1">Luxury</option>
                                         <option value="2">Semi-Luxury</option>
                                     </select>
@@ -1748,9 +1757,9 @@
                                 <div class="d-flex flex-column" style="width: 100%;height: 50%;">
                                     <label class="form-label" for="rentalTypeInPlacingBookingRequestDropdownMenu">Rental
                                         Type</label>
-                                    <select class="form-select d-flex align-items-center justify-content-center"
-                                            style="width: 100%;height: 50%;" aria-label="Default select example"
-                                            id="rentalTypeInPlacingBookingRequestDropdownMenu">
+                                    <select aria-label="Default select example"
+                                            class="form-select d-flex align-items-center justify-content-center" id="rentalTypeInPlacingBookingRequestDropdownMenu"
+                                            style="width: 100%;height: 50%;">
                                         <option value="1">Daily</option>
                                         <option value="2">Monthly</option>
                                     </select>
@@ -1834,9 +1843,9 @@
                                     <input aria-describedby="lossDamageWaiverSlipInPlacingBookingRequest"
                                            class="form-control"
                                            id="lossDamageWaiverSlipInPlacingBookingRequest"
+                                           name="lossDamageWaiverSlip"
                                            placeholder="Upload Loss Damage Waiver Slip"
-                                           type="file"
-                                           name="lossDamageWaiverSlip">
+                                           type="file">
                                 </div>
                             </div>
                             <div class="col d-flex">
@@ -1862,7 +1871,7 @@
             </div>
             <div class="row d-flex justify-content-start align-items-center shadow-lg"
                  style="width: 90%;height: 40%;overflow: auto;">
-                <table id="addToCartTableInBookingRequest" class="table table-hover table-bordered">
+                <table class="table table-hover table-bordered" id="addToCartTableInBookingRequest">
                     <thead>
                     <tr>
                         <th scope="col">Row No</th>
@@ -1886,19 +1895,19 @@
                 </table>
             </div>
             <div class="row d-flex justify-content-center align-items-center" style="width: 90%;height: 10%;">
-                <button id="placeBookingRequestBtn" class="btn btn-primary ms-2 me-2 col-2" type="button">Request
+                <button class="btn btn-primary ms-2 me-2 col-2" id="placeBookingRequestBtn" type="button">Request
                     Booking
                 </button>
-                <button id="updateBookingRequestBtn" class="btn btn-secondary ms-2 me-2 col-2" type="button">Update
+                <button class="btn btn-secondary ms-2 me-2 col-2" id="updateBookingRequestBtn" type="button">Update
                     Booking
                 </button>
-                <button id="deleteBookingRequestBtn" class="btn btn-danger ms-2 me-2  col-2" type="button">Delete
+                <button class="btn btn-danger ms-2 me-2  col-2" id="deleteBookingRequestBtn" type="button">Delete
                     Booking
                 </button>
-                <button id="addToCartInBookingRequestBtn" class="btn btn-outline-success ms-2 me-2  col-2"
+                <button class="btn btn-outline-success ms-2 me-2  col-2" id="addToCartInBookingRequestBtn"
                         type="button">Add To List
                 </button>
-                <button id="clearCartBtnInBookingRequest" class="btn btn-outline-danger ms-2 me-2  col-2" type="button">
+                <button class="btn btn-outline-danger ms-2 me-2  col-2" id="clearCartBtnInBookingRequest" type="button">
                     Clear From
                     List
                 </button>
@@ -1906,8 +1915,8 @@
         </div>
     </section>
 
-    <section id="notificationsForCustomer"
-             class="notificationsForCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+    <section class="notificationsForCustomer container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="notificationsForCustomer"
              style="background-color:rgb(223 233 230);">
         <div class="container-fluid shadow-lg d-flex justify-content-center align-items-center bg-transparent"
              style="width: 80%;height: 80%;">
@@ -1920,11 +1929,11 @@
     <!-- Customer Section End -->
 
     <!-- Driver Section Start -->
-    <section id="viewDriverScheduleInDriverSection"
-             class="viewDriverScheduleInDriverSection container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="viewDriverScheduleInDriverSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="viewDriverScheduleInDriverSection">
         <div class="container-fluid shadow-lg d-flex flex-column justify-content-center align-items-center"
              style="width: 80%;height: 80%;overflow: auto;">
-            <table id="driverScheduleTable" class="table table-hover table-bordered" style="width: 100%;height: 100%;">
+            <table class="table table-hover table-bordered" id="driverScheduleTable" style="width: 100%;height: 100%;">
                 <thead>
                 <tr>
                     <th scope="col">Row No</th>
@@ -1944,13 +1953,13 @@
             </table>
         </div>
     </section>
-    <section id="viewDriverAccountSection"
-             class="viewDriverAccountSection container-fluid position-relative flex-column justify-content-center align-items-center">
+    <section class="viewDriverAccountSection container-fluid position-relative flex-column justify-content-center align-items-center"
+             id="viewDriverAccountSection">
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center shadow-lg"
              style="width: 90%;height: 90%;">
             <div class="col-12 flex-column align-items-center justify-content-center shadow-lg"
                  style="height: 95%;overflow: auto;">
-                <table id="driverAccountTable" class="table table-hover table-bordered"
+                <table class="table table-hover table-bordered" id="driverAccountTable"
                        style="width: 100%;height: 100%;">
                     <thead>
                     <tr>

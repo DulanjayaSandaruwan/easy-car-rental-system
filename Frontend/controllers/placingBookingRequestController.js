@@ -55,6 +55,7 @@ bookingReqIdInPlacingBookingRequest.keyup(function (e) {
                 if (confirm("Do You Want To Search This Request..?") == true) {
                     boolForSearchOrNormal = true;
                     let booking = searchBookingRequest();
+                    console.log(booking);
                     setComboBoxToCarRegNoField(booking.bookingDetails);
                     for (let i = 0; i < booking.bookingDetails.length; i++) {
                         if (booking.bookingDetails[i].car_RegNo == $("#carRegNoMenuInPlacingBookingRequest :selected").text()) {
@@ -341,7 +342,6 @@ $(addToCartInBookingRequestBtn).click(function () {
     }
 
     if (boolForSearchOrNormal == false) {
-        getPaymentsId();
     } else {
         paymentsId = searchBookingRequest().payments.paymentsId;
     }
@@ -393,6 +393,7 @@ $(addToCartInBookingRequestBtn).click(function () {
 
     $(clearCartBtnInBookingRequest).off('click');
     $(clearCartBtnInBookingRequest).click(function () {
+        addToListArr.splice(0, addToListArr.length);
         $("#addToCartTableInBookingRequest > tbody").empty();
     })
 })
@@ -532,6 +533,11 @@ function setBookingIdToField() {
     let boIdInBookingRequest = undefined;
     let boIdInPendingBooking = undefined;
 
+    let paymentIdInBooking = undefined;
+    let paymentIdInPendingBooking = undefined;
+    let paymentIdInBookingRequest = undefined;
+
+    /*Generating Booking Id from Booking Table*/
     $.ajax({
         url: baseUrl + "bookingCarController/generateBookingId",
         method: "GET",
@@ -548,34 +554,171 @@ function setBookingIdToField() {
         }
     })
 
+    /*Generating Payments Id from Payments Table*/
+    $.ajax({
+        url: baseUrl + "bookingCarController/generatePaymentsId",
+        method: "GET",
+        async: false,
+        success: function (resp) {
+            if (resp.status == 200) {
+                paymentIdInBooking = resp.data;
+            }
+        }
+    })
+
+    /*Searching BoId And PaymentsId from PendingBooking and Booking Request Tables for
+    * Checking Whether Generated Booking Id Is Available In One Of The Tables*/
     try {
         $.ajax({
-            url: baseUrl + "bookingCarRequestController/search?boId=" + boIdInBooking,
+            url: baseUrl + "bookingCarRequestController/getAll",
             method: "GET",
             async: false,
             success: function (resp) {
                 if (resp.status == 200) {
-                    boIdInBookingRequest = resp.data.boId;
+                    let data = resp.data;
+                    if (data.length != 0) {
+                        let max1 = undefined;
+                        let max2 = undefined;
+
+                        if (data.length != 1) {
+                            for (let i = 0; i < data.length; i++) {
+                                console.log(data[i])
+                                let temp = parseInt(data[i].boId.split("-")[1]);
+                                console.log("Temp1 = " + temp);
+                                console.log("Length = " + data.length);
+                                for (let j = i + 1; j < data.length; j++) {
+                                    console.log("Length2 = " + j)
+                                    let temp2 = parseInt(data[j].boId.split("-")[1]);
+                                    console.log("Temp2 = " + temp2);
+                                    if (temp < temp2) {
+                                        temp = temp2;
+                                        console.log("TEMP2 = " + temp)
+
+                                        if (temp < 10) {
+                                            max1 = "BO-00" + temp;
+                                        } else if (temp < 100) {
+                                            max1 = "BO-0" + temp;
+                                        } else {
+                                            max1 = "BO-" + temp;
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            max1 = data[0].boId;
+                        }
+                        boIdInBookingRequest = max1;
+
+                        if (data.length != 1) {
+                            for (let i = 0; i < data.length; i++) {
+                                let temp = parseInt(data[i].payments.paymentsId.split("-")[1]);
+                                for (let j = i + 1; j < data.length; j++) {
+                                    let temp2 = parseInt(data[j].payments.paymentsId.split("-")[1]);
+                                    if (temp < temp2) {
+                                        temp = temp2;
+                                        if (temp < 10) {
+                                            max2 = "POR-00" + temp;
+                                        } else if (temp < 100) {
+                                            max2 = "POR-0" + temp;
+                                        } else {
+                                            max2 = "POR-" + temp;
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            max2 = data[0].payments.paymentsId;
+                        }
+
+                        paymentIdInBookingRequest = max2;
+                    }
                 }
             }
         })
 
         $.ajax({
-            url: baseUrl + "bookingCarRequestController/searchPendingBooking?boId=" + boIdInBooking,
+            url: baseUrl + "bookingCarRequestController/getAllPendingBookings",
             method: "GET",
             async: false,
             success: function (resp) {
                 if (resp.status == 200) {
-                    boIdInPendingBooking = resp.data.boId;
+                    let data = resp.data;
+                    if (data.length != 0) {
+                        let max1 = undefined;
+                        let max2 = undefined;
+
+                        if (data.length != 1) {
+                            for (let i = 0; i < data.length; i++) {
+                                let temp = parseInt(data[i].boId.split("-")[1]);
+                                for (let j = i + 1; j < data.length; j++) {
+                                    let temp2 = parseInt(data[j].boId.split("-")[1]);
+                                    if (temp < temp2) {
+                                        temp = temp2;
+                                        if (temp < 10) {
+                                            max1 = "BO-00" + temp;
+                                        } else if (temp < 100) {
+                                            max1 = "BO-0" + temp;
+                                        } else {
+                                            max1 = "BO-" + temp;
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            max1 = data[0].boId;
+                        }
+
+                        boIdInPendingBooking = max1;
+
+                        if (data.length != 1) {
+                            for (let i = 0; i < data.length; i++) {
+                                let temp = parseInt(data[i].payments.paymentsId.split("-")[1]);
+                                for (let j = i + 1; j < data.length; j++) {
+                                    let temp2 = parseInt(data[j].payments.paymentsId.split("-")[1]);
+                                    if (temp < temp2) {
+                                        temp = temp2;
+                                        if (temp < 10) {
+                                            max2 = "POR-00" + temp;
+                                        } else if (temp < 100) {
+                                            max2 = "POR-0" + temp;
+                                        } else {
+                                            max2 = "POR-" + temp;
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            max2 = data[0].payments.paymentsId;
+                        }
+                        paymentIdInPendingBooking = max2;
+                    }
                 }
             }
         })
+
+
     } catch (e) {
         console.log(boIdInBooking + " Is Not Consists In Any Of The Booking Request Or Pending Booking Databases");
     } finally {
-        console.log(boIdInBookingRequest)
-        console.log(boIdInPendingBooking)
-        if ((boIdInPendingBooking || boIdInBookingRequest) == boIdInBooking) {
+        console.log("boIdInBookingRequest - " + boIdInBookingRequest);
+        console.log("boIdInPendingBooking - " + boIdInPendingBooking);
+
+        let idBookingInt = parseInt(boIdInBooking.split("-")[1]);
+        let idRequestInt = undefined;
+        let idPendingInt = undefined;
+
+        if (boIdInBookingRequest != undefined) {
+            idRequestInt = parseInt(boIdInBookingRequest.split("-")[1]);
+        }
+        if (boIdInPendingBooking != undefined) {
+            idPendingInt = parseInt(boIdInPendingBooking.split("-")[1]);
+        }
+        console.log("idBookingInt - " + idBookingInt);
+        console.log("idRequestInt - " + idRequestInt);
+        console.log("idPendingInt - " + idPendingInt);
+
+        if (idBookingInt == (idPendingInt | idRequestInt)) {
+            console.log("condition 1")
             let boId = undefined;
             let id = parseInt(boIdInBooking.split("-")[1]);
             id = id + 1;
@@ -586,10 +729,110 @@ function setBookingIdToField() {
             } else {
                 boId = "BO-" + id;
             }
-
             bookingReqIdInPlacingBookingRequest.val(boId);
-        } else {
+        } else if (idBookingInt < (idPendingInt | idRequestInt)) {
+            console.log('boid in booking is less than')
+            if ((idRequestInt > idPendingInt) | (idPendingInt == undefined)) {
+                console.log("check")
+                let boId = undefined;
+                let id = parseInt(boIdInBookingRequest.split("-")[1]);
+                id = id + 1;
+                if (id < 10) {
+                    boId = "BO-00" + id;
+                } else if (id < 100) {
+                    boId = "BO-0" + id;
+                } else {
+                    boId = "BO-" + id;
+                }
+                bookingReqIdInPlacingBookingRequest.val(boId);
+            } else if ((idPendingInt > idRequestInt) | (idRequestInt == undefined)) {
+                let boId = undefined;
+                let id = parseInt(boIdInPendingBooking.split("-")[1]);
+                id = id + 1;
+                if (id < 10) {
+                    boId = "BO-00" + id;
+                } else if (id < 100) {
+                    boId = "BO-0" + id;
+                } else {
+                    boId = "BO-" + id;
+                }
+                bookingReqIdInPlacingBookingRequest.val(boId);
+            }
+            console.log('no check')
+        } else if (idBookingInt > (idPendingInt && idRequestInt)) {
+            console.log("condition last = bookingid :" + idBookingInt + " / pending : " + idPendingInt + " / request : " + idRequestInt)
             bookingReqIdInPlacingBookingRequest.val(boIdInBooking);
+        } else if ((idPendingInt == undefined) && (idRequestInt == undefined)) {
+            console.log('condition last last last');
+            bookingReqIdInPlacingBookingRequest.val(boIdInBooking);
+        }
+
+        /*Generating Customer Id When Payments Id Consists In One of The Pending Or Request Table*/
+
+
+        console.log("BookingRequestPayment - " + paymentIdInBookingRequest);
+        console.log("PendingBookingPayment - " + paymentIdInPendingBooking);
+
+        let idBookingPaymentInt = parseInt(paymentIdInBooking.split("-")[1]);
+        let idRequestPaymentInt = undefined;
+        let idPendingPaymentInt = undefined;
+
+        if (paymentIdInBookingRequest != undefined) {
+            idRequestPaymentInt = parseInt(paymentIdInBookingRequest.split("-")[1]);
+        }
+        if (paymentIdInPendingBooking != undefined) {
+            idPendingPaymentInt = parseInt(paymentIdInPendingBooking.split("-")[1]);
+        }
+        console.log("idBookingPaymentInt - " + idBookingPaymentInt);
+        console.log("idRequestPaymentInt - " + idRequestPaymentInt);
+        console.log("idPendingPaymentInt - " + idPendingPaymentInt);
+
+        if (idBookingPaymentInt == (idPendingPaymentInt | idRequestPaymentInt)) {
+            console.log("condition 1")
+            let pId = undefined;
+            let id = parseInt(paymentIdInBooking.split("-")[1]);
+            id = id + 1;
+            if (id < 10) {
+                pId = "POR-00" + id;
+            } else if (id < 100) {
+                pId = "POR-0" + id;
+            } else {
+                pId = "POR-" + id;
+            }
+            paymentsId = pId;
+        } else if (idBookingPaymentInt < (idPendingPaymentInt | idRequestPaymentInt)) {
+            console.log('boid in booking is less than')
+            if ((idRequestPaymentInt > idPendingPaymentInt) | (idPendingPaymentInt == undefined)) {
+                let pId = undefined;
+                let id = parseInt(paymentIdInBookingRequest.split("-")[1]);
+                id = id + 1;
+                if (id < 10) {
+                    pId = "POR-00" + id;
+                } else if (id < 100) {
+                    pId = "POR-0" + id;
+                } else {
+                    pId = "POR-" + id;
+                }
+                paymentsId = pId;
+            } else if ((idPendingPaymentInt > idRequestPaymentInt) | (idRequestPaymentInt == undefined)) {
+                let pId = undefined;
+                let id = parseInt(paymentIdInPendingBooking.split("-")[1]);
+                id = id + 1;
+                if (id < 10) {
+                    pId = "POR-00" + id;
+                } else if (id < 100) {
+                    pId = "POR-0" + id;
+                } else {
+                    pId = "POR-" + id;
+                }
+                paymentsId = pId;
+            }
+
+        } else if (idBookingPaymentInt > (idPendingPaymentInt && idRequestPaymentInt)) {
+            console.log("condition last")
+            paymentsId = paymentIdInBooking;
+        } else if ((idPendingPaymentInt == undefined) && (idRequestPaymentInt == undefined)) {
+            paymentsId = paymentIdInBooking;
         }
     }
 }
@@ -640,65 +883,6 @@ function updateBookingRequest(formData) {
     })
 }
 
-function getPaymentsId() {
-    let paymentIdInBooking = undefined;
-    let paymentIdInPendingBooking = undefined;
-    let paymentIdInBookingRequest = undefined;
-
-    $.ajax({
-        url: baseUrl + "bookingCarController/generatePaymentsId",
-        method: "GET",
-        async: false,
-        success: function (resp) {
-            if (resp.status == 200) {
-                paymentIdInBooking = resp.data;
-            }
-        }
-    })
-    try {
-        $.ajax({
-            url: baseUrl + "bookingCarRequestController/search?boId=" + bookingReqIdInPlacingBookingRequest.val(),
-            method: "GET",
-            async: false,
-            success: function (resp) {
-                if (resp.status == 200) {
-                    paymentIdInBookingRequest = resp.data.boId.payments.paymentsId;
-                }
-            }
-        })
-
-        $.ajax({
-            url: baseUrl + "bookingCarRequestController/searchPendingBooking?boId=" + bookingReqIdInPlacingBookingRequest.val(),
-            method: "GET",
-            async: false,
-            success: function (resp) {
-                if (resp.status == 200) {
-                    paymentIdInPendingBooking = resp.data.boId.payments.paymentsId;
-                }
-            }
-        })
-    } catch (e) {
-        console.log(paymentIdInBooking + " Is Not Consists In Any Of The Booking Request Or Pending Booking Databases");
-    } finally {
-        if ((paymentIdInPendingBooking || paymentIdInBookingRequest) == paymentIdInBooking) {
-            let paymentId = undefined;
-            let id = parseInt(paymentIdInBooking.split("-")[1]);
-            id = id + 1;
-            if (id < 10) {
-                paymentId = "POR-00" + id;
-            } else if (id < 100) {
-                paymentId = "POR-0" + id;
-            } else {
-                paymentId = "POR-" + id;
-            }
-
-            paymentsId = paymentId;
-        } else {
-            paymentsId = paymentIdInBooking;
-        }
-    }
-}
-
 function searchCarDetails(regNo) {
     $.ajax({
         url: baseUrl + "car/search?regNo=" + regNo,
@@ -726,11 +910,12 @@ function searchCarDetails(regNo) {
 function clearBookingRequestFields() {
     bookingReqIdInPlacingBookingRequest.val("");
     $(bookingReqIdInPlacingBookingRequest).css("border", "1px solid #ced4da");
-    cusNicInPlacingBookingRequest.val("");
-    $(cusNicInPlacingBookingRequest).css("border", "1px solid #ced4da");
+    $('#carRegNoInPlacingBookingRequest').val("");
+    $('#carRegNoInPlacingBookingRequest').css("border", "1px solid #ced4da");
+
     $("#carRegNoInPlacingBookingRequest option:selected").prop("selected", false)
     $("#rentalTypeInPlacingBookingRequestDropdownMenu option:selected").prop("selected", false)
-    ifDriverNeedsForBookingRequestCheckBox.checked = false;
+    $("#ifDriverNeedsForBookingRequestCheckBox").prop("checked", false);
     dateOfPickupInPlacingBookingRequest.val("");
     timeOfPickupInPlacingBookingRequest.val("");
     pickupVenueInPlacingBookingRequest.val("");
@@ -747,6 +932,7 @@ function clearBookingRequestFields() {
     $(totalCostInPlacingBookingRequest).css("border", "1px solid #ced4da");
     lossDamageWaiverSlipInPlacingBookingRequest.val("");
     $(lossDamageWaiverSlipInPlacingBookingRequest).css("border", "1px solid #ced4da");
+    addToListArr.splice(0, addToListArr.length);
     $('#addToCartTableInBookingRequest > tbody').empty();
 }
 

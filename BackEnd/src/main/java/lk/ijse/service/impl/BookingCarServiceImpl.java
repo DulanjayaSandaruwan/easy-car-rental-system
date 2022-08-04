@@ -103,6 +103,7 @@ public class BookingCarServiceImpl implements BookingCarService {
                 }
                 if (b.getDamageStatus().equals("Damaged")) {
                     car.setMaintenanceStatus("Under Maintenance");
+                    carNotificationsRepo.save(new CarNotifications(car.getC_RegNo(), car.getC_RegNo() + " is Under Maintenance Stage"));
                 } else {
                     if (!car.getMaintenanceStatus().equals("Under Maintenance")) {
                         car.setMaintenanceStatus("No Maintenance Required");
@@ -163,6 +164,7 @@ public class BookingCarServiceImpl implements BookingCarService {
     public String generateBookingId() {
         List<BookingDTO> map = mapper.map(repo.findAll(), new TypeToken<List<BookingDTO>>() {
         }.getType());
+        System.out.println(map);
         Collections.reverse(map);
         if (map.size() != 0) {
             if (map.get(0).getBoId() != null) {
